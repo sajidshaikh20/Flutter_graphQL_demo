@@ -1,0 +1,18 @@
+# build.yaml
+
+targets:
+  $default:
+    builders:
+      graphql_codegen:
+        options:
+          clients:
+            - graphql
+          outputDirectory: graphql_gen
+          addTypename: false
+          generatedFileHeader: "/// GENERATED CODE - DO NOT MODIFY BY HAND\n
+/// *****************************************************\n
+///  FlutterGen\n
+/// *****************************************************\n\n
+// coverage:ignore-file\n
+// ignore_for_file: type=lint\n
+// ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use\n\n"

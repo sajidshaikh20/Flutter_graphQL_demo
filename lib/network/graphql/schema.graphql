@@ -1,0 +1,10251 @@
+type Query {
+  UserData(id: ID): my!
+  getClubList(input: ClubInput!): ClbuDataInfo
+  getTestData: testDataInfo
+  getHomeClubMembers(input: clubMemberPaginationInput!): HomeClubMemberInfo
+  getClubDetail(input: getClubDetailInput!): getClubDetails
+  getUserProfile(input: GetProfileInput!): UserProfileInfo
+  getUserQrCodeText: UserQRCodeInfo
+  RecentlyJoinUsers(input: LocationUpdateInput!): RecentJoinListResponse!
+  getUserComments(input: UserCommentsInput!): UserCommentInfo
+  getDashboardData(input: AdddashboardInput): dashboardCount
+  getPreSignedUrl(input: getPreSignUrlInput!): PreSignUrlInfo
+  getUserData(input: UserPaginationInput!): UserDataInfo
+  viewUser(input: viewUserInput!): viewUserResponse!
+  getPicklerData: PicklerDataInfo
+  getClubData(input: CulbPaginationInput!): ClubDataInfo
+  viewClub(input: viewClubInput!): viewClubResponse!
+  getClubMembers(input: MemberPaginationInput!): ClubMemberInfo
+  exportClubData(input: exportCulbPaginationInput!): exportClubDataInfo
+  getSplashScreen(input: SplashScreenPaginationInput!): SplashScreenDataInfo
+  viewSplashScreen(input: viewSplashScreenInput!): viewSplashScreenResponse!
+  viewBanner(input: viewBannerInput!): viewBannerResponse!
+  getBannerData(input: BannerPaginationInput!): BannerInfo
+  getGroupDetails(input: GroupDataPaginationInput!): GroupDetailsInfo
+  viewGroupDetail(input: viewGroupDetailInput!): viewGroupDetailResponse!
+  viewGroupMember(input: viewGroupMemberInput!): GroupMemberDetailInfo!
+  getUserRatingList(input: UserRatingPaginationInput!): UserRatingInfo
+  getUserList(input: UserListPaginationInput!): UserListInfo
+  getCountryList: CountyDataInfo
+  getRatingDetail: AdminRatingDataInfo
+  getRatingData(input: getRatingInput!): RatingDetailInfo
+  getCmsPage(input: getCmsInput!): CmsPageInfo
+  getGroupTypeDetail: GroupTypeDataInfo
+  viewNews(input: viewNewsInput!): viewNewsResponse!
+  getNewsData(input: NewsPaginationInput!): NewsDataInfo
+  getOnboardingData: GetOnboardingDataInfo
+  ViewGroupFront(input: viewGroupFrontInput!): viewGroupResponse!
+  getGroupDataFront(input: GroupPaginationInput!): GroupDataInfo
+  getExploreClubList(input: exploreClubInput!): exploreClbuDataInfo
+  viewGroupMemberFront(input: viewGroupMemberInput!): GroupMemberDataInfo!
+  ViewGroupMemberAddGroup(
+    input: ViewGroupMemberAddGroupInput!
+  ): AddtoGroupMemberDataInfo!
+  ViewCmsPage(input: viewCmsInput!): ViewCmsPage
+  getCMSData(input: CMSPaginationInput!): CMSDataInfo
+  ViewCmsFrontPage(input: viewCmsFrontInput!): ViewCmsFrontPage
+  getRatingList(input: RatingPaginationInput!): RatingDataInfo
+  ViewRating(input: viewRatingInput!): ShowRating
+  RecommnedationsList(
+    input: RecommenDataPaginationInput!
+  ): RecommendationDataInfo
+  ViewRecommendaion(input: viewRecommenInput!): ShowRecommendation
+  PicklerList(input: PicklerPaginationInput!): PicklerDataInfo
+  ViewPickler(input: viewPickerInput!): ShowPickler
+  GroupTypesList(input: GroupTypesPaginationInput!): GroupTypesDataInfo
+  ViewGroupType(input: viewGroupTypeInput!): ShowGroupType
+  getGroupTypeList: GroupTypeDataInfo
+  BadgesList(input: BadgesPaginationInput!): BadgesDataInfo
+  ViewBadge(input: viewBadgesInput!): ShowBadges
+  categoryData(input: CetegoryPaginationInput!): CategoryDetailsInfo
+  ViewCategory(input: viewCategoryInput!): ShowCategory
+  ReasonList(input: ReasonPaginationInput!): ReasonDataInfo
+  ViewReportReason(input: viewReasonInput!): ShowReasons
+  getMatchDataAdmin(input: MatchAdminPaginationInput!): MatchAdminDataInfo
+  viewMatchDetailsAdmin(input: viewMatchAdminInput!): viewMatchAdminResponse!
+  viewMatchDetailsFront(input: viewMatchInput!): viewMatchResponse!
+  getMatchDataFront(input: MatchPaginationInput!): MatchDataInfo
+  findPlayerGroupList(input: findPlayerGroupInput!): findPlayerGroupInfo
+  findPlayerFriendsList(input: findPlayerFriendInput!): findPlayerFriendInfo
+  findPlayerNetworkList(input: findPlayerNetworkInput!): findPlayerNetworkInfo
+  invitedPlayerFriendsList(
+    input: invitedPlayerFriendInput!
+  ): invitedPlayerFriendInfo
+  invitedPlayerGroupList(
+    input: invitedPlayerGroupInput!
+  ): invitedPlayerGroupInfo
+  invitePlayerNetworkList(
+    input: invitedPlayerNetworkInput!
+  ): invitedPlayerNetworkInfo
+  getUserReview(input: getUserRviewInput!): userReviewInfo
+  getBlockUserListFront(
+    input: BlockUserListFrontPaginationInput!
+  ): BlockUserListFrontInfo
+  InvitedMemberList(input: InvitedMemberInput!): InvitedMemberInfo
+  getMatchComments(input: MatchCommentsInput!): MatchCommentInfo
+  getBlockUserData(input: BlockUserPaginationInput!): BlockUserDataInfo
+  getBlockUserList(input: BlockUserListPaginationInput!): BlockUserListInfo
+  getOpenMatchList(
+    input: OpenMatchListFrontPaginationInput!
+  ): OpenMatchListFrontInfo
+  viewOpenMatchDetail(input: viewGroupInput!): viewOpenMatchDetailResponse!
+  matchJoinusers(input: matchUserInput!): MatchUserJoinListResponse!
+  ViewRequestedPlayer(input: matchUserInput!): MatchUserRequestedResponse!
+  RecommnedationList: RecommendationDataFrontInfo
+  getcategoryList: CategoryDataInfo
+  getSupportList(input: SupportListPaginationInput!): SupportListDataInfo
+  viewSupportDetail(input: viewSupportDetailInput!): viewSupportDetailResponse!
+  getReportReasonList(input: ReportReasonInput): ReportReasonDataInfo
+  getReport(input: ReportDataInput!): ReportDataInfo!
+  getCommentReport(input: CommentReportDataInput!): CommentReportDataInfo!
+  getCmsPageData(input: getCmsDataInput!): CmsPageData
+  getWeekDetail(input: WeekDetailPaginationInput!): WeekDetailInfo
+  weekDetailView(input: WeekDetailViewInput!): WeekDetailViewResponse!
+  getDashboardDetail(input: DashboardFitterInput!): GetDashboardDetailInfo
+  getScheduleMatchList(
+    input: ScheduleMatchListFrontPaginationInput!
+  ): ScheduleMatchListFrontInfo
+  viewScheduleMatchDetail(
+    input: viewScheduleInput!
+  ): viewScheduleMatchDetailResponse!
+  getPastMatchList(
+    input: PastMatchListFrontPaginationInput!
+  ): PastMatchListFrontInfo
+  viewPastMatchDetail(input: ViewPastInput!): ViewPastMatchDetailResponse!
+  MatchShare(input: MatchShareInput!): MatchShareInputResponse!
+  getNewsList(input: NewsListFrontPaginationInput!): NewsListFrontInfo
+  getNewsDetail(input: GetProfileInput!): NewsViewInfo
+  getNewsComments(input: NewsCommentsInput!): NewsCommentInfo
+  NewsShare(input: NewsShareInput!): NewsShareInputResponse!
+  PlayerOfWeek(
+    input: PlayerOfWeekListPaginationInput!
+  ): PlayerOfWeekListFrontInfo
+  getPlayerOfWeekComments(
+    input: PlayerOfWeekCommentsInput!
+  ): PlayerOfWeekCommentInfo
+  PlayOfWeekShare(input: PlayOfWeekShareInput!): PlayOfWeekShareInputResponse!
+  getCongratulationList(input: CongListFrontPaginationInput!): CongListFrontInfo
+  getCongratulationComments(
+    input: CongraCommentsInput!
+  ): CongratulationCommentInfo
+  CongratulationShare(
+    input: CongratulationShareInput!
+  ): CongratulationShareInputResponse!
+  getUpcommingEventsList(
+    input: UpcommingListFrontPaginationInput!
+  ): UpcommingEventsListFrontInfo
+  getEventComments(input: UpcommingEventCommentsInput!): UpcommingCommentInfo
+  UpcommingEventShare(
+    input: UpcommingEventShareInput!
+  ): UpcommingEventShareInputResponse!
+  getPastEventList(
+    input: PastEventListFrontPaginationInput!
+  ): PastEventListFrontInfo
+  viewPastEventDetail(input: ViewPastEventInput!): ViewPastEventDetailResponse!
+  SendInviteSlabs(input: matchInviteSlabInput!): matchInviteInfo
+  MatchInvitePopup(
+    input: MatchInvitePopupInput!
+  ): MatchInvitePopupInputResponse!
+  myMatchListFront(
+    input: MyMatchListFrontPaginationInput!
+  ): MyMatchListFrontInfo
+  myGroupListFront(input: MyGroupPaginationInput!): MyGroupDataInfo
+  getFrinedList(input: FrinedListInput!): FrinedListInfo
+  myEventList(input: MyEventListFrontPaginationInput!): MyEventListFrontInfo
+  getMentionList(input: MentionInput!): FrinedDataInfo
+  notificationList(input: notificationListInput!): notificationListInfo
+  getTransactionList(
+    input: TransactionListPaginationInput!
+  ): TransactionListDataInfo
+  viewTransactionDetail(
+    input: viewTransactionDetailInput!
+  ): viewTransactionDetailResponse!
+  getNotificationSetting: getNotificationSettingInfo
+  getNotificationSettingTime: getNotificationSettingTimeInfo
+  viewAccountDetail(input: ViewAccountDetailInput!): ViewAccountDetailResponse!
+  getAccountDetailFront(input: AccountDetailPaginationInput!): AccountDetailInfo
+  getCardDetail: ViewCardDetailResponse
+  getDashBoradCount: DashboradCount
+  getBannerList(input: BannerTypeInput): BannerDataInfo
+  exportUserData(input: exportUserPaginationInput!): exportUserDataInfo
+  ExportTransactionList(
+    input: ExportTransactionInput!
+  ): ExportTransactionListDataInfo
+  viewMatchParticipateAdmin(
+    input: viewMatchParticipateAdminInput!
+  ): viewMatchParticipateAdminInputInfo
+  scheduleReachoutOrdInfo(
+    input: scheduleReachoutOrdInfoInput!
+  ): scheduleReachoutOrdResponse!
+  exploreNetworkList(input: exploreNetworkInput!): exploreNetworkInfo
+  CommonGroupFront(input: CommonGroupPaginationInput!): CommonGroupInfo
+  getCommonCommentDetail(
+    input: CommonCommentDetailInput!
+  ): CommonCommentDetailInfo
+  getChatGroup(input: getChatGroupInput!): getChatGroupInfo
+  GroupMemberConnectId(
+    input: GroupMemberConnectIdInput!
+  ): GroupMemberConnectIdInfo!
+  getBankAccDetail: GetBankAccResponse
+  findByOrganizer: findByOrganizerInfo
+  FilterTimeline: FilterTimelineInfo
+  getMatchlevel: MatchLevelData
+  getSettingData: ViewSettingResponse!
+  getStateList: StateDataInfo
+  commonSetting(input: FrontCommonSettingInput!): FrontCommonSettingResponse!
+  getLessonData(input: LessonPaginationInput!): LessonDataInfo
+  viewLessonDetails(input: viewLessonInput!): viewLessonResponse!
+  CheckIsCoach(input: GetCoachInput!): UserCoachInfo
+  getCoachSpeciality: CoachSpecialData
+  getOpenLessonList(input: OpenLessonInput!): OpenLessonList
+  getScheduleLessonList(
+    input: ScheduleLessonListFrontPaginationInput!
+  ): ScheduleLessonListFrontInfo
+  getPastLessonList(
+    input: PastLessonListFrontPaginationInput!
+  ): PastLessonListFrontInfo
+  getOpenPlayList(
+    input: OpenPlayListFrontPaginationInput!
+  ): OpenPlayListFrontInfo
+  getOpenPlayScheduleList(
+    input: OpenPlayScheduleListFrontPaginationInput!
+  ): OpenPlayScheduleListFrontInfo
+  getOpenPlayPastList(
+    input: OpenPlayPastListFrontPaginationInput!
+  ): OpenPlayPastListFrontInfo
+  viewOpenPlayDetail(input: viewOpenPlayInput!): viewOpenPlayDetailResponse!
+  getOpenPlayDashboardData(input: openPlayBoardInput): openPlayDashboardCount
+  ViewLessonDetailsFront(input: viewLessonViewInput!): viewLessonDetailResponse!
+  ViewRequestedLsnPlayer(input: LessonUserInput!): LsnUserRequestedResponse!
+  InvitedLessonMemberList(
+    input: InvitedLessonMemberInput!
+  ): InvitedLessonMemberInfo
+  getClubSuggestion(input: ClubSuggestionPaginationInput!): ClubSuggestionInfo
+  remaingRatingUsers(input: remaingRatingUsersInput!): getRemaingUserInfo
+  viewClubSuggestion(
+    input: ViewClubSuggestionInput!
+  ): ViewClubSuggestionResponse!
+  getBannerType: BannerTypeData
+  LatestEventsList(input: GetLatestEventInput!): EventsInfo
+  getMyEventScheduleList(
+    input: MyEventScheduleListFrontPaginationInput!
+  ): MyEventScheduleListFrontInfo
+  getMyEventPastList(
+    input: MyEventListFrontPaginationInput!
+  ): MyEventPastListFrontInfo
+  eventsAllList(input: EventsOpenInput!): EventsOpenList
+  CoachRecommnedationList: CoachRecommendationDataFrontInfo
+  getCommonOpenEventsList(input: CommonOpenEventsInput!): CommonOpenEventsList
+  getCommonPastEventsList(input: CommonPastEventsInput!): CommonPastEventsList
+  getCommonScheduleEventsList(
+    input: CommonScheduleEventsInput!
+  ): CommonScheduleEventsList
+  coachList(input: CoachListInput!): CoachListResponse!
+  invitedCoachList(input: InvitedCoachListInput!): InvitedCoachListResponse!
+  ViewCommonEventDetailsFront(
+    input: viewCommonEventInput!
+  ): viewCommonEventDetailResponse!
+  ViewRequestedEventPlayer(
+    input: EventRequestedUserInput!
+  ): EventUserRequestedResponse!
+  InvitedEventMemberList(
+    input: InvitedEventMemberInput!
+  ): InvitedEventMemberInfo
+  communityEvents(
+    input: CommunityEventsListInput!
+  ): CommunityEventsListResponse!
+  EventWaitingList(input: EventWaitingListInput!): EventWaitingListResponse!
+  tournamentBrackets(
+    input: TournamentBracketsListInput!
+  ): TournamentBracketsListResponse!
+  getCommonEventsData(input: CommonEventsInput!): CommonEventsDataInfo
+  viewCommonEventDetails(
+    input: viewCommonEventsAdminInput!
+  ): viewCommonEventResponse!
+  homePageCount(input: homePageCountInput): homePageCount
+  homePageUserCount(input: homePageUserCountInput): homePageUserCountData
+  matchPaymentLedger(
+    input: matchPaymentLedgerInput!
+  ): matchPaymentLedgerInputInfo
+  viewMatchDetails(input: viewMatchInput!): viewMatchDetailResponse!
+  EventConfirmPlayerList(
+    input: EventConfirmPlayerInput!
+  ): EventConfirmPlayerInfo
+}
+
+type Mutation {
+  signup(input: SignUpInput!): SignUpStepOneResponse!
+  signupSetpTwo(input: SignUpStepTwoInput!): SignUpStepTwoResponse!
+  signupSetpThree(input: SignUpStepThreeInput!): SignUpStepThreeResponse!
+  sendOTP(input: SendOTPInput!): SendOTPResponse!
+  VerifyOTP(input: VeryfyOtpInput!): VeryfyOTpResponse!
+  userLogin(input: UserLoginInput!): userLoginResponse!
+  Logout: LogoutRes!
+  SetLastLoginLog(input: LoginLogInput!): LastLoginResponse!
+  addClub(input: UserClubCreateInput!): ClubResponseFront!
+  updateProfile(input: ProfileUpdateInput!): ProfileUpdateResponse!
+  UpdateDeviceToken(input: UpdateDeviceTockenInput!): UpdateTokenResponse!
+  updateLocation(input: UserLocationUpdateInput!): LocationUpdateResponse!
+  AddUserComment(input: AddUserCommentInput!): AddUserCommentResponse!
+  UserLike(input: UserLikeInput!): UserLikeResponse!
+  deleteAccount: ClubResponse!
+  AcceptGroupRequest(
+    input: AddAcceptGroupRequestInput!
+  ): AddAcceptGroupRequestResponse!
+  AcceptFrindRequestQR(
+    input: AddAcceptFriendRequestqrInput!
+  ): AddAcceptFriendRequestqrResponse!
+  adminLogin(input: Input!): loginResponse!
+  adminLogout: LogoutRes!
+  Forgotpassword(input: ForgotPasswordInput!): ForgotPasswordRes!
+  deleteUser(input: deleteUserInput!): DeleteUserResponse!
+  updateStatus(input: UserUpdateStatusInput!): UpdateUserStatusResponse!
+  createUser(input: UserCreateInput!): UserResponse!
+  updateUser(input: UserUpdateInput!): UserResponse!
+  createClub(input: ClubCreateInput!): ClubResponse!
+  updateClubStatus(input: UpdateStatusInput!): UpdateUserStatusResponse!
+  deleteClub(input: deleteClubInput!): DeleteClubResponse!
+  updateClub(input: ClubUpdateInput!): ClubResponse!
+  ImportClubs(file: Upload): UploadFileRes
+  approveClub(input: ApproveClubInput!): ApproveClubResponse!
+  addSplashScreen(input: SplashScreen!): SplashScreenResponse!
+  updateSplashScreenStatus(
+    input: UpdateSplashScreenStatusInput!
+  ): UpdateSplashScreenStatusResponse!
+  updateSplashScreen(input: SplashscreenUpdateInput!): SplashScreenResponse!
+  addBanner(input: Banner!): BannerResponse!
+  updateBannerStatus(
+    input: UpdateBannerStatusInput!
+  ): UpdateBannerStatusResponse!
+  updateBanner(input: BannerUpdateInput!): BannerResponse!
+  deleteBanner(input: DeleteBannerInput!): DeleteBannerhResponse!
+  addGroupDetails(input: GroupDetailsInput!): GroupDetailsResponse!
+  updateGroupStatus(input: UpdateGroupStatusInput!): UpdateGroupStatusResponse!
+  updateGroup(input: BannerGroupInput!): GroupResponse!
+  deleteGroup(input: DeleteGroupInput!): DeleteGroupResponse!
+  addGroupMember(input: AddGroupMemberInput!): AddGroupMemberResponse!
+  RemoveGroupMemberAdmin(input: RemoveGroupUserInput!): RemoveGroupUserResponse!
+  addNews(input: AddNewsInputs!): NewsResponse!
+  updateNewsStatus(input: UpdateNewsStatusInput!): UpdateNewsStatusResponse!
+  updateNews(input: NewsUpdateInput!): NewsResponse!
+  deleteNews(input: DeleteNewsInput!): DeleteNewsResponse!
+  addGroupFront(input: GroupFrontInput!): GroupFrontResponse!
+  updateGroupFront(input: GroupInput!): GroupResponse!
+  updateGroupStatusFront(
+    input: UpdateGroupStatusInput!
+  ): UpdateGroupStatusResponse!
+  joinGroup(input: joinGroupInput!): joinGroupResponse!
+  sendRequestToJoin(input: sendRequestToJoinInput!): sendRequestToJoinResponse!
+  publicGroupJoin(input: publicGroupJoinInput!): publicGroupJoinResponse!
+  addGroupMemberFront(input: AddGroupMemberInput!): AddGroupMemberResponse!
+  userAddGroupFront(input: UserAddGroupInput!): UserAddGroupResponse!
+  removeGroupMemberFront(
+    input: RemoveGroupMemberInput!
+  ): RemoveGroupMemberResponse!
+  removeGroupMemberByOwner(
+    input: UserRemoveGroupInput!
+  ): UserRemoveGroupResponse!
+  createCMS(input: CMSCreateInput!): AddCMSResponse!
+  updateCMSStatus(input: UpdateCMSStatusInput!): UpdateCMSStatusResponse!
+  deleteCMS(input: deleteCMSInput!): DeleteCMSResponse!
+  updateCMSPage(input: CMSUpdateInput!): CMSResponse!
+  createRating(input: RatingCreateInput!): AddRatingResponse!
+  updateRatingStatus(
+    input: UpdateRatingStatusInput!
+  ): UpdateRatingStatusResponse!
+  updateRating(input: RatingUpdateInput!): RatingUpdateResponse!
+  deleteRatingAdmin(input: deleteRatingAdminInput!): deleteRatingAdminResponse!
+  createRecommendation(input: RecommenCreateInput!): AddRecommenResponse!
+  updateRecommendation(
+    input: RecommendationUpdateInput!
+  ): RecommenUpdateResponse!
+  updateRecommendationStatus(
+    input: UpdateRecommenStatusInput!
+  ): UpdateRatingStatusResponse!
+  deleteRecommand(input: deleteRecommandInput!): deleteRecommandResponse!
+  createPicker(input: PicklerCreateInput!): AddPicklerResponse!
+  updatPicklerStatus(
+    input: UpdatePicklerStatusInput!
+  ): UpdatePicklerStatusResponse!
+  updatePickler(input: PicklerUpdateInput!): PicklerUpdateResponse!
+  deletePickler(input: DeletePicklerInput!): DeletePicklerResponse!
+  createGroupType(input: groupTypeCreateInput!): AddgroupTypeResponse!
+  updatGroupTypeStatus(
+    input: UpdateGTypeStatusInput!
+  ): UpdateGrpupTStatusResponse!
+  updateGroupType(input: GTypeUpdateInput!): GroupTypeUpdateResponse!
+  deleteGroupType(input: DeleteGroupTypeInput!): DeleteGroupTypeResponse!
+  createBadge(input: badgeCreateInput!): AddBadgeResponse!
+  updatBadgeStatus(input: UpdateBadgeStatusInput!): UpdateBadgeStatusResponse!
+  updateBadge(input: BadgeUpdateInput!): BadgeUpdateResponse!
+  deleteBadgesAdmin(input: deleteBadgesAdminInput!): deleteBadgesResponse!
+  createCategory(input: CategoryCreateInput!): AddCetogoryResponse!
+  updatCategoryStatus(
+    input: UpdateCategoryStatusInput!
+  ): UpdateCategoryStatusResponse!
+  updateCategory(input: CategoryUpdateInput!): CategoryUpdateResponse!
+  deleteCategory(input: DeleteCategoryInput!): DeleteCategoryResponse!
+  createReportReason(input: ReasonCreateInput!): AddReasonResponse!
+  updatReasonStatus(
+    input: UpdateReasonStatusInput!
+  ): UpdateReasonStatusResponse!
+  updateReportReason(
+    input: ReportReasonUpdateInput!
+  ): ReasonReportUpdateResponse!
+  deleteReportReason(
+    input: DeleteReportReasonInput!
+  ): DeleteReportReasonResponse!
+  createMatch(input: CreateMatchInput!): CreateMatchResponse!
+  updateMatchStatus(input: UpdateMatchStatusInput!): UpdateMatchStatusResponse!
+  deleteMatch(input: deleteMatchInput!): DeleteMatchResponse!
+  updateMatchDetails(input: MatchInput!): MatchResponse!
+  createMatchFront(input: CreateMatchInput!): CreateFrontMatchResponse!
+  addPayment(input: addPaymentInput!): CreateMatchResponse!
+  UpdateMtchCost(input: UpdateMtchCostInput!): UpdateMtchCostResponse!
+  updateMatchDetailsFront(input: MatchFrontInput!): MatchFrontResponse!
+  blockUser(input: BlockUserInput!): BlockUserResponse!
+  addAsFriend(input: AddAsFriendInput!): AddAsFriendResponse!
+  AcceptFrindRequest(
+    input: AddAcceptFriendRequestInput!
+  ): AddAcceptFriendRequestResponse!
+  RejectFrindRequest(
+    input: AddRejectFriendRequestInput!
+  ): AddRejectFriendRequestResponse!
+  removeAsFriend(input: RemoveAsFriendInput!): RemoveAsFriendResponse!
+  updateUserRating(input: updateUserRatingInput!): UpdateUserRatingResponse!
+  AddMatchComment(input: AddMatchCommentInput!): AddMatchCommentResponse!
+  sendMatchInvite(input: sendMatchInviteInput!): sendMatchInviteResponse!
+  sendMatchReInvite(input: sendMatchReInviteInput!): sendMatchReInviteResponse!
+  requestToPlay(input: AddRequestPlayInput!): RequestToPlayResponse!
+  requestPlayerAccept(input: PlyerRequestAcceptInput!): RequestAcceptResponse!
+  requestPlayerReject(input: PlyerRequestRejectInput!): RequestRejectResponse!
+  addSupport(input: AddSupportInput!): AddSupportResponse!
+  replaySupport(input: ReplaySupportInput!): ReplaySupportResponse!
+  addReport(input: AddReportInput!): AddReportResponse!
+  addCommentReport(input: AddCommentReportInput!): AddCommentReportResponse!
+  AcceptMatchInvite(input: AcceptMatchInviteInput!): AcceptMatchInviteResponse!
+  RejectMatchInvite(input: RejectMatchInviteInput!): RejectMatchInviteResponse!
+  addWeekDetails(input: WeekDetailsInput!): WeekDetailsResponse!
+  deleteWeekData(input: DeleteWeekDataInput!): DeleteWeekDataResponse!
+  updateWeekData(input: WeekDataInput!): WeekDataUpdateResponse!
+  socialSignup(input: SocialSignUpInput!): SocialSignUpResponse!
+  ScheduleMatchSetFlags(
+    input: ScheduleMatchSetFlagsInput!
+  ): ScheduleMatchSetFlagsResponse!
+  MatchLike(input: MatchLikeInput!): MatchLikeResponse!
+  MatchCancel(input: MatchCancelInput!): MatchCancelResponse!
+  AddNewsComment(input: AddNewsCommentInput!): AddNewsCommentResponse!
+  NewsLike(input: NewsLikeInput!): NewsLikeResponse!
+  AddPlayerOfWeekComment(
+    input: PlayerOfWeekCommentInput!
+  ): PlayerOfWeekCommentResponse!
+  PlayOfWeekLike(input: PlayOfWeekLikeInput!): PlayOfWeekLikeResponse!
+  AddCongratulationComment(
+    input: AddCongratulationCommentInput!
+  ): AddCongratulationCommentResponse!
+  CongratulationLike(
+    input: CongratulationLikeInput!
+  ): CongratulationLikeResponse!
+  AddEventComment(
+    input: AddUpcommingEventCommentInput!
+  ): AddUpcommingEventCommentResponse!
+  UpcommingEnentLike(
+    input: UpcommingEnentLikeInput!
+  ): UpcommingEnentLikeResponse!
+  addUserRecommendation(
+    input: addUserRecommendationInput!
+  ): addUserRecommendationResponse!
+  ClearNotification(input: ClearNotificationInput!): ClearNotificationResponse!
+  NotificationRead(input: NotificationReadInput!): NotificationReadResponse!
+  notificationSetting(
+    input: notificationSettingInput!
+  ): notificationSettingResponse!
+  addAccountDetail(input: AddAccountDetailInput!): AddAccountDetailResponse!
+  CommentLike(input: CommentLikeInput!): CommentLikeResponse!
+  updateAccountDetail(
+    input: AccountDetailUpdateInput!
+  ): AccountDetailUpdateResponse!
+  addCardDetail(input: AddCardDetailInput!): AddCardDetailResponse!
+  updateCardDetail(input: AccountCardUpdateInput!): AccountCardUpdateResponse!
+  deleteAll(input: deleteAllInput!): deleteAllResponse!
+  CommonComment(input: CommonCommentInput!): CommonCommentResponse!
+  deleteCommonComment(
+    input: CommonCommentDeleteInput!
+  ): CommonCommentDeleteResponse!
+  MapUserContactcube(
+    input: MapUserContactcubeInput!
+  ): MapUserContactcubeResponse!
+  CreateChatGroup(input: CreateChatGroupInput!): CreateChatGroupResponse!
+  UpdateChatGroup(input: UpdateChatGroupInput!): UpdateChatGroupResponse!
+  createBankAccount(input: AddAccountDetailInput!): AddAccountDetailResponse!
+  editBankAccDetail(input: EditBankAccInput!): EditBankAccResponse!
+  sendReportMail(input: ReportMailInput!): ReportMailDataInfo!
+  GetMatchStatus(input: GetMatchStatusInput!): GetMatchResponse!
+  commonSetting(input: CommonSettingInput!): CommonSettingResponse!
+  distanceSetting(input: DistanceSettingInput!): DistanceSettingResponse!
+  createClubSuggestion(
+    input: CreateClubSuggestionInput!
+  ): CreateClubSuggestionResponseFront!
+  updateRecommend(input: RecommendationInput!): RecommendationResponse!
+  deleteCoach(input: deleteCoachInput!): DeleteCoachResponse!
+  deleteCoachUser(input: deleUserCoachInput!): DeleUserCoachResponse!
+  deleteAlll(input: deleteAlInput!): DeleteAlResponse!
+  joinOpenPlayFront(input: joinOpenPlayInput!): joinOpenPlay!
+  openPlayDelete(input: openPlayDeleteInput!): openPlayDeleteResponse!
+  requestToPlayLesson(input: AddRequestPlayInputLsn!): RequestToPlayLsnResponse!
+  addPaymentLesson(input: addPaymentInputLsn!): CreateLsnPayResponse!
+  requestLessonAccept(input: LsnReqAcceptInput!): LsnReqAcceptResponse!
+  requestLessonReject(input: LessonReqRejectInput!): ReqRejectResponseLsn!
+  LessonCancel(input: LessonCancelInput!): LessonCancelResponse!
+  addgroupconnectycubeid(input: ConnectycubeidInput!): Connectycube!
+  inActiveCoach(input: inActiveCoachInput!): inActiveCoachResponse!
+  approveClubSuggestion(
+    input: approveClubSuggestionInput!
+  ): approveClubSuggestionInputResponseFront!
+  removePlayer(input: removePlayerInput!): removePlayerResponse!
+  joinMatch(input: joinMatchInput!): joinMatch!
+  sendCoachEventInvite(input: sendCoachInviteInput!): sendCoachInviteResponse!
+  removeCoachByOrganizer(input: CoachRemoveInput!): CoachRemoveResponse!
+  requestToPlayEvent(
+    input: AddRequestPlayInputEvent!
+  ): RequestToPlayEventResponse!
+  requestEventAccept(input: EventReqAcceptInput!): EventReqAcceptResponse!
+  requestCommonEventReject(
+    input: CommonEventReqRejectInput!
+  ): ReqRejectResponseEvent!
+  EventCancel(input: EventCancelInput!): EventCancelResponse!
+  addPaymentEvent(input: addPaymentInputEvent!): CreateEventPayResponse!
+  setPartnerPreference(
+    input: setPartnerPreferenceInput!
+  ): setPartnerPreferenceResponse!
+  cancelWaitingSpot(input: EventReqAcceptInput!): EventReqAcceptResponse!
+  moveToOtherEvent(input: MoveToOtherEventInput!): MoveToOtherEventResponse!
+  CommunityApprove(input: CommunityApproveInput!): CommunityApproveResponse!
+  UpdateCommunityPhoto(
+    input: UpdateCommunityPhotoInput!
+  ): UpdateCommunityPhotoResponse!
+  skipRatingFront(input: skipRatingInput!): skipRating!
+  addPreferredPartner(
+    input: addPreferredPartnerInput!
+  ): addPreferredPartnerResponse!
+  addPaymentPreferPartner(
+    input: addPaymentPreferPartnerInput!
+  ): addPaymentPreferPartnerResponse!
+  inviteFreeLessonAccept(
+    input: inviteFreeLessonAcceptInput!
+  ): inviteFreeLessonAcceptResponse!
+  joinCommonEvent(input: joinCommonEventInput!): joinCommonEventResponse!
+  inviteAcceptSlotCheck(
+    input: inviteAcceptSlotCheckInput!
+  ): inviteAcceptSlotCheckResponse!
+  login(input: LoginInput): AuthPayload!
+  refreshToken(input: RefreshTokenInput): RefreshTokenPayload!
+  logout: LogoutResponse!
+  forgotPassword(input: ForgotPasswordInput!): ForgotPasswordResponse!
+  updateForgottenPassword(
+    input: NewPasswordWithCodeInput
+  ): ForgotPasswordResponse!
+  register(input: RegisterInput): RegisterResponse!
+  socialLogin(input: SocialLoginInput!): AuthPayload!
+  verifyEmail(input: VerifyEmailInput!): AuthPayload!
+  updatePassword(input: UpdatePassword!): UpdatePasswordResponse!
+}
+
+type UserData {
+  uuid: String!
+  first_name: String
+  last_name: String
+  full_name: String
+  mobile_number: String
+  status: String
+  gender: String
+  avatar: String
+  file_path: String
+  phone_country_id: String
+  created_at: String
+  updated_at: String
+  sr_no: Int
+  country_id: String
+  country: String
+  state: String
+  city: String
+  date_of_birth: String
+  clubs: [clubs]
+  pickers: [pickers]
+  email: String
+  bio_data: String
+  rating: String
+  country_code: String
+  apple_key: String
+  is_social: Int
+  is_coach: Int
+  coach_speciality: Int
+  coach_experience: Float
+  coach_rate: Int
+  otp: Int
+}
+
+type Meta {
+  status: Boolean!
+  message: String!
+  message_code: String!
+  status_code: Int!
+}
+
+type my {
+  id: ID
+}
+
+type MatchLevel {
+  id: Int
+  uuid: String
+  title: String
+  status: String
+  created_at: String
+  updated_at: String
+  deleted_at: String
+  min_level: String
+  max_level: String
+  is_selected: String
+  type: String
+  skill_range: String
+}
+
+input SignUpInput {
+  version: String!
+  platform: String!
+  first_name: String!
+  last_name: String!
+  phone_country_id: String!
+  mobile_number: String!
+  device_token: String
+  device_info: String
+}
+
+type userStepOneData {
+  uuid: String
+  phone_country_id: String
+  mobile_number: String
+}
+
+type signupStepOneData {
+  user: userStepOneData
+}
+
+type SignUpStepOneResponse {
+  meta: Meta!
+  data: signupStepOneData
+}
+
+input SignUpStepTwoInput {
+  uuid: String!
+  avatar: String
+  file_path: String
+  first_name: String!
+  last_name: String!
+  email: String!
+  gender: Int!
+  date_of_birth: String!
+  bio_data: String
+  pickler: [String]
+  country: String
+  state: String
+  city: String
+  latitude: String
+  longitude: String
+  is_social: Int
+  phone_country_id: String
+  mobile_number: String
+  referral_from: String
+}
+
+type userStepTwoData {
+  uuid: String!
+  first_name: String!
+  last_name: String!
+  avatar: String
+  file_path: String
+  rating: String
+  latitude: String
+  longitude: String
+  is_card_added: Boolean
+  is_bank_account_added: Boolean
+}
+
+type signupStepTwoData {
+  is_completed: String
+}
+
+type SignUpStepTwoResponse {
+  meta: Meta!
+  data: signupStepTwoData
+}
+
+input SignUpStepThreeInput {
+  uuid: String!
+  rating: String
+  is_finish: Int
+  club: [String]
+}
+
+type signupStepThreeData {
+  token_type: String
+  expires_in: String
+  access_token: String
+  refresh_token: String
+  user: userStepTwoData
+}
+
+type SignUpStepThreeResponse {
+  meta: Meta!
+  data: signupStepThreeData
+}
+
+input SendOTPInput {
+  version: String
+  platform: String
+  phone_country_id: String!
+  mobile_number: String!
+}
+
+type userData {
+  uuid: String!
+  first_name: String
+  last_name: String
+  mobile_number: String
+  status: String
+  avatar: String
+  file_path: String
+  phone_country_id: String
+  created_at: String
+  gender: String
+  date_of_birth: String
+  country: String
+  state: String
+  city: String
+  pickers: [pickers]
+  clubs: [clubs]
+  ratings: [ratings]
+  email: String
+  bio_data: String
+  rating: String
+  country_code: String
+  apple_key: String
+  is_social: Int
+  location: String
+  recommendation: String
+  recommanded_by: Int
+  skill_by: Int
+  skill: skill
+  is_coach: Int
+  coach_speciality: Int
+  coach_experience: Float
+  certificate: [userCertificate]
+  coach_bio: String
+  coach_rate: Int
+  refferal_by: refferalBy
+  is_referral: Int
+}
+
+type OTPData {
+  user: userData
+}
+
+type SendOTPResponse {
+  meta: Meta!
+  data: OTPData
+}
+
+input VeryfyOtpInput {
+  phone_country_id: String!
+  mobile_number: String!
+  otp: String!
+}
+
+type userRes {
+  uuid: String
+  first_name: String
+  last_name: String
+  is_completed: String
+  rating: String
+  is_finish: Int
+}
+
+type VeryfyOTpResponse {
+  meta: Meta!
+  data: userRes
+}
+
+input UserLoginInput {
+  version: String!
+  platform: String!
+  phone_country_id: String!
+  mobile_number: String!
+  otp: String!
+  device_token: String
+  device_info: String
+}
+
+type LogoutRes {
+  meta: Meta!
+}
+
+type LoginUserData {
+  uuid: String!
+  first_name: String!
+  last_name: String!
+  avatar: String
+  file_path: String
+  rating: String
+  is_completed: String
+  is_finish: Int
+  connectycube_id: String
+  phone_country_id: String
+  mobile_number: String
+  is_card_added: Boolean
+  is_bank_account_added: Boolean
+}
+
+type userLoginData {
+  token_type: String!
+  expires_in: String!
+  access_token: String!
+  refresh_token: String!
+  user: LoginUserData
+}
+
+type userLoginResponse {
+  meta: Meta!
+  data: userLoginData
+}
+
+type ClbuDataInfo {
+  meta: Meta!
+  data: [getClubList]
+}
+
+type getClubList {
+  uuid: String
+  name: String
+  type: String
+  latitude: String
+  longitude: String
+  location: String
+  image: String
+  file_path: String
+}
+
+input ClubInput {
+  name: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  is_membership_requre: String
+  club_type: String
+  user_uuid: String
+}
+
+type testDataInfo {
+  meta: Meta!
+  data: getTestDatata
+}
+
+type getTestDatata {
+  data: String
+}
+
+input clubMemberPaginationInput {
+  uuid: String
+  full_name: String
+  rating: String
+  gender: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  min_age: Int
+  max_age: Int
+  recommendation: String
+  offset: Int
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type HomeClubMemberInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [HomeClubMembersList]
+}
+
+type HomeClubMembersList {
+  sr_no: Int
+  uuid: String
+  full_name: String
+  file_path: String
+  avatar: String
+  rattng: String
+  address: String
+  location: String
+  recommendation: String
+  rating: String
+  is_friend: Boolean
+  connectycube_id: String
+  is_selected: Boolean
+}
+
+type Pagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input getClubDetailInput {
+  uuid: String
+}
+
+type getClubDetails {
+  meta: Meta!
+  data: FrontClubData
+}
+
+type FrontClubData {
+  uuid: String
+  image: String
+  file_path: String
+  type: String
+  address: String
+  url: String
+  country_code: String
+  phone_number: String
+  no_of_members: Int
+  no_of_courts: Int
+  court_type: String
+  is_membership_require: String
+  cost: String
+  latitude: String
+  longitude: String
+  name: String
+  note: String
+  short_address: String
+  start_time_mon: String
+  end_time_mon: String
+  start_time_tue: String
+  end_time_tue: String
+  start_time_wed: String
+  end_time_wed: String
+  start_time_thu: String
+  end_time_thu: String
+  start_time_fri: String
+  end_time_fri: String
+  start_time_sat: String
+  end_time_sat: String
+  start_time_sun: String
+  end_time_sun: String
+  is_mon_on: Boolean
+  is_tue_on: Boolean
+  is_wed_on: Boolean
+  is_thu_on: Boolean
+  is_fri_on: Boolean
+  is_sat_on: Boolean
+  is_sun_on: Boolean
+}
+
+input LoginLogInput {
+  user_uuid: String
+  version: String
+  plateform: String
+}
+
+type LastLoginResponse {
+  meta: Meta!
+}
+
+input UserClubCreateInput {
+  user_uuid: String
+  name: String!
+  address: String
+  latitude: String
+  longitude: String
+  image: String
+  file_path: String
+  type: String
+  url: String
+  note: String
+  phone_number: String
+  number_of_member: String
+  number_of_courts: String
+  is_membership_requre: String
+  cost: String
+  court_type: String
+  country_code: String
+  start_time: String
+  end_time: String
+  start_time_mon: String
+  end_time_mon: String
+  start_time_tue: String
+  end_time_tue: String
+  start_time_wed: String
+  end_time_wed: String
+  start_time_thu: String
+  end_time_thu: String
+  start_time_fri: String
+  end_time_fri: String
+  start_time_sat: String
+  end_time_sat: String
+  start_time_sun: String
+  end_time_sun: String
+  is_mon_on: Boolean
+  is_tue_on: Boolean
+  is_wed_on: Boolean
+  is_thu_on: Boolean
+  is_fri_on: Boolean
+  is_sat_on: Boolean
+  is_sun_on: Boolean
+  is_register: Int
+  short_address: String
+}
+
+type ClubResponseFront {
+  meta: Meta!
+  data: clubRes
+}
+
+type clubRes {
+  uuid: String
+  name: String
+  type: String
+  address: String
+  image: String
+  file_path: String
+}
+
+type UserProfileInfo {
+  meta: Meta!
+  data: getprofileData
+}
+
+input GetProfileInput {
+  uuid: String
+  logged_in_user: String
+  is_home: Boolean
+  is_feedback_need: Boolean
+}
+
+type getprofileData {
+  uuid: String!
+  first_name: String
+  last_name: String
+  mobile_number: String
+  status: String
+  avatar: String
+  file_path: String
+  phone_country_id: String
+  bio_data: String
+  rating: String
+  created_at: String
+  gender: String
+  date_of_birth: String
+  country: String
+  state: String
+  city: String
+  email: String
+  is_friend: Boolean
+  recommendation: String
+  badges: [String]
+  pickers: [pickers]
+  clubs: [clubs]
+  referral_code: String
+  latitude: String
+  longitude: String
+  location: String
+  redius: Int
+  recommanded_by: Int
+  skill_by: Int
+  common_grp: Int
+  isBlocked: Boolean
+  badgesList: [badgesList]
+  country_name: String
+  connectycube_id: String
+  unread_count: Int
+  referral_from: String
+  is_coach: Int
+  UserLessonLevel: [MatchLevel]
+  is_feedback_exits: Boolean
+  coachDetails: coachProfile
+  coach_bio: String
+  jwt_token: String
+  card_id: String
+  bank_id: String
+  customer_id: String
+  stripe_account_id: String
+}
+
+type badgesList {
+  uuid: String
+  name: String
+  image: String
+  file_path: String
+  description: String
+  is_achive: Boolean
+  is_user_badge: String
+}
+
+type coachProfile {
+  coach_rate: String
+  recommanded_by: String
+  coach_experience: String
+  coach_speciality: String
+  rating: String
+  certifications: String
+  lesson_given: String
+  recommendation: String
+}
+
+input ProfileUpdateInput {
+  uuid: String!
+  first_name: String!
+  last_name: String!
+  gender: Int!
+  date_of_birth: String!
+  phone_country_id: String!
+  mobile_number: String!
+  country: String
+  state: String
+  city: String
+  bio_data: String
+  avatar: String
+  file_path: String
+  pickler: [String]
+  club: [String]
+  coach_rate: Int
+}
+
+type ProfileUpdateResponse {
+  meta: Meta!
+}
+
+input UpdateDeviceTockenInput {
+  uuid: String!
+  device_token: String!
+}
+
+type UpdateTokenResponse {
+  meta: Meta!
+}
+
+type UserQRCodeInfo {
+  meta: Meta!
+  data: Qrtext
+}
+
+type Qrtext {
+  text: String
+}
+
+input UserLocationUpdateInput {
+  uuid: String!
+  latitude: String
+  longitude: String
+  location: String
+  redius: Int
+  country_name: String
+}
+
+type LocationUpdateResponse {
+  meta: Meta!
+}
+
+input LocationUpdateInput {
+  name: String
+  rating: String
+  gender: String
+  radius: Int
+  min_age: Int
+  max_age: Int
+  max: Int
+  min: Int
+  latitude: Float
+  longitude: Float
+  recommendation: String
+  offset: Int
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type RecentJoinListResponse {
+  meta: Meta!
+  pagination: Pagination
+  data: [recentJoinUsers]
+}
+
+type recentJoinUsers {
+  uuid: String
+  full_name: String
+  avtar: String
+  file_path: String
+  rating: String
+  locations: String
+  is_like: Int
+  like_count: String
+  comment_count: String
+  isSelected: Boolean
+  clubs: [clubs]
+  recommendation: String
+  gender: String
+  age: Int
+  is_friend: Boolean
+  connectycube_id: String
+  created_at: String
+  max_age: String
+}
+
+type clubs {
+  uuid: String
+  name: String
+  club_type: String
+  type: String
+  address: String
+  club_latitude: String
+  club_longitude: String
+}
+
+input AddUserCommentInput {
+  user_uuid: String
+  comment: String
+  parent_id: String
+}
+
+type AddUserCommentResponse {
+  meta: Meta!
+}
+
+input UserCommentsInput {
+  user_uuid: String
+}
+
+type UserCommentInfo {
+  meta: Meta!
+  data: [UsersCommentData]
+}
+
+type UsersCommentData {
+  id: Int
+  uuid: String
+  comments: String
+  created_by: String
+  created_at: String
+  like_count: Int
+  is_like: Boolean
+  sub_comments: [user_sub_comments]
+}
+
+type user_sub_comments {
+  uuid: String
+  comments: String
+  created_by: String
+  created_at: String
+  like_count: Int
+  is_like: Boolean
+}
+
+input UserLikeInput {
+  user_uuid: String
+  is_like: Int
+}
+
+type UserLikeResponse {
+  meta: Meta!
+}
+
+type ClubResponse {
+  meta: Meta!
+}
+
+input AddAcceptGroupRequestInput {
+  group_uuid: String
+  user_uuid: String
+}
+
+type AddAcceptGroupRequestResponse {
+  meta: Meta!
+  data: userName
+}
+
+type userName {
+  full_name: String
+}
+
+input AddAcceptFriendRequestqrInput {
+  sender_id: String!
+  receiver_id: String!
+}
+
+type AddAcceptFriendRequestqrResponse {
+  meta: Meta!
+  data: userName
+}
+
+type dashboardCount {
+  meta: Meta!
+  data: getDashboardCount
+}
+
+type getDashboardCount {
+  open_match_count: Int
+  scheduled_match_count: Int
+  recently_joined: Int
+  upcoming_events: Int
+}
+
+input AdddashboardInput {
+  latitude: Float
+  longitude: Float
+  radius: Int
+}
+
+type PreSignUrlInfo {
+  meta: Meta!
+  data: PreSignUrl
+}
+
+type PreSignUrl {
+  url: String
+}
+
+input getPreSignUrlInput {
+  file_path: String!
+}
+
+input Input {
+  email: String!
+  password: String!
+}
+
+type LoginUser {
+  uuid: String!
+  first_name: String
+  last_name: String
+  mobile_number: String
+  status: String
+  avatar: String
+  file_path: String
+  is_social: Int
+  phone_country_id: String
+}
+
+type LoginData {
+  token_type: String!
+  expires_in: String!
+  access_token: String!
+  refresh_token: String!
+  user: LoginUser
+}
+
+type loginResponse {
+  meta: Meta!
+  data: LoginData
+}
+
+input ForgotPasswordInput {
+  email: String!
+}
+
+type ForgotPasswordRes {
+  meta: Meta!
+}
+
+type UserDataInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [UserData]
+}
+
+type pickers {
+  uuid: String
+  name: String
+}
+
+input UserPaginationInput {
+  offset: Int!
+  limit: Int
+  full_name: String
+  mobile_number: String
+  status: String
+  gender: String
+  email: String
+  rating: String
+  start_date: String
+  end_date: String
+  sort_column: String
+  sort_order: String
+  club_id: String
+  state: String
+  is_coach: String
+}
+
+input deleteUserInput {
+  uuid: String!
+}
+
+type DeleteUserResponse {
+  meta: Meta!
+}
+
+input viewUserInput {
+  uuid: String!
+}
+
+type viewUserResponse {
+  meta: Meta!
+  data: userData!
+}
+
+type ratings {
+  uuid: String
+  rating: String
+}
+
+type skill {
+  uuid: String
+  rating: String
+}
+
+type userCertificate {
+  uuid: String
+  certificate: String
+}
+
+type refferalBy {
+  uuid: String
+  name: String
+  clubs: [clubs]
+  location: String
+  email: String
+  skill: skill
+  avatar: String
+  file_path: String
+}
+
+input UserUpdateStatusInput {
+  uuid: String!
+  status: String!
+}
+
+type UpdateUserStatusResponse {
+  meta: Meta!
+}
+
+input UserCreateInput {
+  first_name: String!
+  last_name: String!
+  gender: Int!
+  date_of_birth: String!
+  phone_country_id: String!
+  mobile_number: String!
+  country: String
+  state: String
+  city: String
+  rating: String
+  pickler: [String]
+  club: [String]
+  avatar: String
+  file_path: String
+  email: String
+  bio_data: String
+  location: String
+  coach_rate: Int
+}
+
+type UserResponse {
+  meta: Meta!
+}
+
+input UserUpdateInput {
+  uuid: String!
+  first_name: String!
+  last_name: String!
+  gender: Int!
+  date_of_birth: String!
+  phone_country_id: String!
+  mobile_number: String!
+  country: String
+  state: String
+  city: String
+  rating: String
+  avatar: String
+  file_path: String
+  pickler: [String]
+  club: [String]
+  email: String
+  bio_data: String
+  location: String
+  coach_speciality: Int
+  coach_experience: Float
+  is_coach: Int
+  certificate: [String]
+  coach_bio: String
+  coach_rate: Int
+}
+
+type PicklerDataInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [PicklerData]
+}
+
+type PicklerData {
+  uuid: String!
+  name: String
+  status: String
+  sr_no: Int
+  created_at: String
+  updated_at: String
+}
+
+input ClubCreateInput {
+  name: String!
+  address: String!
+  latitude: String
+  longitude: String
+  image: String
+  file_path: String
+  type: String
+  url: String
+  phone_number: String
+  number_of_member: String
+  number_of_courts: String
+  start_time: String
+  end_time: String
+  is_membership_requre: String
+  cost: String
+  note: String
+  court_type: String
+  country_code: String
+  start_time_mon: String
+  end_time_mon: String
+  start_time_tue: String
+  end_time_tue: String
+  start_time_wed: String
+  end_time_wed: String
+  start_time_thu: String
+  end_time_thu: String
+  start_time_fri: String
+  end_time_fri: String
+  start_time_sat: String
+  end_time_sat: String
+  start_time_sun: String
+  end_time_sun: String
+  is_mon_on: Boolean
+  is_tue_on: Boolean
+  is_wed_on: Boolean
+  is_thu_on: Boolean
+  is_fri_on: Boolean
+  is_sat_on: Boolean
+  is_sun_on: Boolean
+  short_address: String
+}
+
+type ClubDataInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [ClubData]
+}
+
+type ClubData {
+  uuid: String!
+  name: String
+  address: String
+  latitude: String
+  longitude: String
+  status: String
+  created_at: String
+  updated_at: String
+  image: String
+  file_path: String
+  type: String
+  url: String
+  phone_number: String
+  no_member: String
+  no_courts: String
+  start_time: String
+  end_time: String
+  is_membership_requre: String
+  court_type: String
+  is_approve: String
+  cost: String
+  sr_no: Int
+  country_code: String
+  short_address: String
+  club_type: String
+  added_by: String
+}
+
+input CulbPaginationInput {
+  offset: Int!
+  limit: Int
+  name: String
+  address: String
+  club_type: String
+  is_export: Int
+  start_date: String
+  end_date: String
+  sort_column: String
+  sort_order: String
+  state: String
+  is_approve: String
+  no_member: String
+}
+
+input UpdateStatusInput {
+  uuid: String!
+  status: String!
+}
+
+input viewClubInput {
+  uuid: String!
+}
+
+type viewClubResponse {
+  meta: Meta!
+  data: clubData!
+}
+
+type clubData {
+  uuid: String!
+  name: String
+  short_address: String
+  address: String
+  latitude: String
+  longitude: String
+  contact: String
+  status: String
+  image: String
+  file_path: String
+  type: String
+  url: String
+  phone_number: String
+  no_member: String
+  no_courts: String
+  start_time: String
+  end_time: String
+  is_membership_requre: String
+  created_at: String
+  court_type: String
+  cost: String
+  country_code: String
+  club_type: String
+  added_by: String
+  note: String
+  start_time_mon: String
+  end_time_mon: String
+  start_time_tue: String
+  end_time_tue: String
+  start_time_wed: String
+  end_time_wed: String
+  start_time_thu: String
+  end_time_thu: String
+  start_time_fri: String
+  end_time_fri: String
+  start_time_sat: String
+  end_time_sat: String
+  start_time_sun: String
+  end_time_sun: String
+  is_mon_on: Boolean
+  is_tue_on: Boolean
+  is_wed_on: Boolean
+  is_thu_on: Boolean
+  is_fri_on: Boolean
+  is_sat_on: Boolean
+  is_sun_on: Boolean
+  group_count: Int
+}
+
+input deleteClubInput {
+  uuid: String!
+}
+
+type DeleteClubResponse {
+  meta: Meta!
+}
+
+input ClubUpdateInput {
+  uuid: String!
+  name: String!
+  address: String!
+  latitude: String
+  longitude: String
+  image: String
+  file_path: String
+  type: String
+  url: String
+  phone_number: String
+  number_of_member: String
+  number_of_courts: String
+  start_time: String
+  end_time: String
+  is_membership_requre: String
+  cost: String
+  note: String
+  short_address: String
+  court_type: String
+  country_code: String
+  start_time_mon: String
+  end_time_mon: String
+  start_time_tue: String
+  end_time_tue: String
+  start_time_wed: String
+  end_time_wed: String
+  start_time_thu: String
+  end_time_thu: String
+  start_time_fri: String
+  end_time_fri: String
+  start_time_sat: String
+  end_time_sat: String
+  start_time_sun: String
+  end_time_sun: String
+  is_mon_on: Boolean
+  is_tue_on: Boolean
+  is_wed_on: Boolean
+  is_thu_on: Boolean
+  is_fri_on: Boolean
+  is_sat_on: Boolean
+  is_sun_on: Boolean
+}
+
+input MemberPaginationInput {
+  offset: Int!
+  limit: Int
+  uuid: String
+  full_name: String
+  sort_column: String
+  sort_order: String
+}
+
+type ClubMemberInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [ClubMembersList]
+}
+
+type ClubMembersList {
+  sr_no: Int
+  uuid: String
+  full_name: String
+  file_path: String
+  avatar: String
+  rattng: String
+  address: String
+}
+
+type exportClubDataInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: ClubInfo
+}
+
+type ClubInfo {
+  url: String
+}
+
+input exportCulbPaginationInput {
+  offset: Int!
+  limit: Int
+  name: String
+  address: String
+  club_type: String
+  is_export: Int
+  sort_column: String
+  sort_order: String
+  start_date: String
+  end_date: String
+  state: String
+  is_approve: String
+  no_member: String
+}
+
+scalar Upload
+
+type UploadFileRes {
+  meta: Meta!
+}
+
+input ApproveClubInput {
+  uuid: String!
+  is_approve: Int!
+}
+
+type ApproveClubResponse {
+  meta: Meta!
+}
+
+input SplashScreen {
+  image: String!
+  file_path: String!
+  title: String!
+  description: String!
+}
+
+type SplashScreenResponse {
+  meta: Meta!
+}
+
+input SplashScreenPaginationInput {
+  offset: Int!
+  limit: Int
+  status: String
+  sort_column: String
+  sort_order: String
+}
+
+type SplashScreenDataInfo {
+  meta: Meta!
+  pagination: SplashScreenPagination
+  data: [SplashScreenData]
+}
+
+type SplashScreenData {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  title: String
+  description: String
+  status: String
+  name: String
+  created_by: Int
+  created_at: String
+  updated_at: String
+}
+
+type SplashScreenPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input UpdateSplashScreenStatusInput {
+  uuid: String!
+  status: String!
+}
+
+type UpdateSplashScreenStatusResponse {
+  meta: Meta!
+}
+
+input viewSplashScreenInput {
+  uuid: String!
+}
+
+type viewSplashScreenResponse {
+  meta: Meta!
+  data: splashScreenData!
+}
+
+type splashScreenData {
+  uuid: String!
+  image: String
+  title: String
+  description: String
+  status: String
+  created_by: Int
+  name: String
+  created_at: String
+  file_path: String
+}
+
+input SplashscreenUpdateInput {
+  uuid: String!
+  image: String
+  name: String
+  title: String
+  file_path: String
+  description: String
+  status: String
+}
+
+input Banner {
+  file_name: String
+  file_type: String
+  file_path: String
+  title: String
+  description: String
+  status: String
+  start_date: String
+  end_date: String
+  start_time: String
+  end_time: String
+  url: String
+  order: Int
+  banner_type: String
+}
+
+type BannerResponse {
+  meta: Meta!
+}
+
+input UpdateBannerStatusInput {
+  uuid: String!
+  status: String!
+}
+
+type UpdateBannerStatusResponse {
+  meta: Meta!
+}
+
+input viewBannerInput {
+  uuid: String!
+}
+
+type viewBannerResponse {
+  meta: Meta!
+  data: bannerData!
+}
+
+type bannerData {
+  uuid: String!
+  file_name: String
+  file_type: String
+  file_path: String
+  title: String
+  description: String
+  status: String
+  start_date: String
+  end_date: String
+  start_time: String
+  end_time: String
+  created_by: String
+  url: String
+  order: Int
+  banner_type: viewBannertype
+}
+
+type viewBannertype {
+  id: ID
+  uuid: String
+  name: String
+  key: String
+}
+
+input BannerUpdateInput {
+  uuid: String!
+  file_name: String
+  file_type: String
+  title: String
+  description: String
+  status: String
+  start_date: String
+  start_time: String
+  end_time: String
+  end_date: String
+  file_path: String
+  url: String
+  order: Int
+  banner_type: String
+}
+
+input BannerPaginationInput {
+  offset: Int!
+  limit: Int!
+  banner_title: String
+  file_type: String
+  file_path: String
+  file_name: String
+  status: String
+  sort_column: String
+  sort_order: String
+  banner_type: String
+}
+
+type BannerInfo {
+  meta: Meta!
+  pagination: BannerPagination
+  data: [BannerData]
+}
+
+type BannerData {
+  sr_no: Int!
+  uuid: String!
+  file_name: String
+  file_path: String
+  file_type: String
+  title: String
+  description: String
+  status: String
+  start_date: String
+  end_date: String
+  start_time: String
+  end_time: String
+  created_at: String
+  updated_at: String
+  url: String
+  order: Int
+  banner_type: String
+}
+
+type BannerPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input DeleteBannerInput {
+  uuid: String!
+}
+
+type DeleteBannerhResponse {
+  meta: Meta!
+}
+
+input GroupDetailsInput {
+  name: String!
+  image: String
+  file_path: String
+  club: [String]
+  type: [String]
+  rating_id: String
+  status: String
+  description: String
+  member_count: Int
+  is_private: Int
+}
+
+type GroupDetailsResponse {
+  meta: Meta!
+}
+
+input UpdateGroupStatusInput {
+  uuid: String!
+  status: String!
+}
+
+type UpdateGroupStatusResponse {
+  meta: Meta!
+}
+
+input GroupDataPaginationInput {
+  offset: Int!
+  limit: Int
+  name: String
+  owner_name: String
+  group_type: String
+  club_name: String
+  status: String
+  sort_column: String
+  sort_order: String
+  is_private: String
+}
+
+type GroupDetailsInfo {
+  meta: Meta!
+  pagination: GroupPagination
+  data: [GroupDetails]
+}
+
+type GroupDetails {
+  sr_no: Int!
+  uuid: String
+  image: String
+  file_path: String
+  name: String
+  status: String
+  clubs: [clubInfo]
+  types: [typeInfo]
+  rating: String
+  member_count: Int
+  description: String
+  group_owner: String
+  created_by: String
+  created_at: String
+  updated_at: String
+  is_private: Int
+}
+
+type clubInfo {
+  uuid: String!
+  name: String!
+  address: String!
+}
+
+type typeInfo {
+  uuid: String!
+  name: String!
+}
+
+type GroupPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+  private_count: Int
+  public_count: Int
+}
+
+input viewGroupDetailInput {
+  uuid: String!
+}
+
+type viewGroupDetailResponse {
+  meta: Meta!
+  data: groupDetails!
+}
+
+type groupDetails {
+  uuid: String!
+  image: String
+  file_path: String
+  name: String
+  status: String
+  clubs: [clubInfo]
+  types: [typeInfo]
+  rating: String
+  member_count: Int
+  description: String
+  group_owner: String
+  created_by: String
+  created_at: String
+  is_private: Int
+}
+
+input BannerGroupInput {
+  uuid: String!
+  name: String!
+  image: String
+  file_path: String
+  club: [String]
+  type: [String]
+  rating_id: String
+  status: String
+  description: String
+  member_count: Int
+  is_private: Int
+}
+
+type GroupResponse {
+  meta: Meta!
+}
+
+input DeleteGroupInput {
+  uuid: String!
+}
+
+type DeleteGroupResponse {
+  meta: Meta!
+  data: ccGroupData
+}
+
+type ccGroupData {
+  ccgroup: String
+}
+
+input AddGroupMemberInput {
+  group_uuid: String!
+  user: [String]!
+}
+
+type AddGroupMemberResponse {
+  meta: Meta!
+}
+
+input viewGroupMemberInput {
+  uuid: String
+  full_name: String
+  rating: String
+  gender: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  min_age: Int
+  max_age: Int
+  recommendation: String
+  offset: Int
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type GroupMemberDetailInfo {
+  meta: Meta!
+  pagination: pagination
+  data: [GroupMemberInfo]
+}
+
+type GroupMemberInfo {
+  sr_no: Int!
+  uuid: String!
+  email: String
+  latitude: String
+  longitude: String
+  county: String
+  state: String
+  city: String
+  full_name: String
+  mobile_number: String
+  avatar: String
+  file_path: String
+  is_social: Int
+  rattings: Float
+  location: String
+  country_code: String
+}
+
+type pagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input RemoveGroupUserInput {
+  group_uuid: String!
+  user: [String]!
+}
+
+type RemoveGroupUserResponse {
+  meta: Meta!
+  data: CCGroupData
+}
+
+type CCGroupData {
+  ccgroup: String
+}
+
+input UserRatingPaginationInput {
+  offset: Int!
+  limit: Int!
+  player_name: String
+  given_by: [String]
+  sort_column: String
+  sort_order: String
+  rating_type: String
+}
+
+type UserRatingInfo {
+  meta: Meta!
+  pagination: UserRatingPagination
+  data: [UserRatingList]
+}
+
+type UserRatingList {
+  sr_no: Int!
+  match_uuid: String
+  match: String
+  locations: String
+  player_name: String
+  mobile_number: String
+  given_by: String
+  given_by_mobile_number: String
+  rating: String
+  rating_type: String
+  date: String
+}
+
+type UserRatingPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input UserListPaginationInput {
+  offset: Int!
+  limit: Int!
+  name: String
+  sort_column: String
+  sort_order: String
+}
+
+type UserListInfo {
+  meta: Meta!
+  pagination: UserListPagination
+  data: [UserListList]
+}
+
+type UserListList {
+  id: Int!
+  uuid: String
+  first_name: String
+  last_name: String
+  full_name: String
+}
+
+type UserListPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+type CountyDataInfo {
+  meta: Meta!
+  data: [CountyData]
+}
+
+type CountyData {
+  id: String
+  uuid: String!
+  code: String
+  name: String
+  phone_code: String
+  currency: String
+}
+
+type AdminRatingDataInfo {
+  meta: Meta!
+  data: [RatingDataList]
+}
+
+type RatingDataList {
+  uuid: String!
+  rating: String
+  details: String
+  sr_no: Int
+  created_at: String
+  updated_at: String
+}
+
+type RatingDetailInfo {
+  meta: Meta!
+  data: RatingDetail
+}
+
+type RatingDetail {
+  uuid: String
+  rating: String
+  details: String
+  sr_no: Int
+}
+
+input getRatingInput {
+  version: String
+  platform: String
+  rating: String
+}
+
+type CmsPageInfo {
+  meta: Meta!
+  data: CmsDetail
+}
+
+type CmsDetail {
+  uuid: String
+  title: String
+  description: String
+}
+
+input getCmsInput {
+  slug: String
+}
+
+type GroupTypeDataInfo {
+  meta: Meta!
+  data: [GroupTypeData]
+}
+
+type GroupTypeData {
+  uuid: String!
+  name: String
+}
+
+input AddNewsInputs {
+  file_name: String
+  file_path: String
+  file_type: String
+  title: String
+  description: String
+  status: String
+  country_id: String
+  country_name: String
+  url: String
+}
+
+type NewsResponse {
+  meta: Meta!
+}
+
+input UpdateNewsStatusInput {
+  uuid: String!
+  status: String!
+}
+
+type UpdateNewsStatusResponse {
+  meta: Meta!
+}
+
+input NewsUpdateInput {
+  uuid: String!
+  file_name: String
+  file_type: String
+  file_path: String
+  title: String
+  description: String
+  status: String
+  country_id: String
+  country_name: String
+  url: String
+}
+
+input viewNewsInput {
+  uuid: String!
+}
+
+type viewNewsResponse {
+  meta: Meta!
+  data: newsDataInfo!
+}
+
+type newsDataInfo {
+  uuid: String!
+  file_name: String
+  file_path: String
+  file_type: String
+  title: String
+  status: String
+  created_at: String
+  country_id: String
+  country_name: String
+  description: String
+  url: String
+}
+
+input NewsPaginationInput {
+  offset: Int!
+  limit: Int!
+  title: String
+  file_type: String
+  status: String
+  start_date: String
+  end_date: String
+  sort_column: String
+  sort_order: String
+  country_id: String
+}
+
+type NewsDataInfo {
+  meta: Meta!
+  pagination: NewsPagination
+  data: [NewsDetails]
+}
+
+type NewsDetails {
+  sr_no: Int!
+  uuid: String!
+  file_name: String
+  file_path: String
+  file_type: String
+  title: String
+  description: String
+  status: String
+  created_at: String
+  country_id: String
+  country_name: String
+  updated_at: String
+  url: String
+}
+
+type NewsPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input DeleteNewsInput {
+  uuid: String!
+}
+
+type DeleteNewsResponse {
+  meta: Meta!
+}
+
+type GetOnboardingDataInfo {
+  meta: Meta!
+  data: [OnboardingData]
+}
+
+type OnboardingData {
+  id: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  title: String
+  description: String
+  status: Int!
+  order: Int!
+}
+
+input GroupFrontInput {
+  name: String!
+  image: String
+  file_path: String
+  club: [String]
+  type: [String]
+  rating_id: String
+  description: String
+  is_private: Int
+  location: String
+  latitude: String
+  longitude: String
+}
+
+type GroupFrontResponse {
+  meta: Meta!
+  data: group_data
+}
+
+type group_data {
+  uuid: String
+}
+
+input viewGroupFrontInput {
+  uuid: String!
+}
+
+type viewGroupResponse {
+  meta: Meta!
+  data: groupDataFront
+}
+
+type groupDataFront {
+  uuid: String!
+  image: String
+  file_path: String
+  name: String
+  status: String
+  clubs: [clubsInfo]
+  types: [typeInfo]
+  rating: String
+  min_rating: String
+  created_by: Int
+  created_at: String
+  description: String
+  no_of_player: Int
+  is_accepted: Boolean
+  ownerUser: GroupOwnerInfo
+  ccgroup: String
+  is_private: Int
+  is_requested: Int
+  location: String
+  latitude: String
+  longitude: String
+}
+
+type GroupOwnerInfo {
+  uuid: String
+  full_name: String
+  image: String
+  file_path: String
+  recommendation: String
+  rating: String
+  location: String
+  club: groupClubInfo
+  connectycube_id: String
+}
+
+type groupClubInfo {
+  uuid: String
+  name: String
+  type: String
+}
+
+type clubsInfo {
+  uuid: String
+  name: String
+  type: String
+  latitude: String
+  longitude: String
+  address: String
+  image: String
+  file_path: String
+}
+
+input GroupPaginationInput {
+  offset: Int!
+  limit: Int
+  name: String
+  status: String
+  group_type: String
+  skill: String
+  club: String
+  is_explore_list: Boolean
+  user_uuid: String
+  sort_column: String
+  sort_order: String
+  is_owner: String
+  is_my_group: Boolean
+  group_for: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+}
+
+type GroupDataInfo {
+  meta: Meta!
+  pagination: GroupPagination
+  data: [GroupData]
+}
+
+type GroupData {
+  sr_no: Int!
+  uuid: String
+  image: String
+  name: String
+  owner: String
+  status: String
+  clubs: [clubInfo]
+  types: [typeInfo]
+  rating: Float
+  min_rating: Float
+  file_path: String
+  no_of_player: Int
+  isSelected: Boolean
+  created_by: Int
+  created_at: String
+  ccgroup: String
+  is_private: Int
+  location: String
+  latitude: String
+  longitude: String
+}
+
+input GroupInput {
+  uuid: String!
+  name: String!
+  club: [String]
+  type: [String]
+  image: String
+  file_path: String
+  rating_id: String
+  description: String
+  is_private: Int
+  location: String
+  latitude: String
+  longitude: String
+}
+
+type exploreClubPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+type exploreClbuDataInfo {
+  meta: Meta!
+  pagination: exploreClubPagination
+  data: [getExploreClubList]
+}
+
+type getExploreClubList {
+  uuid: String!
+  name: String
+  type: String
+  no_of_member: Int
+  image: String
+  file_path: String
+  location: String
+  court_type: String
+  no_courts: String
+  is_membership_req: Boolean
+  short_address: String
+  ccgroup: String
+}
+
+input exploreClubInput {
+  offset: Int!
+  limit: Int
+  name: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  is_membership_requre: String
+  court_type: String
+  no_courts: Int
+  no_member: Int
+  type: String
+}
+
+input joinGroupInput {
+  group_id: String!
+  user_id: String!
+  status: String
+}
+
+type joinGroupResponse {
+  meta: Meta!
+  data: ccGroupData
+}
+
+input sendRequestToJoinInput {
+  group_uuid: [String]!
+  user: String!
+}
+
+type sendRequestToJoinResponse {
+  meta: Meta!
+  data: group_data
+}
+
+input publicGroupJoinInput {
+  group_id: String!
+  user_id: String!
+  status: String!
+}
+
+type publicGroupJoinResponse {
+  meta: Meta!
+  data: ccGroupData
+}
+
+input UserAddGroupInput {
+  group_uuid: [String]!
+  user: String!
+}
+
+type UserAddGroupResponse {
+  meta: Meta!
+}
+
+type GroupMemberDataInfo {
+  meta: Meta!
+  pagination: pagination
+  data: [GroupMemberData]
+}
+
+type GroupMemberData {
+  uuid: String
+  full_name: String
+  mobile_number: String
+  image: String
+  file_path: String
+  recommendation: String
+  rating: String
+  gender: String
+  isSelected: Int
+  isFriend: Boolean
+  location: String
+  clubsInfo: frontGrpMemClubInfo
+  connectycube_id: String
+}
+
+type frontGrpMemClubInfo {
+  uuid: String
+  name: String
+  type: String
+}
+
+input RemoveGroupMemberInput {
+  group_uuid: String!
+  user: [String]!
+}
+
+type RemoveGroupMemberResponse {
+  meta: Meta!
+  data: CCGroupData
+}
+
+input ViewGroupMemberAddGroupInput {
+  uuid: String
+  offset: Int
+  limit: Int
+  full_name: String
+  rating: String
+  gender: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  min_age: Int
+  max_age: Int
+  recommendation: String
+  is_friend: Boolean
+  sort_column: String
+  sort_order: String
+}
+
+type AddtoGroupMemberDataInfo {
+  meta: Meta!
+  pagination: pagination
+  data: [OtherGroupMemberData]
+}
+
+type OtherGroupMemberData {
+  uuid: String
+  full_name: String
+  mobile_number: String
+  image: String
+  file_path: String
+  recommendation: String
+  rating: String
+  gender: String
+  isSelected: Boolean
+  location: String
+  clubsInfo: frontOtherGrpMemClubInfo
+  connectycube_id: String
+  is_friend: Boolean
+}
+
+type frontOtherGrpMemClubInfo {
+  uuid: String
+  name: String
+  type: String
+}
+
+input UserRemoveGroupInput {
+  group_uuid: String!
+  user: [String]!
+}
+
+type UserRemoveGroupResponse {
+  meta: Meta!
+  data: CCGroupData
+}
+
+input CMSCreateInput {
+  title: String
+  description: String
+  status: String
+}
+
+type AddCMSResponse {
+  meta: Meta!
+}
+
+type ViewCmsPage {
+  meta: Meta!
+  data: CmsView
+}
+
+type CmsView {
+  uuid: String
+  title: String
+  description: String
+  status: String
+  terms: [TermsResponse]
+}
+
+type TermsResponse {
+  title: String
+  description: String
+}
+
+input viewCmsInput {
+  uuid: String
+}
+
+input UpdateCMSStatusInput {
+  uuid: String!
+  status: String!
+}
+
+type UpdateCMSStatusResponse {
+  meta: Meta!
+}
+
+input deleteCMSInput {
+  uuid: String!
+}
+
+type DeleteCMSResponse {
+  meta: Meta!
+}
+
+input CMSUpdateInput {
+  uuid: String!
+  title: String
+  description: String
+  status: String
+  terms: [TermsData]
+}
+
+input TermsData {
+  title: String
+  description: String
+}
+
+type CMSResponse {
+  meta: Meta!
+}
+
+type CMSDataInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [CMSData]
+}
+
+type CMSData {
+  uuid: String!
+  title: String
+  description: String
+  status: String
+  slug: String
+  sr_no: Int
+  created_at: String
+  updated_at: String
+}
+
+input CMSPaginationInput {
+  offset: Int!
+  limit: Int
+  title: String
+  sort_column: String
+  sort_order: String
+}
+
+type ViewCmsFrontPage {
+  meta: Meta!
+  data: CmsFrontView
+}
+
+type CmsFrontView {
+  uuid: String
+  title: String
+  description: String
+  status: String
+  response: [FrontResponse]
+}
+
+type FrontResponse {
+  title: String
+  description: String
+}
+
+input viewCmsFrontInput {
+  slug: String
+}
+
+type RatingDataInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [RatingData]
+}
+
+type RatingData {
+  uuid: String!
+  rating: String
+  status: String
+  details: String
+  sr_no: Int
+  created_at: String
+  updated_at: String
+}
+
+input RatingPaginationInput {
+  offset: Int!
+  limit: Int
+  rating: String
+  sort_column: String
+  sort_order: String
+}
+
+type ShowRating {
+  meta: Meta!
+  data: RatingView
+}
+
+type RatingView {
+  uuid: String
+  rating: String
+  status: String
+  details: String
+}
+
+input viewRatingInput {
+  uuid: String
+}
+
+input RatingCreateInput {
+  rating: String!
+  details: String
+  status: String
+}
+
+type AddRatingResponse {
+  meta: Meta!
+}
+
+input UpdateRatingStatusInput {
+  uuid: String!
+  status: String!
+}
+
+type UpdateRatingStatusResponse {
+  meta: Meta!
+}
+
+input RatingUpdateInput {
+  uuid: String!
+  rating: String
+  status: String
+  details: String
+}
+
+type RatingUpdateResponse {
+  meta: Meta!
+}
+
+input deleteRatingAdminInput {
+  uuid: String!
+}
+
+type deleteRatingAdminResponse {
+  meta: Meta!
+}
+
+type RecommendationDataInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [RecommendationDetail]
+}
+
+type RecommendationDetail {
+  sr_no: Int
+  uuid: String!
+  min: Int
+  max: Int
+  label: String
+  description: String
+  status: String
+  created_at: String
+  updated_at: String
+}
+
+input RecommenDataPaginationInput {
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type ShowRecommendation {
+  meta: Meta!
+  data: RecommendationView
+}
+
+type RecommendationView {
+  uuid: String
+  min: Int
+  max: Int
+  label: String
+  description: String
+  status: String
+}
+
+input viewRecommenInput {
+  uuid: String
+}
+
+input RecommenCreateInput {
+  min: Int
+  max: Int
+  label: String
+  status: String
+  description: String
+}
+
+type AddRecommenResponse {
+  meta: Meta!
+}
+
+input RecommendationUpdateInput {
+  uuid: String!
+  min: Int
+  max: Int
+  label: String
+  description: String
+  status: String
+}
+
+type RecommenUpdateResponse {
+  meta: Meta!
+}
+
+input UpdateRecommenStatusInput {
+  uuid: String!
+  status: String!
+}
+
+input deleteRecommandInput {
+  uuid: String!
+}
+
+type deleteRecommandResponse {
+  meta: Meta!
+}
+
+input PicklerPaginationInput {
+  offset: Int!
+  limit: Int
+  name: String
+  sort_column: String
+  sort_order: String
+}
+
+type ShowPickler {
+  meta: Meta!
+  data: PicklerView
+}
+
+type PicklerView {
+  uuid: String
+  name: String
+  status: String
+}
+
+input viewPickerInput {
+  uuid: String
+}
+
+input PicklerCreateInput {
+  name: String!
+  status: String
+}
+
+type AddPicklerResponse {
+  meta: Meta!
+}
+
+input UpdatePicklerStatusInput {
+  uuid: String!
+  status: String!
+}
+
+type UpdatePicklerStatusResponse {
+  meta: Meta!
+}
+
+input PicklerUpdateInput {
+  uuid: String!
+  name: String!
+  status: String
+}
+
+type PicklerUpdateResponse {
+  meta: Meta!
+}
+
+input DeletePicklerInput {
+  uuid: String!
+}
+
+type DeletePicklerResponse {
+  meta: Meta!
+}
+
+type GroupTypesDataInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [GroupTypesData]
+}
+
+type GroupTypesData {
+  uuid: String!
+  name: String
+  status: String
+  sr_no: Int
+  created_at: String
+  updated_at: String
+}
+
+input GroupTypesPaginationInput {
+  offset: Int!
+  limit: Int
+  name: String
+  sort_column: String
+  sort_order: String
+}
+
+type ShowGroupType {
+  meta: Meta!
+  data: GroupTypeView
+}
+
+type GroupTypeView {
+  uuid: String
+  name: String
+  status: String
+}
+
+input viewGroupTypeInput {
+  uuid: String
+}
+
+input groupTypeCreateInput {
+  name: String!
+  status: String
+}
+
+type AddgroupTypeResponse {
+  meta: Meta!
+}
+
+input UpdateGTypeStatusInput {
+  uuid: String!
+  status: String!
+}
+
+type UpdateGrpupTStatusResponse {
+  meta: Meta!
+}
+
+input GTypeUpdateInput {
+  uuid: String!
+  name: String!
+  status: String
+}
+
+type GroupTypeUpdateResponse {
+  meta: Meta!
+}
+
+input DeleteGroupTypeInput {
+  uuid: String!
+}
+
+type DeleteGroupTypeResponse {
+  meta: Meta!
+}
+
+type BadgesDataInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [BadgesData]
+}
+
+type BadgesData {
+  uuid: String
+  name: String
+  image: String
+  file_path: String
+  status: String
+  description: String
+  sr_no: Int
+  created_at: String
+  updated_at: String
+  image_disable: String
+  file_path_disable: String
+}
+
+input BadgesPaginationInput {
+  offset: Int!
+  limit: Int
+  name: String
+  sort_column: String
+  sort_order: String
+}
+
+type ShowBadges {
+  meta: Meta!
+  data: Badgesview
+}
+
+type Badgesview {
+  uuid: String
+  name: String
+  image: String
+  file_path: String
+  status: String
+  description: String
+  image_disable: String
+  file_path_disable: String
+}
+
+input viewBadgesInput {
+  uuid: String
+}
+
+input badgeCreateInput {
+  name: String
+  image: String
+  file_path: String
+  status: String
+  description: String
+  image_disable: String
+  file_path_disable: String
+}
+
+type AddBadgeResponse {
+  meta: Meta!
+}
+
+input UpdateBadgeStatusInput {
+  uuid: String!
+  status: String!
+}
+
+type UpdateBadgeStatusResponse {
+  meta: Meta!
+}
+
+input BadgeUpdateInput {
+  uuid: String
+  name: String
+  image: String
+  file_path: String
+  status: String
+  description: String
+  image_disable: String
+  file_path_disable: String
+}
+
+type BadgeUpdateResponse {
+  meta: Meta!
+}
+
+input deleteBadgesAdminInput {
+  uuid: String!
+}
+
+type deleteBadgesResponse {
+  meta: Meta!
+}
+
+type CategoryDetailsInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [CetegoryDetails]
+}
+
+type CetegoryDetails {
+  uuid: String!
+  name: String
+  status: String
+  sr_no: Int
+  created_at: String
+  updated_at: String
+}
+
+input CetegoryPaginationInput {
+  offset: Int!
+  limit: Int
+  name: String
+  sort_column: String
+  sort_order: String
+}
+
+type ShowCategory {
+  meta: Meta!
+  data: Cetegoryview
+}
+
+type Cetegoryview {
+  uuid: String
+  name: String
+  status: String
+}
+
+input viewCategoryInput {
+  uuid: String
+}
+
+input CategoryCreateInput {
+  name: String!
+  status: String
+}
+
+type AddCetogoryResponse {
+  meta: Meta!
+}
+
+input UpdateCategoryStatusInput {
+  uuid: String!
+  status: String!
+}
+
+type UpdateCategoryStatusResponse {
+  meta: Meta!
+}
+
+input CategoryUpdateInput {
+  uuid: String
+  name: String
+  status: String
+}
+
+type CategoryUpdateResponse {
+  meta: Meta!
+}
+
+input DeleteCategoryInput {
+  uuid: String!
+}
+
+type DeleteCategoryResponse {
+  meta: Meta!
+}
+
+type ReasonDataInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [ReasonData]
+}
+
+type ReasonData {
+  uuid: String!
+  name: String
+  status: String
+  sr_no: Int
+}
+
+input ReasonPaginationInput {
+  offset: Int!
+  limit: Int
+  name: String
+  sort_column: String
+  sort_order: String
+}
+
+type ShowReasons {
+  meta: Meta!
+  data: Reasonsview
+}
+
+type Reasonsview {
+  uuid: String
+  name: String
+  status: String
+}
+
+input viewReasonInput {
+  uuid: String
+}
+
+input ReasonCreateInput {
+  name: String!
+  status: String
+}
+
+type AddReasonResponse {
+  meta: Meta!
+}
+
+input UpdateReasonStatusInput {
+  uuid: String!
+  status: String!
+}
+
+type UpdateReasonStatusResponse {
+  meta: Meta!
+}
+
+input ReportReasonUpdateInput {
+  uuid: String!
+  name: String
+  status: String
+}
+
+type ReasonReportUpdateResponse {
+  meta: Meta!
+}
+
+input DeleteReportReasonInput {
+  uuid: String!
+}
+
+type DeleteReportReasonResponse {
+  meta: Meta!
+}
+
+input CreateMatchInput {
+  image: String
+  file_path: String
+  match_court_type: Int
+  match_title: String
+  match_title_uuid: String
+  locations: String
+  address: String
+  latitude: String
+  longitude: String
+  clubs: String
+  date: String
+  time: String
+  is_recurring: Int
+  recurring_type: Int
+  recurring_end_date: String
+  custom_recurring: CustomRecurring
+  match_user_type: Int
+  no_slot: Int
+  hours: String
+  minutes: String
+  points_to_play: Int
+  is_rating: Int
+  ratings: String
+  is_booked_court: Int
+  court_details: [CourtData]
+  matchlevel: String
+  total_court: Int
+  note: String
+  status: Int
+  time_zone: String
+  is_private: Int
+  is_event: Int
+  total_players: Int
+  cost_per_player: String
+  match_organiser: Int
+  event_end_date: String
+  event_end_time: String
+  community_image: String
+  community_label_approved: Int
+  gender: Int
+  tier_details: [TireData]
+  tournament_bracket_type: Int
+}
+
+input CourtData {
+  court_no: Int
+  court_type: String
+}
+
+type CreateMatchResponse {
+  meta: Meta!
+}
+
+input MatchAdminPaginationInput {
+  offset: Int!
+  limit: Int
+  title: String
+  club_name: String
+  skill_level: String
+  status: String
+  locations: String
+  radius: String
+  latitude: String
+  longitude: String
+  start_date: String
+  end_date: String
+  sort_column: String
+  sort_order: String
+  is_event: Int
+  match_creator: [String]
+}
+
+type MatchAdminDataInfo {
+  meta: Meta!
+  pagination: MatchPagination
+  data: [MatchDetailsInfo]
+}
+
+type MatchDetailsInfo {
+  sr_no: Int!
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  locations: String
+  latitude: String
+  longitude: String
+  status: String
+  clubs: [clubInfoAdminMatch]
+  ratings: [ratingInfoAdminMatch]
+  organizer: [userInfoAdminMatch]
+  date: String
+  time: String
+  total_court: Int
+  match_court_type: String
+  updated_at: String
+  created_at: String
+  matchlevel: String
+  matchlevel_label: String
+  is_event: Int
+  is_open: String
+  is_recurring: String
+  hours: String
+  minutes: String
+  cost_per_player: Int
+  min_skill_level: String
+}
+
+type userInfoAdminMatch {
+  id: Int
+  uuid: String
+  full_name: String
+  email: String
+  latitude: String
+  longitude: String
+  location: String
+}
+
+type clubInfoAdminMatch {
+  uuid: String
+  name: String
+  cost_per_player: String
+}
+
+type ratingInfoAdminMatch {
+  uuid: String
+  rating: String
+}
+
+type MatchPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input UpdateMatchStatusInput {
+  uuid: String!
+  status: String!
+}
+
+type UpdateMatchStatusResponse {
+  meta: Meta!
+}
+
+input viewMatchAdminInput {
+  uuid: String!
+}
+
+type viewMatchAdminResponse {
+  meta: Meta!
+  data: matchDataInfo!
+}
+
+type matchDataInfo {
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  locations: String
+  latitude: String
+  longitude: String
+  clubs: [clubViewDtlInfo]
+  ratings: [ratingInfo]
+  points_to_play: Int
+  date: String
+  time: String
+  hours: String
+  minutes: String
+  no_slot: String
+  no_of_players: String
+  note: String
+  organizer: [userDataInfo]
+  status: String
+  participants_count: Int
+  duration: String
+  cost_per_player: Int
+  cost_per_player_label: String
+  guest_fee: Int
+  match_type: String
+  match_type_id: Int
+  min_skill_level: String
+  courts: [adminClubcourtInfo]
+  court_type: String
+  matchlevel: String
+  matchlevel_label: String
+  court: String
+  is_open: String
+  is_recurring: String
+  amount_paid_to_organizer: Float
+  total_amount_paid_for_match: Float
+  match_cost_per_player: Float
+  tier_details: [tierAdminMatchInfo]
+  is_waiting: Int
+  waiting_list: [AdminEventWaitingList]
+}
+
+type adminClubcourtInfo {
+  court_no: Int
+  court_type: String
+}
+
+type clubViewDtlInfo {
+  uuid: String!
+  name: String!
+  type: String
+  address: String
+  cost: Int
+  image: String
+  file_path: String
+  rating: String
+  locations: String
+}
+
+type ratingInfo {
+  uuid: String!
+  rating: String!
+}
+
+type tierAdminMatchInfo {
+  tier_price: Int
+  tier_description: String
+}
+
+type userDataInfo {
+  uuid: String
+  full_name: String
+  email: String
+  latitude: String
+  longitude: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  recommendation_level: String
+  court: String
+}
+
+type AdminEventWaitingList {
+  uuid: String
+  email: String
+  is_requested: Int
+  is_invited: Int
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  recommendation_level: String
+  clubs_coach: [clubs_event]
+  is_waiting: Int
+  invite_from: Int
+  gender: Int
+  mobile_number: String
+}
+
+input deleteMatchInput {
+  uuid: String!
+}
+
+type DeleteMatchResponse {
+  meta: Meta!
+}
+
+input MatchInput {
+  uuid: String!
+  image: String
+  match_court_type: Int
+  match_title: String
+  locations: String
+  address: String
+  latitude: String
+  longitude: String
+  clubs: String
+  date: String
+  time: String
+  is_recurring: Int
+  recurring_type: Int
+  recurring_end_date: String
+  match_user_type: Int
+  no_slot: Int
+  hours: String
+  minutes: String
+  points_to_play: Int
+  is_rating: Int
+  ratings: String
+  is_booked_court: Int
+  court_details: [CourtData]
+  total_court: Int
+  note: String
+  status: String
+  cost_per_player: String
+  match_level: String
+  event_end_date: String
+  event_end_time: String
+  community_image: String
+  community_label_approved: Int
+  gender: Int
+}
+
+type MatchResponse {
+  meta: Meta!
+}
+
+input CustomRecurring {
+  type: Int
+  repeat: Int
+  repeat_week: [String]
+  repeat_month: repeat_month
+  is_end: Int
+  end_date: String
+}
+
+input repeat_month {
+  is_date: Int
+  date: String
+  day: String
+  occurance: Int
+}
+
+input TireData {
+  tier_price: Int
+  tier_description: String
+}
+
+type CreateFrontMatchResponse {
+  meta: Meta!
+  data: matchResponse
+}
+
+type matchResponse {
+  id: Int
+  uuid: String
+  alert_message: String
+  alert_title: String
+}
+
+input viewMatchInput {
+  uuid: String!
+  is_common_detail: Boolean
+}
+
+type viewMatchResponse {
+  meta: Meta!
+  data: matchInfo!
+}
+
+type matchInfo {
+  uuid: String
+  name: String
+  image: String
+  file_path: String
+  is_accept: Int
+  type: Int
+  is_host: Boolean
+  club_type: String
+  cost_per_player: String
+  club_list: String
+  date: String
+  time: String
+  user_uuid: String
+  admin_pay_charge: Float
+  stripe_transaction_charge: Float
+  is_event: Int
+  isPrivateMatch: Boolean
+  tier_details: [tierPriceInfo]
+  no_slot: Int
+  is_waiting: Int
+  is_requested: Int
+  gender: String
+  admin_charge_max_amount: Float
+  skill_level: String
+  min_skill_level: String
+}
+
+type courtInfo {
+  court_no: Int!
+  court_type: Int!
+}
+
+input MatchPaginationInput {
+  offset: Int!
+  limit: Int
+  title: String
+  status: String
+  sort_column: String
+  sort_order: String
+}
+
+type MatchDataInfo {
+  meta: Meta!
+  pagination: MatchPagination
+  data: [MatchData]
+}
+
+type MatchData {
+  uuid: String
+  match_title: String
+  file_path: String
+  image: String
+}
+
+input addPaymentInput {
+  match_uuid: String
+  cost_per_player: String
+  transaction_fee: String
+  admin_fee: String
+  total: String
+  tier_description: String
+}
+
+input UpdateMtchCostInput {
+  match_uuid: String
+  cost_per_player: String
+}
+
+type UpdateMtchCostResponse {
+  meta: Meta!
+}
+
+input MatchFrontInput {
+  uuid: String!
+  image: String
+  file_path: String
+  match_court_type: Int
+  match_title: String
+  match_title_uuid: String
+  locations: String
+  address: String
+  latitude: String
+  longitude: String
+  clubs: String
+  date: String
+  time: String
+  match_user_type: Int
+  no_slot: Int
+  hours: String
+  minutes: String
+  points_to_play: Int
+  is_rating: Int
+  ratings: String
+  is_booked_court: Int
+  court_details: [CourtData]
+  total_court: Int
+  note: String
+  status: String
+  time_zone: String
+  is_private: Int
+  is_event: Int
+  total_players: Int
+  cost_per_player: String
+  match_level: String
+  match_organiser: Int
+  event_end_date: String
+  event_end_time: String
+  community_image: String
+  community_image_changed: Int
+  gender: Int
+  tier_details: [TireData]
+  tournament_bracket_type: Int
+}
+
+type MatchFrontResponse {
+  meta: Meta!
+  data: upmatchResponse
+}
+
+type upmatchResponse {
+  alert_message: String
+  alert_title: String
+}
+
+type findPlayerGroupInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [findPlayerGroupInfoList]
+}
+
+type findPlayerGroupInfoList {
+  uuid: String
+  name: String
+  owner: String
+  min_skill_level: String
+  rating: String
+  clubs: [clubs]
+  image: String
+  file_path: String
+  types: [group_type]
+  no_of_player: Int
+  isSelected: Boolean
+  ccgroup: String
+  is_private: Int
+  is_my_group: Boolean
+}
+
+type group_type {
+  uuid: String
+  name: String
+}
+
+input findPlayerGroupInput {
+  name: String
+  group_type: String
+  skill: String
+  club: String
+  offset: Int
+  limit: Int
+  sort_column: String
+  sort_order: String
+  group_for: String
+  is_my_group: Boolean
+}
+
+input BlockUserInput {
+  version: String
+  platform: String
+  user_uuid: String
+  blockUser_uuid: String
+  block: String
+}
+
+type BlockUserResponse {
+  meta: Meta!
+}
+
+input AddAsFriendInput {
+  sender_id: String!
+  receiver_id: String!
+}
+
+type AddAsFriendResponse {
+  meta: Meta!
+  data: userName
+}
+
+input AddAcceptFriendRequestInput {
+  sender_id: String!
+  receiver_id: String!
+}
+
+type AddAcceptFriendRequestResponse {
+  meta: Meta!
+  data: userName
+}
+
+input AddRejectFriendRequestInput {
+  sender_id: String!
+  receiver_id: String!
+}
+
+type AddRejectFriendRequestResponse {
+  meta: Meta!
+  data: userName
+}
+
+input RemoveAsFriendInput {
+  sender_id: String
+  receiver_id: [String]
+}
+
+type RemoveAsFriendResponse {
+  meta: Meta!
+}
+
+type findPlayerFriendInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [findPlayerFriendInfoList]
+}
+
+type findPlayerFriendInfoList {
+  uuid: String
+  full_name: String
+  recommendation: String
+  gender: String
+  location: String
+  rating: String
+  clubs: [clubs]
+  isSelected: Boolean
+  image: String
+  file_path: String
+  min_age: Int
+  max_age: Int
+  connectycube_id: String
+}
+
+input findPlayerFriendInput {
+  name: String
+  rating: String
+  match_id: String
+  gender: String
+  offset: Int
+  limit: Int
+  latitude: Float
+  longitude: Float
+  radius: Int
+  min_age: Int
+  max_age: Int
+  clubs: String
+  recommendation: String
+  sort_column: String
+  sort_order: String
+  is_coach: Int
+}
+
+type findPlayerNetworkInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [findPlayerNetworkInfoList]
+}
+
+type findPlayerNetworkInfoList {
+  uuid: String
+  full_name: String
+  recommendation: String
+  location: String
+  rating: String
+  gender: String
+  clubs: [clubs]
+  isSelected: Boolean
+  image: String
+  file_path: String
+  age: Int
+  is_friend: Boolean
+  is_coach: Int
+  connectycube_id: String
+}
+
+input findPlayerNetworkInput {
+  name: String
+  rating: String
+  match_id: String
+  gender: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  min_age: Int
+  max_age: Int
+  max: Int
+  min: Int
+  clubs: String
+  recommendation: String
+  offset: Int
+  limit: Int
+  sort_column: String
+  sort_order: String
+  is_coach: Int
+}
+
+type invitedPlayerFriendInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [invitedPlayerFriendInfoList]
+}
+
+type invitedPlayerFriendInfoList {
+  uuid: String
+  full_name: String
+  recommendation: String
+  location: String
+  rating: String
+  clubs: [clubs]
+  status: String
+  avatar: String
+  file_path: String
+  is_friend: Boolean
+  is_group: Boolean
+  connectycube_id: String
+}
+
+input invitedPlayerFriendInput {
+  name: String
+  uuid: String
+  offset: Int
+  limit: Int
+  skill_level: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  recommendation_level: String
+  age_range: String
+  gender: String
+  friends: String
+  sort_column: String
+  sort_order: String
+}
+
+type invitedPlayerGroupInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [invitedPlayerGroupInfoList]
+}
+
+type invitedPlayerGroupInfoList {
+  uuid: String
+  name: String
+  owner: String
+  rating: String
+  clubs: [clubs]
+  image: String
+  file_path: String
+  types: [group_type]
+  no_of_player: Int
+  status: String
+  confirmed_count: Int
+  cancelled_count: Int
+  invited_count: Int
+}
+
+input invitedPlayerGroupInput {
+  uuid: String
+  name: String
+  skill_level: String
+  group_types: String
+  preferred_club: String
+  offset: Int
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type invitedPlayerNetworkInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [invitedPlayerNetworkInfoList]
+}
+
+type invitedPlayerNetworkInfoList {
+  uuid: String
+  full_name: String
+  recommendation: String
+  location: String
+  rating: String
+  status: String
+  clubs: [clubs]
+  avatar: String
+  file_path: String
+  is_friend: Boolean
+  is_group: Boolean
+  connectycube_id: String
+}
+
+input invitedPlayerNetworkInput {
+  uuid: String
+  name: String
+  offset: Int
+  limit: Int
+  radius: Int
+  latitude: Float
+  longitude: Float
+  recommendation_level: String
+  age_range: String
+  skill_level: String
+  gender: String
+  friends: String
+  sort_column: String
+  sort_order: String
+}
+
+input getUserRviewInput {
+  match_uuid: String
+  user_uuid: String
+  is_event: Int
+}
+
+type userReviewInfo {
+  meta: Meta!
+  data: [userReviewData]
+}
+
+type userReviewData {
+  uuid: String
+  match_uuid: String
+  avatar: String
+  file_path: String
+  rating: String
+  full_name: String
+  rating_info: String
+  is_recommended: Boolean
+  is_eligible_rating: Boolean
+}
+
+input updateUserRatingInput {
+  match_uuid: String
+  user_uuid: String
+  rating: String
+}
+
+type UpdateUserRatingResponse {
+  meta: Meta!
+}
+
+input BlockUserListFrontPaginationInput {
+  uuid: String!
+  full_name: String
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type BlockUserListFrontInfo {
+  meta: Meta!
+  pagination: BlockUserListFrontPagination
+  data: [BlockUserListFront]
+}
+
+type BlockUserListFront {
+  sr_no: Int!
+  uuid: String!
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  recommendation: String
+  connectycube_id: String
+}
+
+type BlockUserListFrontPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+type InvitedMemberInfo {
+  meta: Meta!
+  pagination: MemberListPagination
+  data: [InvitedMemberInfoList]
+}
+
+type InvitedMemberInfoList {
+  uuid: String
+  full_name: String
+  recommendation: String
+  location: String
+  rating: String
+  clubs: [clubs]
+  status: String
+  avatar: String
+  file_path: String
+  is_friend: Boolean
+  is_group: Boolean
+  invite_from: Int
+  invite_from_lable: String
+  group_name: String
+  group_id: String
+  connectycube_id: String
+  is_reinvite: Boolean
+  show_more: Boolean
+  is_waiting: Int
+}
+
+input InvitedMemberInput {
+  name: String
+  uuid: String
+  offset: Int
+  limit: Int
+  skill_level: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  recommendation_level: String
+  age_range: String
+  gender: String
+  friends: String
+  sort_column: String
+  sort_order: String
+}
+
+type MemberListPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+  is_reachout: Boolean
+  show_more: Boolean
+}
+
+input AddMatchCommentInput {
+  match_id: String
+  comment: String
+  parent_id: String
+}
+
+type AddMatchCommentResponse {
+  meta: Meta!
+  data: commentData
+}
+
+type commentData {
+  id: Int
+  match_created_date: String
+  uuid: String
+  comments: String
+  created_by: String
+  created_at: String
+  like_count: Int
+  is_like: Boolean
+}
+
+input MatchCommentsInput {
+  match_uuid: String
+}
+
+type MatchCommentInfo {
+  meta: Meta!
+  data: [MatchCommentData]
+}
+
+type MatchCommentData {
+  id: Int
+  match_created_date: String
+  uuid: String
+  comments: String
+  created_by: String
+  created_at: String
+  like_count: Int
+  is_like: Boolean
+  sub_comments: [sub_comment]
+}
+
+type sub_comment {
+  uuid: String
+  comments: String
+  created_by: String
+  created_at: String
+  like_count: Int
+  is_like: Boolean
+}
+
+input BlockUserPaginationInput {
+  offset: Int!
+  limit: Int!
+  full_name: String!
+  sort_column: String
+  sort_order: String
+}
+
+type BlockUserDataInfo {
+  meta: Meta!
+  pagination: BlockUserPagination
+  data: [BlockUserData]
+}
+
+type BlockUserData {
+  sr_no: Int!
+  uuid: String!
+  full_name: String!
+  avatar: String
+}
+
+type BlockUserPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input BlockUserListPaginationInput {
+  uuid: String!
+  full_name: String!
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type BlockUserListInfo {
+  meta: Meta!
+  pagination: BlockUserListPagination
+  data: [BlockUserList]
+}
+
+type BlockUserList {
+  sr_no: Int!
+  uuid: String!
+  full_name: String!
+  avatar: String
+}
+
+type BlockUserListPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input sendMatchInviteInput {
+  match_id: String
+  reachout_ord: [reachout_ord]
+  is_reachout: Int
+  reachout_date: String
+  time_zone: String
+  is_reinvite: Boolean
+  is_alert_notification: Boolean
+  event_approved: Int
+}
+
+input reachout_ord {
+  hours: Int
+  minute: Int
+  slab_no: Int
+  players: [players_info]
+}
+
+input players_info {
+  player_id: String
+  type: Int
+  group_id: String
+}
+
+type sendMatchInviteResponse {
+  meta: Meta!
+}
+
+input sendMatchReInviteInput {
+  match_id: String
+  user_id: String
+}
+
+type sendMatchReInviteResponse {
+  meta: Meta!
+}
+
+input OpenMatchListFrontPaginationInput {
+  match_title: String
+  location: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  invitation_status: String
+  schdeuled_type: String
+  match_type: String
+  skill_level: String
+  rating: String
+  club_name: String
+  club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  organized_by: [String]
+}
+
+type OpenMatchListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [OpenMatchListFront]
+}
+
+type OpenMatchListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  match_type_id: Int
+  skill_level: String
+  min_skill_level: String
+  skill_level_label: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  created_date: String
+  is_recurring: Boolean
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+  is_waiting_user: Int
+}
+
+input viewGroupInput {
+  uuid: String!
+}
+
+type viewOpenMatchDetailResponse {
+  meta: Meta!
+  data: OpenMatchDetail!
+}
+
+type OpenMatchDetail {
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  match_type_id: Int
+  skill_level: String
+  min_skill_level: String
+  club_info: club_info
+  date: String
+  time: String
+  open_slot: String
+  note: String
+  points_to_play: String
+  no_of_players: String
+  cost_of_player: String
+  duration: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  request_status: String
+  cost_per_player: String
+  points_to_play_lable: String
+  open_spots_label: String
+  skill_level_label: String
+  duration_label: String
+  no_of_players_label: String
+  match_status: String
+  open_host_info: open_host_info
+  is_recurring: Int
+  recurring_match: String
+  open_player_info: [open_player_info]
+  match_location: String
+  match_latitude: String
+  match_longitude: String
+  openCourtInfo: [openCourtInfo]
+  is_multi_dink: Boolean
+  no_courts: String
+  created_date: String
+  admin_pay_charge: Float
+  stripe_transaction_charge: Float
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+  match_organiser: Int
+  tier_details: [tierOpenMatchInfo]
+  is_waiting: Int
+  is_waiting_user: Int
+  admin_charge_max_amount: Float
+}
+
+type openCourtInfo {
+  court_no: String
+  game_type: String
+}
+
+type open_host_info {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  is_friend: Boolean
+  is_group: Boolean
+  recommendation_level: String
+  clubs: [clubs]
+  connectycube_id: String
+}
+
+type club_info {
+  id: String
+  uuid: String
+  club_name: String
+  club_type: String
+  address: String
+  latitude: String
+  longitude: String
+  is_membership_requre: String
+}
+
+type open_player_info {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  is_friend: Boolean
+  is_group: Boolean
+  clubs: [clubs]
+  recommendation_level: String
+  connectycube_id: String
+  tier_details: tierOpenMatchInfo
+}
+
+type tierOpenMatchInfo {
+  tier_price: Int
+  tier_description: String
+}
+
+input AddRequestPlayInput {
+  match_id: String!
+  user_id: String!
+}
+
+type RequestToPlayResponse {
+  meta: Meta!
+}
+
+input PlyerRequestAcceptInput {
+  match_id: String!
+  user_id: String!
+  tier_price: Int
+  tier_description: String
+}
+
+type RequestAcceptResponse {
+  meta: Meta!
+}
+
+input PlyerRequestRejectInput {
+  match_id: String!
+  user_id: String!
+  is_host_reject: Boolean
+}
+
+type RequestRejectResponse {
+  meta: Meta!
+}
+
+input matchUserInput {
+  match_id: String!
+  offset: Int
+  limit: Int
+  skill_level: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  recommendation_level: String
+  age_range: String
+  gender: String
+  friends: String
+  sort_column: String
+  sort_order: String
+}
+
+type MatchUserJoinListResponse {
+  meta: Meta!
+  data: [users]
+}
+
+type users {
+  uuid: String
+  full_name: String
+  avtar: String
+  file_path: String
+  rating: String
+  locations: String
+  clubs: [clubs]
+}
+
+type MatchUserRequestedResponse {
+  meta: Meta!
+  pagination: Pagination
+  data: userFinalData
+}
+
+type userFinalData {
+  plyares: [plyares]
+  is_slot_available: Boolean
+}
+
+type plyares {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  clubs: [clubs]
+  status: String
+  is_friend: Boolean
+  is_group: Boolean
+  recommendation_level: String
+  connectycube_id: String
+}
+
+type RecommendationDataFrontInfo {
+  meta: Meta!
+  data: [RecommendationData]
+}
+
+type RecommendationData {
+  uuid: String!
+  min: Int
+  max: Int
+  title: String
+  description: String
+  is_selected: Boolean
+}
+
+type CategoryDataInfo {
+  meta: Meta!
+  data: [CetegoryData]
+}
+
+type CetegoryData {
+  uuid: String!
+  name: String
+  slug: String
+}
+
+input AddSupportInput {
+  version: String
+  platform: String
+  category: String
+  message: String
+}
+
+type AddSupportResponse {
+  meta: Meta!
+}
+
+input SupportListPaginationInput {
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type SupportListDataInfo {
+  meta: Meta!
+  pagination: SupportPagination
+  data: [SupportListData]
+}
+
+type SupportListData {
+  sr_no: Int!
+  uuid: String!
+  user_name: String
+  user_email: String
+  category: String
+  note: String
+  message: String
+  created_at: String
+  updated_at: String
+}
+
+type SupportPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input viewSupportDetailInput {
+  uuid: String!
+}
+
+type viewSupportDetailResponse {
+  meta: Meta!
+  data: SupportDetail!
+}
+
+type SupportDetail {
+  uuid: String!
+  user_name: String
+  user_email: String
+  category: String
+  message: String
+  created_at: String
+}
+
+input ReplaySupportInput {
+  uuid: String!
+  note: String
+}
+
+type ReplaySupportResponse {
+  meta: Meta!
+}
+
+type ReportReasonDataInfo {
+  meta: Meta!
+  data: [ReportReasonDat]
+}
+
+input ReportReasonInput {
+  type: Int
+}
+
+type ReportReasonDat {
+  uuid: String!
+  name: String
+}
+
+input AddReportInput {
+  version: String
+  platform: String
+  reason: String
+  report_uesr_email: String
+  description: String
+}
+
+type AddReportResponse {
+  meta: Meta!
+}
+
+input AddCommentReportInput {
+  version: String
+  platform: String
+  comment_uuid: String
+  reason: String
+  description: String
+}
+
+type AddCommentReportResponse {
+  meta: Meta!
+}
+
+input ReportDataInput {
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type ReportDataInfo {
+  meta: Meta!
+  pagination: pagination
+  data: [ReportData]
+}
+
+type ReportData {
+  sr_no: Int!
+  uuid: String
+  user_name: String
+  user_email: String
+  reported_user_name: String
+  reported_user_email: String
+  reason: String
+  description: String
+  created_at: String
+  updated_at: String
+  user_uuid: String
+}
+
+input CommentReportDataInput {
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type CommentReportDataInfo {
+  meta: Meta!
+  pagination: pagination
+  data: [CommentReportData]
+}
+
+type CommentReportData {
+  sr_no: Int!
+  uuid: String
+  comment_id: Int
+  reason: String
+  description: String
+  created_at: String
+  updated_at: String
+}
+
+type CmsPageData {
+  meta: Meta!
+  data: CmsData
+}
+
+type CmsData {
+  url: String
+}
+
+input getCmsDataInput {
+  slug: String!
+}
+
+input AcceptMatchInviteInput {
+  match_id: String
+}
+
+type AcceptMatchInviteResponse {
+  meta: Meta!
+}
+
+input RejectMatchInviteInput {
+  match_id: String
+}
+
+type RejectMatchInviteResponse {
+  meta: Meta!
+}
+
+input WeekDetailsInput {
+  video_title: String
+  thumbnail_image: String
+  file_path: String
+  video_link: String
+  video_type: Int
+  order: Int
+}
+
+type WeekDetailsResponse {
+  meta: Meta!
+}
+
+input WeekDetailPaginationInput {
+  offset: Int!
+  limit: Int
+  title: String
+  sort_column: String
+  sort_order: String
+}
+
+type WeekDetailInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [WeekDetails]
+}
+
+type WeekDetails {
+  sr_no: Int!
+  uuid: String
+  video_title: String
+  file_path: String
+  thumbnail_image: String
+  created_by: Int
+  created_at: String
+  video_type: Int
+  video_link: String
+  updated_at: String
+  order: Int
+}
+
+input WeekDetailViewInput {
+  uuid: String!
+}
+
+type WeekDetailViewResponse {
+  meta: Meta!
+  data: weekDetails!
+}
+
+type weekDetails {
+  uuid: String!
+  video_title: String
+  file_path: String
+  thumbnail_image: String
+  created_by: Int
+  created_at: String
+  video_type: Int
+  video_link: String
+  order: Int
+}
+
+input DeleteWeekDataInput {
+  uuid: String!
+}
+
+type DeleteWeekDataResponse {
+  meta: Meta!
+}
+
+input WeekDataInput {
+  uuid: String!
+  video_title: String
+  file_path: String
+  thumbnail_image: String
+  video_type: Int
+  video_link: String
+  order: Int
+}
+
+type WeekDataUpdateResponse {
+  meta: Meta!
+}
+
+input SocialSignUpInput {
+  version: String!
+  platform: String!
+  first_name: String
+  last_name: String
+  email: String
+  provider_type: String!
+  provider_key: String!
+  mobile: String
+  profile: String
+  device_token: String
+  device_info: String
+}
+
+type userSignuoOtherData {
+  uuid: String!
+  first_name: String
+  last_name: String
+  avatar: String
+  file_path: String
+  is_completed: Int
+  is_finish: Int
+  ratings: String
+  is_card_added: Boolean
+  is_bank_account_added: Boolean
+}
+
+type userSignupData {
+  token_type: String
+  expires_in: String
+  access_token: String
+  refresh_token: String
+  user: userSignuoOtherData
+}
+
+type socialSignupData {
+  user: userSignupData
+}
+
+type SocialSignUpResponse {
+  meta: Meta!
+  data: socialSignupData
+}
+
+input DashboardFitterInput {
+  fitter: String
+  start_date: String
+  end_date: String
+}
+
+type GetDashboardDetailInfo {
+  meta: Meta!
+  data: [GetDashboardData]
+}
+
+type GetDashboardData {
+  total_user: Int
+  total_clubs: Int
+  private_clubs: Int
+  public_clubs: Int
+  total_events: Int
+  total_matches: Int
+  home_clubs: Int
+}
+
+input ScheduleMatchListFrontPaginationInput {
+  match_title: String
+  location: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  invitation_status: String
+  schedual_type: String
+  match_type: String
+  skill_level: String
+  rating: String
+  club_name: String
+  club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  schdeuled_type: String
+  organized_by: [String]
+  open_slot_filt: String
+}
+
+type ScheduleMatchListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [ScheduleMatchListFront]
+}
+
+type ScheduleMatchListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  match_type_id: Int
+  skill_level: String
+  min_skill_level: String
+  skill_level_label: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  time: String
+  created_date: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  is_host: Boolean
+  is_recurring: Boolean
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+}
+
+input viewScheduleInput {
+  uuid: String!
+}
+
+type viewScheduleMatchDetailResponse {
+  meta: Meta!
+  data: ScheduleMatchDetail!
+}
+
+type ScheduleMatchDetail {
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  match_title_uuid: String
+  match_user_type: String
+  match_type_id: Int
+  skill_level: String
+  locations: String
+  date: String
+  created_date: String
+  time: String
+  club_uuid: String
+  club_name: String
+  address: String
+  club_latitude: String
+  club_longitude: String
+  club_type: String
+  is_membership_requre: String
+  open_slot: String
+  note: String
+  points_to_play: String
+  no_of_players: String
+  cost_of_player: String
+  points_to_play_lable: String
+  open_spots_label: String
+  skill_level_label: String
+  duration_label: String
+  no_of_players_label: String
+  court_no_label: String
+  court_no: String
+  duration: String
+  is_like: Boolean
+  like_count: Int
+  comment_count: Int
+  is_host: Boolean
+  is_recurring: Int
+  recurring_match: String
+  schedule_host_info: schedule_host_info
+  schedule_player_info: [schedule_player_info]
+  cost_per_player_lable: String
+  match_status: String
+  match_location: String
+  match_latitude: String
+  match_longitude: String
+  schdeuled_courtInfo: [schdeuled_courtInfo]
+  is_multi_dink: Boolean
+  no_courts: String
+  is_booked_court: Int
+  is_private: Int
+  min_skill_level: String
+  is_reminder: Boolean
+  admin_pay_charge: Float
+  stripe_transaction_charge: Float
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_reachout: Boolean
+  match_organiser: Int
+  tier_details: [tierScheuleMatchInfo]
+  is_waiting: Int
+  waiting_count: Int
+  is_reachout_edit: Boolean
+  admin_charge_max_amount: Float
+  request_status: String
+  is_waiting_user: Int
+}
+
+type schdeuled_courtInfo {
+  court_no: String
+  game_type: String
+}
+
+type schedule_host_info {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  is_friend: Boolean
+  is_group: Boolean
+  host_recommendation_level: String
+  clubs: [clubs]
+  connectycube_id: String
+}
+
+type schedule_player_info {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  clubs: [clubs]
+  is_friend: Boolean
+  is_group: Boolean
+  recommendation_level: String
+  connectycube_id: String
+  isSelected: Boolean
+  tier_details: tierScheuleMatchInfo
+}
+
+type tierScheuleMatchInfo {
+  tier_price: Int
+  tier_description: String
+}
+
+input ScheduleMatchSetFlagsInput {
+  match_id: String
+  flag_value: Int
+  flag_type: String
+}
+
+type ScheduleMatchSetFlagsResponse {
+  meta: Meta!
+}
+
+input MatchLikeInput {
+  match_id: String
+  is_like: Boolean
+}
+
+type MatchLikeResponse {
+  meta: Meta!
+  data: likeCountData
+}
+
+type likeCountData {
+  like_count: String
+}
+
+input MatchCancelInput {
+  match_id: String
+  cancel_all: Int
+}
+
+type MatchCancelResponse {
+  meta: Meta!
+}
+
+input PastMatchListFrontPaginationInput {
+  match_title: String
+  match_type: String
+  skill_level: String
+  rating: String
+  club_name: String
+  club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  invitation_status: String
+  schdeuled_type: String
+  organized_by: [String]
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+}
+
+type PastMatchListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [PastMatchListFrontDetails]
+}
+
+type PastMatchListFrontDetails {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  match_type_id: Int
+  skill_level: String
+  skill_level_label: String
+  min_skill_level: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  created_date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  is_host: Boolean
+  is_recurring: Boolean
+}
+
+input ViewPastInput {
+  uuid: String!
+}
+
+type ViewPastMatchDetailResponse {
+  meta: Meta!
+  data: PastMatchDetail!
+}
+
+type PastMatchDetail {
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  match_type_id: Int
+  skill_level: String
+  min_skill_level: String
+  clubs: [past_clubs]
+  date: String
+  time: String
+  created_date: String
+  open_slot: String
+  note: String
+  points_to_play: String
+  no_of_players: String
+  cost_of_player: String
+  court_no: String
+  duration: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  request_status: String
+  cost_per_player_lable: String
+  points_to_play_lable: String
+  open_spots_label: String
+  skill_level_label: String
+  duration_label: String
+  no_of_players_label: String
+  court_no_label: String
+  match_status: String
+  recurring_match: String
+  past_host_info: past_host_info
+  cost_of_player_label: String
+  past_player_info: [past_player_info]
+  match_location: String
+  match_latitude: String
+  match_longitude: String
+  past_court_info: [past_court_info]
+  is_multi_dink: Boolean
+  no_courts: String
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+  match_organiser: Int
+  tier_details: [tierPastMatchInfo]
+}
+
+type past_court_info {
+  court_no: String
+  game_type: String
+}
+
+type past_host_info {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  is_friend: Boolean
+  is_group: Boolean
+  recommendation_level: String
+  clubs: [past_clubs]
+  connectycube_id: String
+}
+
+type past_clubs {
+  uuid: String
+  name: String
+  type: String
+  address: String
+  latitude: String
+  longitude: String
+  club_type: String
+  is_membership_requre: String
+}
+
+type past_player_info {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  is_friend: Boolean
+  is_group: Boolean
+  recommendation_level: String
+  clubs: [past_clubs]
+  connectycube_id: String
+  tier_details: tierPastMatchInfo
+}
+
+type tierPastMatchInfo {
+  tier_price: Int
+  tier_description: String
+}
+
+input MatchShareInput {
+  match_id: String
+}
+
+type MatchShareInputResponse {
+  meta: Meta!
+  data: MatchData
+}
+
+input NewsListFrontPaginationInput {
+  title: String
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type NewsListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [NewsListFront]
+}
+
+type NewsListFront {
+  sr_no: Int
+  uuid: String
+  title: String
+  description: String
+  image: String
+  file_path: String
+  file_type: String
+  type: String
+  created_at: String
+  is_like: Boolean
+  comment_count: String
+  like_count: String
+  url: String
+}
+
+type NewsViewInfo {
+  meta: Meta!
+  data: newsData
+}
+
+input GetNewsDetailInput {
+  uuid: String
+}
+
+type newsData {
+  sr_no: Int
+  uuid: String
+  title: String
+  description: String
+  image: String
+  file_path: String
+  file_type: String
+  type: String
+  created_at: String
+  is_like: Boolean
+  comment_count: String
+  like_count: String
+  url: String
+}
+
+input AddNewsCommentInput {
+  news_uuid: String
+  comment: String
+  parent_id: String
+}
+
+type AddNewsCommentResponse {
+  meta: Meta!
+}
+
+input NewsCommentsInput {
+  news_uuid: String
+}
+
+type NewsCommentInfo {
+  meta: Meta!
+  data: [NewsCommentData]
+}
+
+type NewsCommentData {
+  id: Int
+  uuid: String
+  comments: String
+  created_by: String
+  created_at: String
+  like_count: Int
+  is_like: Boolean
+  sub_comments: [news_sub_comments]
+}
+
+type news_sub_comments {
+  uuid: String
+  comments: String
+  created_by: String
+  created_at: String
+  like_count: Int
+  is_like: Boolean
+}
+
+input NewsLikeInput {
+  news_uuid: String
+  is_like: Int
+}
+
+type NewsLikeResponse {
+  meta: Meta!
+  data: likeCountData
+}
+
+input NewsShareInput {
+  news_uuid: String
+}
+
+type NewsShareInputResponse {
+  meta: Meta!
+  data: NewsData
+}
+
+type NewsData {
+  uuid: String
+  title: String
+  description: String
+  file_name: String
+  file_path: String
+  file_type: String
+  type: String
+  created_at: String
+}
+
+input PlayerOfWeekListPaginationInput {
+  title: String
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type PlayerOfWeekListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [PlayerOfWeekListFront]
+}
+
+type PlayerOfWeekListFront {
+  sr_no: Int
+  uuid: String
+  video_title: String
+  file_path: String
+  upload_video: String
+  thumbnail_image: String
+  created_at: String
+  is_like: Boolean
+  comment_count: String
+  like_count: String
+  video_type: Int
+  video_link: String
+  order: Int
+}
+
+input PlayerOfWeekCommentInput {
+  uuid: String
+  comment: String
+  parent_id: String
+}
+
+type PlayerOfWeekCommentResponse {
+  meta: Meta!
+}
+
+input PlayerOfWeekCommentsInput {
+  uuid: String
+}
+
+type PlayerOfWeekCommentInfo {
+  meta: Meta!
+  data: [PlayerOfWeekCommentData]
+}
+
+type PlayerOfWeekCommentData {
+  id: Int
+  uuid: String
+  comments: String
+  created_by: String
+  created_at: String
+  like_count: Int
+  is_like: Boolean
+  sub_comments: [play_of_week_sub_comments]
+}
+
+type play_of_week_sub_comments {
+  uuid: String
+  comments: String
+  created_by: String
+  created_at: String
+  like_count: Int
+  is_like: Boolean
+}
+
+input PlayOfWeekLikeInput {
+  uuid: String
+  is_like: Int
+}
+
+type PlayOfWeekLikeResponse {
+  meta: Meta!
+  data: likeCountData
+}
+
+input PlayOfWeekShareInput {
+  uuid: String
+}
+
+type PlayOfWeekShareInputResponse {
+  meta: Meta!
+  data: PlayOfWeekData
+}
+
+type PlayOfWeekData {
+  uuid: String
+  video_title: String
+  file_path: String
+  thumbnail_image: String
+  created_at: String
+}
+
+input CongListFrontPaginationInput {
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type CongListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [CongListFront]
+}
+
+type CongListFront {
+  sr_no: Int
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  match_type: String
+  location: String
+  old_skill_level: String
+  new_skill_level: String
+  old_recommendation: String
+  new_recommendation: String
+  is_like: Boolean
+  is_friend: Boolean
+  type: String
+  rating: String
+  comment_count: String
+  like_count: String
+  message: String
+  user_uuid: String
+  club_uuid: String
+  club_name: String
+  connectycube_id: String
+  date: String
+}
+
+input AddCongratulationCommentInput {
+  uuid: String
+  comment: String
+  parent_id: String
+}
+
+type AddCongratulationCommentResponse {
+  meta: Meta!
+}
+
+input CongraCommentsInput {
+  uuid: String
+}
+
+type CongratulationCommentInfo {
+  meta: Meta!
+  data: [CongraCommentData]
+}
+
+type CongraCommentData {
+  id: Int
+  uuid: String
+  comments: String
+  created_by: String
+  created_at: String
+  like_count: Boolean
+  is_like: Boolean
+  sub_comments: [congratulation_sub_comments]
+}
+
+type congratulation_sub_comments {
+  uuid: String
+  comments: String
+  created_by: String
+  created_at: String
+  like_count: Int
+  is_like: Boolean
+}
+
+input CongratulationLikeInput {
+  uuid: String
+  is_like: Int
+}
+
+type CongratulationLikeResponse {
+  meta: Meta!
+  data: likeCountData
+}
+
+input CongratulationShareInput {
+  uuid: String
+}
+
+type CongratulationShareInputResponse {
+  meta: Meta!
+  data: CongratulationData
+}
+
+type CongratulationData {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  match_type: String
+  location: String
+  old_skill_level: String
+  new_skill_level: String
+}
+
+input UpcommingListFrontPaginationInput {
+  match_title: String
+  location: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  invitation_status: String
+  schedual_type: String
+  match_type: String
+  skill_level: String
+  rating: String
+  club_name: String
+  time_line: String
+  from_date: String
+  to_date: String
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type UpcommingEventsListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [UpcommingEventsListFront]
+}
+
+type UpcommingEventsListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  skill_level: String
+  skill_level_label: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+}
+
+input AddUpcommingEventCommentInput {
+  uuid: String
+  comment: String
+  parent_id: String
+}
+
+type AddUpcommingEventCommentResponse {
+  meta: Meta!
+}
+
+input UpcommingEnentLikeInput {
+  uuid: String
+  is_like: Int
+}
+
+type UpcommingEnentLikeResponse {
+  meta: Meta!
+}
+
+input UpcommingEventCommentsInput {
+  uuid: String
+}
+
+type UpcommingCommentInfo {
+  meta: Meta!
+  data: [UpcommingEventCommentData]
+}
+
+type UpcommingEventCommentData {
+  id: Int
+  uuid: String
+  comments: String
+  created_by: String
+  created_at: String
+  like_count: Boolean
+  sub_comments: [sub_comments]
+}
+
+type sub_comments {
+  uuid: String
+  comments: String
+  created_by: String
+  created_at: String
+  like_count: Int
+}
+
+input UpcommingEventShareInput {
+  uuid: String
+}
+
+type UpcommingEventShareInputResponse {
+  meta: Meta!
+  data: MatchData
+}
+
+input addUserRecommendationInput {
+  match_uuid: String
+  user_uuid: String
+  recommendation_user_uuid: String
+  is_event: Int
+  is_decline: String
+}
+
+type addUserRecommendationResponse {
+  meta: Meta!
+}
+
+input PastEventListFrontPaginationInput {
+  match_title: String
+  match_type: String
+  skill_level: String
+  rating: String
+  club_name: String
+  time_line: String
+  from_date: String
+  to_date: String
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type PastEventListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [PastMatchListFront]
+}
+
+type PastMatchListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_court_type: String
+  locations: String
+  latitude: String
+  longitude: String
+  clubs: [clubInfo]
+  match_user_type: String
+  hours: String
+  courts: [courtInfo]
+  minutes: String
+  points_to_play: Int
+  is_rating: Int
+  ratings: [ratingInfo]
+  status: String
+  recurring_match_id: Int
+  is_booked_court: String
+  total_court: Int
+  note: String
+  skill_level_label: String!
+  club_name_label: String!
+  no_slot_label: String!
+  is_like: Int
+  like_count: Int
+  comment_count: Int
+  created_by: Int
+  created_at: String
+}
+
+input ViewPastEventInput {
+  uuid: String!
+}
+
+type ViewPastEventDetailResponse {
+  meta: Meta!
+  data: PastEventDetail!
+}
+
+type PastEventDetail {
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: Int
+  ratings: [ratingInfo]
+  clubs: [clubs]
+  date: String
+  time: String
+  open_slot: String
+  note: String
+  points_to_play: String
+  no_of_players: String
+  cost_of_player: String
+  court_no: String
+  duration: String
+  game_type: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  request_status: String
+  cost_per_player: String
+  open_spots_label: String
+  skill_level_label: String
+  duration_label: String
+  no_of_players_label: String
+  court_no_label: String
+  match_status: String
+  host_info: host_info
+  player_info: [player_info]
+}
+
+type host_info {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  is_friend: Boolean
+  is_group: Boolean
+  host_recommendation_level: String
+  clubs: [clubs]
+  connectycube_id: String
+}
+
+type player_info {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  clubs: [clubs]
+  is_friend: Boolean
+  is_group: Boolean
+  recommendation_level: String
+  connectycube_id: String
+  isSelected: Boolean
+  tier_details: tier_match_info
+}
+
+input matchInviteSlabInput {
+  match_uuid: String
+  reachout_time: String
+  time_zone: String
+}
+
+type matchInviteInfo {
+  meta: Meta!
+  data: matchInviteSlabData
+}
+
+type matchInviteSlabData {
+  duration: String
+  time: [String]
+  reachout_date: String
+}
+
+input MatchInvitePopupInput {
+  match_id: String
+}
+
+type MatchInvitePopupInputResponse {
+  meta: Meta!
+  data: MatchInviteData
+}
+
+type MatchInviteData {
+  uuid: String
+  match_title: String
+  file_path: String
+  image: String
+  ratings: ratingdtl
+  clubs: clubInviteInfo
+  date: String
+  no_slot: Int
+}
+
+type clubInviteInfo {
+  uuid: String
+  name: String
+  type: String
+}
+
+type ratingdtl {
+  id: Int
+  uuid: String
+  rating: String
+}
+
+input MyMatchListFrontPaginationInput {
+  match_title: String
+  match_type: String
+  skill_level: String
+  rating: String
+  club_name: String
+  time_line: String
+  from_date: String
+  to_date: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  offset: Int!
+  limit: Int
+  invitation_status: String
+  schdeuled_type: String
+  sort_column: String
+  sort_order: String
+}
+
+type MyMatchListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [MyMatchDetails]
+}
+
+type MyMatchDetails {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_court_type: String
+  locations: String
+  latitude: String
+  longitude: String
+  clubs: [clubInfo]
+  match_user_type: String
+  match_type_id: Int
+  hours: String
+  courts: [courtInfo]
+  minutes: String
+  points_to_play: Int
+  is_rating: Int
+  ratings: [ratingInfo]
+  status: String
+  recurring_match_id: Int
+  is_booked_court: String
+  total_court: Int
+  note: String
+  skill_level_label: String!
+  club_name_label: String!
+  no_slot_label: String!
+  is_like: Int
+  like_count: Int
+  comment_count: Int
+  created_by: Int
+  created_at: String
+}
+
+input MyGroupPaginationInput {
+  offset: Int!
+  limit: Int
+  skill_level: String
+  group_type: String
+  club_name: String
+  sort_column: String
+  sort_order: String
+}
+
+type MyGroupDataInfo {
+  meta: Meta!
+  pagination: MyGroupPagination
+  data: [MyGroupDetailsInfo]
+}
+
+type MyGroupDetailsInfo {
+  sr_no: Int!
+  uuid: String
+  image: String
+  name: String
+  status: String
+  clubs: [clubInfo]
+  types: [typeInfo]
+  rating: String
+  created_by: Int
+  created_at: String
+}
+
+type MyGroupPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input FrinedListInput {
+  offset: Int!
+  limit: Int
+  club_name: String
+  skill_level: String
+  gender: String
+  age: Int
+  recommendation_count: Int
+  name: String
+  sort_column: String
+  sort_order: String
+}
+
+type FrinedListInfo {
+  meta: Meta!
+  pagination: FriendListPagination
+  data: [FriendInfo]
+}
+
+type FriendInfo {
+  sr_no: Int!
+  uuid: String!
+  email: String
+  latitude: String
+  longitude: String
+  county: String
+  state: String
+  city: String
+  full_name: String
+  phone_country_id: String
+  mobile_number: String
+  gender: String
+  recommendation_count: Int
+  age: Int
+  avatar: String
+  file_path: String
+  clubs: [clubInfo]
+  skill: raitngInfo
+}
+
+type FriendListPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+type raitngInfo {
+  uuid: String!
+  rating: String!
+}
+
+input MyEventListFrontPaginationInput {
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  skill_level: String
+  rating: String
+  club_name: String
+  club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  organized_by: [String]
+  open_slot_filt: String
+}
+
+type MyEventListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [MyEventDetails]
+}
+
+type MyEventDetails {
+  sr_no: Int!
+  uuid: String
+  image: String
+  file_path: String
+  event_title: String
+  locations: String
+  latitude: String
+  longitude: String
+  date: String
+  time: String
+  hours: String
+  minutes: String
+  status: String
+  clubs: [clubListEventInfo]
+  note: String
+  is_like: Int
+  like_count: Int
+  comment_count: Int
+}
+
+type clubListEventInfo {
+  uuid: String!
+  name: String!
+  address: String!
+}
+
+type FrinedDataInfo {
+  meta: Meta!
+  data: [getMentionList]
+}
+
+type getMentionList {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  email: String
+}
+
+input MentionInput {
+  name: String
+}
+
+input notificationListInput {
+  type: Int
+  is_requested: Int
+  limit: Int
+  offset: Int
+}
+
+type notificationListInfo {
+  meta: Meta!
+  pagination: NotificationPagination
+  data: [notificationListData]
+}
+
+type notificationListData {
+  uuid: String
+  subject: String
+  message: String
+  invited_type_id: Int
+  invite_type: String
+  is_read: Int
+  created_At: String
+  user: userInfo
+  group: groupInfo
+  match: matchInfo
+  comment: commentInfo
+  notify_event: Int
+}
+
+type userInfo {
+  uuid: String
+  name: String
+  avatar: String
+  file_path: String
+  is_accept: Int
+}
+
+type commentInfo {
+  comment_uuid: String
+  sub_type: String
+  sub_type_uuid: String
+  sub_type_title: String
+  sub_type_image: String
+  sub_type_file_path: String
+  sub_type_created_at: String
+  matchDateTime: String
+}
+
+type groupInfo {
+  uuid: String
+  name: String
+  image: String
+  file_path: String
+  is_accept: Int
+  user_uuid: String
+  is_deleted: Boolean
+}
+
+type tierPriceInfo {
+  tier_price: Int
+  tier_description: String
+}
+
+type NotificationPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+  unread_count: Int
+}
+
+input ClearNotificationInput {
+  type: Int
+}
+
+type ClearNotificationResponse {
+  meta: Meta!
+  data: unread_count
+}
+
+type unread_count {
+  unread_count: Int
+}
+
+input TransactionListPaginationInput {
+  offset: Int!
+  limit: Int
+  id: String
+  date: String
+  sort_column: String
+  sort_order: String
+}
+
+type TransactionListDataInfo {
+  meta: Meta!
+  pagination: TransactionPagination
+  data: [TransactionListData]
+}
+
+type TransactionListData {
+  sr_no: Int!
+  uuid: String!
+  date: String
+  transaction_id: String
+  from_user: String
+  to_user: String
+  total_transaction_amount: String
+  status: String
+  matches: matchtransInfo
+  created_at: String
+  updated_at: String
+}
+
+type matchtransInfo {
+  uuid: String
+  match_title: String
+}
+
+type TransactionPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input viewTransactionDetailInput {
+  uuid: String!
+}
+
+type viewTransactionDetailResponse {
+  meta: Meta!
+  data: TransactionDetail!
+}
+
+type TransactionDetail {
+  uuid: String!
+  date: String
+  transaction_id: String
+  from_user: String
+  to_user: String
+  total_transaction_amount: String
+  per_head_share: String
+  transaction_fees: String
+  status: String
+  matches: transmatchdtl
+}
+
+type transmatchdtl {
+  uuid: String
+  match_title: String
+}
+
+input NotificationReadInput {
+  uuid: String
+}
+
+type NotificationReadResponse {
+  meta: Meta!
+  data: unread_count
+}
+
+input notificationSettingInput {
+  is_inapp: Int
+  in_app_day: Int
+  in_app_night: Int
+  is_snooze: Int
+  time_interval: String
+  is_manual: Int
+  hours: Int
+  minute: Int
+  is_openplay: Int
+  is_lesson: Int
+  is_social: Int
+  is_tournament: Int
+  is_camp: Int
+  is_league: Int
+  is_home_club: Int
+  club_uuid: String
+  invite_match: Int
+  invite_lesson: Int
+  invite_openplay: Int
+  invite_social: Int
+  invite_league: Int
+  invite_tournament: Int
+  invite_camp: Int
+  min_skill_range: Float
+  max_skill_range: Float
+}
+
+type notificationSettingResponse {
+  meta: Meta!
+}
+
+type getNotificationSettingInfo {
+  meta: Meta!
+  data: notificationSettingData
+}
+
+type notificationSettingData {
+  uuid: String
+  user_id: Int
+  is_inapp: Int
+  in_app_day: Int
+  in_app_night: Int
+  is_snooze: Int
+  time_interval: String
+  is_manual: Int
+  hours: Int
+  minute: Int
+  created_at: String
+  is_openplay: Int
+  is_lesson: Int
+  is_social: Int
+  is_tournament: Int
+  is_camp: Int
+  is_league: Int
+  is_home_club: Int
+  clubs: settingclubInfo
+  invite_match: Int
+  invite_lesson: Int
+  invite_openplay: Int
+  invite_social: Int
+  invite_league: Int
+  invite_tournament: Int
+  invite_camp: Int
+  is_skill_range: Int
+  min_skill_range: Float
+  max_skill_range: Float
+}
+
+type settingclubInfo {
+  uuid: String
+  name: String
+}
+
+type getNotificationSettingTimeInfo {
+  meta: Meta!
+  data: getNotificationSettingTimeData
+}
+
+type getNotificationSettingTimeData {
+  time: [String]
+}
+
+input AddAccountDetailInput {
+  version: String
+  platform: String
+  account_holder_name: String
+  account_holder_type: String
+  routing_number: String
+  account_number: String
+  first_name: String
+  last_name: String
+  city: String
+  dob: String
+  ssn_last_4: String
+  country: String
+  currency: String
+  stripe_bank_id: String
+  stripe_bank_token: String
+}
+
+type AddAccountDetailResponse {
+  meta: Meta!
+  data: CreateAccData
+}
+
+input CommentLikeInput {
+  comment_uuid: String
+  is_like: Boolean
+}
+
+type CommentLikeResponse {
+  meta: Meta!
+  data: commentLikeCountData
+}
+
+type commentLikeCountData {
+  like_count: String
+}
+
+input ViewAccountDetailInput {
+  uuid: String!
+}
+
+type ViewAccountDetailResponse {
+  meta: Meta!
+  data: accountData!
+}
+
+type accountData {
+  uuid: String!
+  account_number: String
+  account_holder_name: String
+  account_holder_type: String
+  ssn: String
+  country: String
+  state: String
+  city: String
+  routing_number: String
+}
+
+input AccountDetailUpdateInput {
+  uuid: String!
+  version: String
+  platform: String
+  account_number: String
+  account_holder_name: String
+  account_holder_type: String
+  ssn: String
+  country: String
+  state: String
+  city: String
+  routing_number: String
+}
+
+type AccountDetailUpdateResponse {
+  meta: Meta!
+}
+
+input AccountDetailPaginationInput {
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+}
+
+type AccountDetailInfo {
+  meta: Meta!
+  pagination: AccountDetailPagination
+  data: [AccountDetails]
+}
+
+type AccountDetails {
+  sr_no: Int!
+  uuid: String
+  account_number: String
+  account_holder_name: String
+  account_holder_type: String
+  ssn: String
+  country: String
+  state: String
+  city: String
+  routing_number: String
+}
+
+type AccountDetailPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input AddCardDetailInput {
+  version: String
+  platform: String
+  card_holder_name: String
+  card_number: String
+  cvv: String
+  card_exp_month: String
+  card_exp_year: String
+  brand: String
+  token_id: String
+  card_id: String
+  country_code: String
+}
+
+type AddCardDetailResponse {
+  meta: Meta!
+  data: AddCardData
+}
+
+type AddCardData {
+  card_id: String
+  stripe_customer_id: String
+}
+
+type ViewCardDetailResponse {
+  meta: Meta!
+  data: CardData
+}
+
+type CardData {
+  uuid: String
+  card_holder_name: String
+  card_number: String
+  cvv: String
+  card_exp_month: String
+  card_exp_year: String
+  country_code: String
+}
+
+input AccountCardUpdateInput {
+  uuid: String!
+  version: String
+  platform: String
+  card_holder_name: String
+  card_number: String
+  cvv: String
+  expiry_date: String
+}
+
+type AccountCardUpdateResponse {
+  meta: Meta!
+}
+
+type DashboradCount {
+  meta: Meta!
+  data: DashboradData
+}
+
+type DashboradData {
+  open_match_count: Int
+  schedual_match_count: Int
+  upcomming_events_count: Int
+  recent_joined_user: Int
+}
+
+type BannerDataInfo {
+  meta: Meta!
+  data: [getBannerList]
+}
+
+type getBannerList {
+  uuid: String!
+  file_name: String
+  file_type: String
+  file_path: String
+  title: String
+  description: String
+  start_date: String
+  end_date: String
+  interval: Int
+  url: String
+  banner_type: Int
+}
+
+input BannerTypeInput {
+  bannerType: String
+}
+
+type exportUserDataInfo {
+  meta: Meta!
+  pagination: userExportPagination
+  data: userExportInfo
+}
+
+type userExportInfo {
+  url: String
+}
+
+type userExportPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input exportUserPaginationInput {
+  offset: Int!
+  limit: Int
+  full_name: String
+  mobile_number: String
+  status: String
+  gender: String
+  email: String
+  rating: String
+  start_date: String
+  end_date: String
+  sort_column: String
+  sort_order: String
+  club_id: String
+  state: String
+  is_coach: String
+  is_export: Int
+}
+
+input ExportTransactionInput {
+  offset: Int!
+  limit: Int
+  ID: String
+  is_export: Int
+  sort_column: String
+  sort_order: String
+}
+
+type ExportTransactionListDataInfo {
+  meta: Meta!
+  pagination: ExportTransactionPagination
+  data: ExportTransactionListData
+}
+
+type ExportTransactionListData {
+  url: String
+}
+
+type ExportTransactionPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input viewMatchParticipateAdminInput {
+  offset: Int
+  limit: Int
+  match_id: String
+  sort_column: String
+  sort_order: String
+}
+
+type viewMatchParticipateAdminInputInfo {
+  meta: Meta!
+  pagination: viewMatchParticipateAdminPagination
+  data: [viewMatchParticipateAdminInfo]
+}
+
+type viewMatchParticipateAdminInfo {
+  sr_no: Int
+  uuid: String
+  image: String
+  file_path: String
+  name: String
+  gender: Int
+  email: String
+  mobile_number: String
+  status: Int
+  is_invited: Int
+  is_requested: Int
+  is_notified: Int
+  invite_from: Int
+  location: String
+  payment_status: String
+  amount: String
+  tier_details: tierParticipateMatchInfo
+}
+
+type tierParticipateMatchInfo {
+  tier_price: Int
+  tier_description: String
+}
+
+type viewMatchParticipateAdminPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input scheduleReachoutOrdInfoInput {
+  match_id: String
+}
+
+type scheduleReachoutOrdResponse {
+  meta: Meta!
+  data: [scheduleReachoutOrdData]
+}
+
+type scheduleReachoutOrdData {
+  slot: String
+  slot_lable: String
+  slab_no: Int
+  avtar: String
+  file_path: String
+  name: String
+  skill: Float
+  recommand: String
+  member_count: Int
+  group_type: String
+  is_group: Int
+}
+
+input deleteAllInput {
+  uuid: [String]
+  section: String
+}
+
+type deleteAllResponse {
+  meta: Meta!
+}
+
+type exploreNetworkInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [exploreNetworkInfoList]
+}
+
+type exploreNetworkInfoList {
+  uuid: String
+  full_name: String
+  recommendation: String
+  location: String
+  rating: String
+  gender: String
+  clubs: [exploreClubs]
+  isSelected: Boolean
+  image: String
+  file_path: String
+  age: Int
+  isFriend: Boolean
+  connectycube_id: String
+  is_coach: Int
+}
+
+type exploreClubs {
+  uuid: String
+  name: String
+  type: String
+}
+
+input exploreNetworkInput {
+  name: String
+  rating: String
+  gender: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  min_age: Int
+  max_age: Int
+  max: Int
+  min: Int
+  clubs: String
+  recommendation: String
+  is_coach: Int
+  offset: Int
+  limit: Int
+  is_friend: Boolean
+  sort_column: String
+  sort_order: String
+}
+
+input CommonGroupPaginationInput {
+  offset: Int!
+  limit: Int
+  user_uuid: String
+  name: String
+  status: String
+  group_type: String
+  skill: String
+  club: String
+  sort_column: String
+  sort_order: String
+}
+
+type CommonGroupInfo {
+  meta: Meta!
+  pagination: CommonGroupPagination
+  data: [CommonGroupData]
+}
+
+type CommonGroupData {
+  sr_no: Int!
+  uuid: String
+  image: String
+  name: String
+  owner: String
+  status: String
+  clubs: [commonclubInfo]
+  types: [commontypeInfo]
+  rating: Float
+  file_path: String
+  no_of_player: Int
+  isSelected: Boolean
+  created_by: Int
+  created_at: String
+}
+
+type commonclubInfo {
+  uuid: String!
+  name: String!
+}
+
+type commontypeInfo {
+  uuid: String!
+  name: String!
+}
+
+type CommonGroupPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input CommonCommentInput {
+  uuid: String
+  comment: String
+  parent_id: String
+  type: String
+  comment_mentions_users: [CustomCommentMention]
+}
+
+type CommonCommentResponse {
+  meta: Meta!
+  data: AddCommonCommentData
+}
+
+input CustomCommentMention {
+  full_name: String
+  user_uuid: String
+}
+
+type AddCommonCommentData {
+  id: Int
+  match_created_date: String
+  uuid: String
+  comments: String
+  created_by_uuid: String
+  created_by: String
+  created_at: String
+  like_count: Int
+  comment_count: Int
+  is_like: Boolean
+  tag_users: [tag_users]
+  avatar: String
+  file_path: String
+}
+
+type tag_users {
+  user_uuid: String
+  full_name: String
+}
+
+input CommonCommentDetailInput {
+  uuid: String
+  type: String
+  offset: Int
+  limit: Int
+}
+
+type CommonCommentDetailInfo {
+  meta: Meta!
+  pagination: commentPagination
+  data: [CommonCommentData]
+}
+
+type CommonCommentData {
+  id: Int
+  created_date: String
+  uuid: String
+  comments: String
+  created_by_uuid: String
+  created_by: String
+  created_at: String
+  like_count: Int
+  is_like: Boolean
+  tag_users: [tag_users]
+  sub_comments: [common_sub_comment]
+  avatar: String
+  file_path: String
+}
+
+type common_sub_comment {
+  uuid: String
+  comments: String
+  created_by_uuid: String
+  created_by: String
+  avatar: String
+  file_path: String
+  created_at: String
+  like_count: Int
+  is_like: Boolean
+  sub_tag_users: [sub_tag_users]
+}
+
+type sub_tag_users {
+  sub_user_uuid: String
+  sub_full_name: String
+}
+
+type commentPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+  is_post_host: Boolean
+  is_allowed_to_comment: Boolean
+}
+
+input CommonCommentDeleteInput {
+  comment_id: String!
+}
+
+type CommonCommentDeleteResponse {
+  meta: Meta!
+  data: CommentRespose
+}
+
+type CommentRespose {
+  comment_count: Int
+}
+
+input MapUserContactcubeInput {
+  connectycube_id: String
+  user_id: String
+}
+
+type MapUserContactcubeResponse {
+  meta: Meta!
+}
+
+input CreateChatGroupInput {
+  group_id: String
+  user_id: [String]
+  type: Int
+}
+
+type CreateChatGroupResponse {
+  meta: Meta!
+  data: CreateChatGroupInfo
+}
+
+type CreateChatGroupInfo {
+  group_id: String
+  is_inserted: Int
+}
+
+input UpdateChatGroupInput {
+  group_id: String
+  user_id: [String]
+  type: Int
+}
+
+type UpdateChatGroupResponse {
+  meta: Meta!
+}
+
+type getChatGroupInfo {
+  meta: Meta!
+  data: getChatGroupData
+}
+
+input getChatGroupInput {
+  user_id: [String]
+}
+
+type getChatGroupData {
+  group_id: String
+  type: Int
+}
+
+input GroupMemberConnectIdInput {
+  uuid: String
+}
+
+type GroupMemberConnectIdInfo {
+  meta: Meta!
+  data: [GroupMemberConnectIdData]
+}
+
+type GroupMemberConnectIdData {
+  connectycube_id: String
+}
+
+type CreateAccData {
+  stripe_bank_id: String
+  stripe_customer_id: String
+  stripe_account_id: String
+}
+
+type GetBankAccResponse {
+  meta: Meta!
+  data: AccData
+}
+
+type AccData {
+  account_holder_name: String
+  account_holder_type: String
+  routing_number: String
+  account_number: String
+  ssn_last_4: String
+  country: String
+  currency: String
+  first_name: String
+  last_name: String
+  city: String
+  dob: String
+}
+
+input EditBankAccInput {
+  account_holder_name: String
+  account_holder_type: String
+  routing_number: String
+  account_number: String
+  first_name: String
+  last_name: String
+  city: String
+  dob: String
+  ssn_last_4: String
+  country: String
+  currency: String
+  stripe_bank_id: String
+  stripe_bank_token: String
+}
+
+type EditBankAccResponse {
+  meta: Meta!
+  data: EditAccData
+}
+
+type EditAccData {
+  stripe_bank_id: String
+  stripe_customer_id: String
+  stripe_account_id: String
+}
+
+input ReportMailInput {
+  uuid: String
+  email: String
+  message: String
+}
+
+type ReportMailDataInfo {
+  meta: Meta
+}
+
+type findByOrganizerInfo {
+  meta: Meta!
+  data: [findByOrganizerData]
+}
+
+type findByOrganizerData {
+  uuid: String
+  name: String
+}
+
+type FilterTimelineInfo {
+  meta: Meta!
+  data: [FilterTimelineValue]
+}
+
+type FilterTimelineValue {
+  key: String
+  value: String
+}
+
+input GetMatchStatusInput {
+  user_id: String
+  match_id: String
+}
+
+type GetMatchResponse {
+  meta: Meta!
+  data: matchStatus
+}
+
+type matchStatus {
+  status: String
+}
+
+type MatchLevelData {
+  meta: Meta!
+  data: [getMatchlevelList]
+}
+
+type getMatchlevelList {
+  id: ID
+  uuid: String
+  title: String
+  status: Int
+  min_level: Float
+  max_level: Float
+  is_selected: Boolean
+  type: String
+}
+
+input CommonSettingInput {
+  cancel_match_time: Int
+  cancel_lesson_time: Int
+  cancel_social_time: Int
+  cancel_camp_time: Int
+  cancel_tournament_time: Int
+  cancel_league_time: Int
+}
+
+type CommonSettingResponse {
+  meta: Meta!
+}
+
+input DistanceSettingInput {
+  match_distance: Int
+  event_distance: Int
+  lesson_distance: Int
+  social_distance: Int
+  camp_distance: Int
+  league_distance: Int
+  tournament_distance: Int
+}
+
+type DistanceSettingResponse {
+  meta: Meta!
+}
+
+type ViewSettingData {
+  match_distance: Int
+  event_distance: Int
+  social_distance: Int
+  camp_distance: Int
+  tournament_distance: Int
+  league_distance: Int
+  cancel_match_time: Int
+  cancel_lesson_time: Int
+  cancel_camp_time: Int
+  cancel_tournament_time: Int
+  cancel_league_time: Int
+  cancel_social_time: Int
+  lesson_distance: Int
+  recommendation: Int
+}
+
+type ViewSettingResponse {
+  meta: Meta!
+  data: ViewSettingData
+}
+
+type StateDataInfo {
+  meta: Meta!
+  data: [StateData]
+}
+
+type StateData {
+  id: String
+  uuid: String!
+  state_name: String
+  status: Int
+}
+
+input FrontCommonSettingInput {
+  platform: String
+  version: String
+  user_id: String
+}
+
+type FrontCommonSettingResponse {
+  meta: Meta!
+  data: CommonSettingData
+}
+
+type CommonSettingData {
+  invite_string: String
+  is_update: Boolean
+  download_link: String
+  fource_dialog_message: String
+  stripeKey: String
+  reachout_on_free_event_create_time: Int
+  reachout_off_free_event_create_time: Int
+  reachout_on_paid_event_create_time: Int
+  reachout_off_paid_event_create_time: Int
+  match_types: [MatchUserTypes]
+}
+
+type MatchUserTypes {
+  id: Int
+  value: String
+}
+
+input CreateClubSuggestionInput {
+  user_uuid: String!
+  club_id: String!
+  image: String
+  file_path: String
+  name: String
+  country_code: String
+  phone_number: String
+  url: String
+  type: String
+  number_of_member: String
+  number_of_courts: String
+  is_membership_requre: String
+  start_time_mon: String
+  end_time_mon: String
+  start_time_tue: String
+  end_time_tue: String
+  start_time_wed: String
+  end_time_wed: String
+  start_time_thu: String
+  end_time_thu: String
+  start_time_fri: String
+  end_time_fri: String
+  start_time_sat: String
+  end_time_sat: String
+  start_time_sun: String
+  end_time_sun: String
+  is_mon_on: Boolean
+  is_tue_on: Boolean
+  is_wed_on: Boolean
+  is_thu_on: Boolean
+  is_fri_on: Boolean
+  is_sat_on: Boolean
+  is_sun_on: Boolean
+  court_type: String
+  note: String
+  cost: String
+}
+
+type CreateClubSuggestionResponseFront {
+  meta: Meta!
+}
+
+input LessonPaginationInput {
+  offset: Int!
+  limit: Int
+  title: String
+  club_name: String
+  skill_level: String
+  status: String
+  locations: String
+  radius: String
+  latitude: String
+  longitude: String
+  start_date: String
+  end_date: String
+  sort_column: String
+  sort_order: String
+  is_event: Int
+  lesson_creator: [String]
+}
+
+type LessonDataInfo {
+  meta: Meta!
+  pagination: LessonPagination
+  data: [LessonDetailsInfo]
+}
+
+type LessonDetailsInfo {
+  sr_no: Int!
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  locations: String
+  latitude: String
+  longitude: String
+  status: String
+  clubs: [clubInfoLesson]
+  ratings: [ratingInfoLesson]
+  organizer: [userInfoLesson]
+  date: String
+  time: String
+  total_court: Int
+  match_court_type: String
+  updated_at: String
+  created_at: String
+  matchlevel: String
+  matchlevel_label: String
+  is_event: Int
+  is_open: String
+  is_recurring: String
+  hours: String
+  minutes: String
+  min_skill_level: String
+}
+
+type userInfoLesson {
+  uuid: String
+  full_name: String
+  email: String
+  latitude: String
+  longitude: String
+  location: String
+}
+
+type clubInfoLesson {
+  uuid: String
+  name: String
+  cost_per_player: String
+}
+
+type ratingInfoLesson {
+  uuid: String
+  rating: String
+}
+
+type LessonPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input viewLessonInput {
+  uuid: String!
+}
+
+type viewLessonResponse {
+  meta: Meta!
+  data: lessonDataInfo!
+}
+
+type lessonDataInfo {
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  locations: String
+  latitude: String
+  longitude: String
+  clubs: [clubViewsDtlInfo]
+  ratings: [ratinggInfo]
+  points_to_play: Int
+  date: String
+  time: String
+  hours: String
+  minutes: String
+  no_slot: String
+  no_of_players: String
+  note: String
+  organizer: [userDataaInfo]
+  status: String
+  participants_count: Int
+  duration: String
+  cost_per_player: Int
+  cost_per_player_label: String
+  guest_fee: Int
+  match_type: String
+  min_skill_level: String
+  courts: [ClubcourtInfo]
+  court_type: String
+  matchlevel: String
+  matchlevel_label: String
+  court: String
+  is_open: String
+  is_recurring: String
+  amount_lesson_organizer: Float
+  total_amount_paid_for_lesson: Float
+  lesson_cost_per_player: Float
+}
+
+type ClubcourtInfo {
+  court_no: Int
+  court_type: String
+}
+
+type clubViewsDtlInfo {
+  uuid: String!
+  name: String!
+  type: String
+  address: String
+  cost: Int
+  image: String
+  file_path: String
+  rating: String
+  locations: String
+}
+
+type ratinggInfo {
+  uuid: String!
+  rating: Float
+}
+
+type userDataaInfo {
+  uuid: String
+  full_name: String
+  email: String
+  latitude: String
+  longitude: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  recommendation_level: String
+  court: String
+}
+
+type UserCoachInfo {
+  meta: Meta!
+  data: getCoachData
+}
+
+input GetCoachInput {
+  uuid: String
+  logged_in_user: String
+}
+
+type getCoachData {
+  uuid: String!
+  is_coach: String
+  recommendation_count: String
+  rating: String
+}
+
+type CoachSpecialData {
+  meta: Meta!
+  data: [CoachSpecialList]
+}
+
+type CoachSpecialList {
+  id: ID
+  uuid: String
+  rating: String
+  status: Int
+  description: String
+  min_val: Float
+  max_val: Float
+}
+
+input RecommendationInput {
+  recommendation: Int
+}
+
+type RecommendationResponse {
+  meta: Meta!
+}
+
+input OpenLessonInput {
+  user_name: String
+  match_title: String
+  location: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  invitation_status: String
+  schdeuled_type: String
+  match_type: String
+  skill_level: String
+  rating: String
+  club_name: String
+  club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  organized_by: [String]
+  timezone: String
+}
+
+type OpenLessonList {
+  meta: Meta!
+  pagination: Pagination
+  data: [OpenLessonListFront]
+}
+
+type OpenLessonListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  skill_level: String
+  min_skill_level: String
+  skill_level_label: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  created_date: String
+  is_recurring: Boolean
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+  cost: String
+  coach: coachInfo
+}
+
+type coachInfo {
+  uuid: String
+  name: String
+  image: String
+  rating: String
+  recommendation: String
+  file_path: String
+}
+
+input ScheduleLessonListFrontPaginationInput {
+  match_title: String
+  location: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  invitation_status: String
+  schedual_type: String
+  match_type: String
+  skill_level: String
+  rating: String
+  club_name: String
+  club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  schdeuled_type: String
+  organized_by: [String]
+  open_slot_filt: String
+  timezone: String
+}
+
+type ScheduleLessonListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [ScheduleLessonListFront]
+}
+
+type ScheduleLessonListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  skill_level: String
+  min_skill_level: String
+  skill_level_label: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  time: String
+  created_date: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  is_host: Boolean
+  is_recurring: Boolean
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+  cost: String
+  coach: coachInfo
+}
+
+input PastLessonListFrontPaginationInput {
+  match_title: String
+  match_type: String
+  skill_level: String
+  rating: String
+  club_name: String
+  club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  invitation_status: String
+  schdeuled_type: String
+  organized_by: [String]
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+  timezone: String
+}
+
+type PastLessonListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [PastLessonListFrontDetails]
+}
+
+type PastLessonListFrontDetails {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  skill_level: String
+  skill_level_label: String
+  min_skill_level: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  created_date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  is_host: Boolean
+  is_recurring: Boolean
+  cost: String
+  coach: coachInfo
+  matchlevel: String
+  matchlevel_label: String
+}
+
+input deleteCoachInput {
+  uuid: String!
+}
+
+type DeleteCoachResponse {
+  meta: Meta!
+}
+
+input deleUserCoachInput {
+  uuid: String!
+}
+
+type DeleUserCoachResponse {
+  meta: Meta!
+}
+
+input deleteAlInput {
+  uuid: [String]
+}
+
+type DeleteAlResponse {
+  meta: Meta!
+}
+
+input OpenPlayListFrontPaginationInput {
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  skill_level: String
+  rating: String
+  open_club_name: String
+  open_club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  organized_by: [String]
+  timezone: String
+}
+
+type OpenPlayListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [OpenPlayListFront]
+}
+
+type OpenPlayListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  skill_level: String
+  min_skill_level: String
+  skill_level_label: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  created_date: String
+  is_recurring: Boolean
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+}
+
+input OpenPlayScheduleListFrontPaginationInput {
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  skill_level: String
+  rating: String
+  club_name: String
+  club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  organized_by: [String]
+  open_slot_filt: String
+  timezone: String
+}
+
+type OpenPlayScheduleListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [OpenPlayScheduleListFront]
+}
+
+type OpenPlayScheduleListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  skill_level: String
+  min_skill_level: String
+  skill_level_label: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  created_date: String
+  is_recurring: Boolean
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+}
+
+input OpenPlayPastListFrontPaginationInput {
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  skill_level: String
+  rating: String
+  club_name: String
+  club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  organized_by: [String]
+  open_slot_filt: String
+  timezone: String
+}
+
+type OpenPlayPastListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [OpenPlayPastListFront]
+}
+
+type OpenPlayPastListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  skill_level: String
+  min_skill_level: String
+  skill_level_label: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  created_date: String
+  is_recurring: Boolean
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+}
+
+input viewOpenPlayInput {
+  uuid: String!
+}
+
+type viewOpenPlayDetailResponse {
+  meta: Meta!
+  data: OpenPlayDetail
+}
+
+type OpenPlayDetail {
+  is_host: Boolean
+  is_joined: Boolean
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  skill_level: String
+  min_skill_level: String
+  club_info: club_info_open_play
+  date: String
+  time: String
+  open_slot: String
+  note: String
+  points_to_play: String
+  no_of_players: String
+  cost_of_player: String
+  duration: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  request_status: String
+  cost_per_player: String
+  match_status: String
+  open_play_host_info: open_play_host
+  recurring_match: String
+  open_play_player_info: [open_play_player]
+  match_location: String
+  match_latitude: String
+  match_longitude: String
+  openCourtInfo: [openCourtInfo]
+  is_multi_dink: Boolean
+  no_courts: String
+  created_date: String
+  admin_pay_charge: Float
+  stripe_transaction_charge: Float
+  matchlevel: String
+  total_players: Int
+  is_booked_court: Int
+  skill_level_label: String
+  players_going_label: String
+  club_type_label: String
+  guest_fee_label: String
+  court_reserved_label: String
+  court_number_label: String
+  no_of_players_label: String
+  duration_label: String
+  points_to_play_lable: String
+  open_spots_label: String
+  matchlevel_label: String
+  is_reminder: Boolean
+  is_recurring: Int
+  admin_charge_max_amount: Float
+}
+
+type club_info_open_play {
+  id: String
+  uuid: String
+  club_name: String
+  club_type: String
+  address: String
+  latitude: String
+  longitude: String
+  is_membership_requre: String
+}
+
+type open_play_host {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  is_friend: Boolean
+  is_group: Boolean
+  recommendation_level: String
+  clubs: [clubs_open_play]
+  connectycube_id: String
+}
+
+type open_play_player {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  is_friend: Boolean
+  is_group: Boolean
+  clubs: [clubs_open_play]
+  recommendation_level: String
+  connectycube_id: String
+  isSelected: Boolean
+}
+
+type clubs_open_play {
+  uuid: String
+  name: String
+  club_type: String
+}
+
+input joinOpenPlayInput {
+  uuid: String
+  request_type: Int
+}
+
+type joinOpenPlay {
+  meta: Meta!
+}
+
+input openPlayBoardInput {
+  radius: Int
+  latitude: Float
+  longitude: Float
+}
+
+type openPlayDashboardCount {
+  meta: Meta!
+  data: getOpenPlayDashboardCount
+}
+
+type getOpenPlayDashboardCount {
+  open_play_count: Int
+  open_lesson_count: Int
+  upcoming_events_count: Int
+  open_social_event_count: Int
+  open_camp_event_count: Int
+  open_tournament_event_count: Int
+  open_league_event_count: Int
+}
+
+input openPlayDeleteInput {
+  user_id: Int
+}
+
+type openPlayDeleteResponse {
+  meta: Meta!
+}
+
+input viewLessonViewInput {
+  uuid: String!
+}
+
+type viewLessonDetailResponse {
+  meta: Meta!
+  data: OpenLessonDetail!
+}
+
+type OpenLessonDetail {
+  is_host: Boolean
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  match_status: String
+  club_info: club_info_lesson
+  date: String
+  time: String
+  recurring_match: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  no_courts: String
+  openCourtInfo: [openCourtInfoLesson]
+  no_of_players_label: String
+  note: String
+  no_of_players: String
+  skill_level_label: String
+  skill_level: String
+  min_skill_level: String
+  open_spots_label: String
+  open_slot: String
+  cost_of_player: String
+  cost_per_player_label: String
+  is_booked_court: Int
+  admin_pay_charge: Float
+  stripe_transaction_charge: Float
+  total_players: Int
+  is_reachout: String
+  is_private: String
+  duration: String
+  duration_label: String
+  request_status: String
+  open_host_info: open_host_info_lesson
+  open_player_info: [open_player_info_lesson]
+  matchlevel: String
+  matchlevel_label: String
+  is_reminder: Boolean
+  costPerPlayerLabel: String
+  is_recurring: Int
+  admin_charge_max_amount: Float
+  is_reachout_edit: Boolean
+}
+
+type openCourtInfoLesson {
+  court_no: String
+  game_type: String
+}
+
+type open_host_info_lesson {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  is_friend: Boolean
+  is_group: Boolean
+  recommendation_level: String
+  clubs_lesson: [clubs_lesson]
+  connectycube_id: String
+}
+
+type clubs_lesson {
+  uuid: String
+  name: String
+  club_type: String
+}
+
+type club_info_lesson {
+  id: String
+  uuid: String
+  club_name: String
+  club_type: String
+  address: String
+  latitude: String
+  longitude: String
+  is_membership_requre: String
+}
+
+type open_player_info_lesson {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  is_friend: Boolean
+  is_group: Boolean
+  clubs: [clubs_lesson]
+  recommendation_level: String
+  connectycube_id: String
+}
+
+input AddRequestPlayInputLsn {
+  match_id: String!
+  user_id: String!
+}
+
+type RequestToPlayLsnResponse {
+  meta: Meta!
+}
+
+input addPaymentInputLsn {
+  match_id: String
+  cost_per_player: String
+  transaction_fee: String
+  admin_fee: String
+  total: String
+}
+
+type CreateLsnPayResponse {
+  meta: Meta!
+}
+
+input LsnReqAcceptInput {
+  match_id: String!
+  user_id: String!
+}
+
+type LsnReqAcceptResponse {
+  meta: Meta!
+}
+
+input LessonReqRejectInput {
+  match_id: String!
+  user_id: String!
+  is_host_reject: Boolean
+}
+
+type ReqRejectResponseLsn {
+  meta: Meta!
+}
+
+input LessonCancelInput {
+  match_id: String
+  cancel_all: Int
+}
+
+type LessonCancelResponse {
+  meta: Meta!
+}
+
+input LessonUserInput {
+  match_id: String!
+  offset: Int
+  limit: Int
+  skill_level: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  recommendation_level: String
+  age_range: String
+  gender: String
+  friends: String
+  sort_column: String
+  sort_order: String
+}
+
+type LsnUserRequestedResponse {
+  meta: Meta!
+  pagination: Pagination
+  data: userFinalLsnData
+}
+
+type userFinalLsnData {
+  plyares: [plyaresLsn]
+  is_slot_available: Boolean
+}
+
+type plyaresLsn {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  clubs: [clubsLsnReq]
+  status: String
+  is_friend: Boolean
+  is_group: Boolean
+  recommendation_level: String
+  connectycube_id: String
+}
+
+type clubsLsnReq {
+  uuid: String
+  name: String
+  type: String
+}
+
+type InvitedLessonMemberInfo {
+  meta: Meta!
+  pagination: MemberLsnListPagination
+  data: [InvitedLsnMemberInfoList]
+}
+
+type InvitedLsnMemberInfoList {
+  uuid: String
+  full_name: String
+  recommendation: String
+  location: String
+  rating: String
+  clubs: [clubsInvited]
+  status: String
+  avatar: String
+  file_path: String
+  is_friend: Boolean
+  is_group: Boolean
+  invite_from: Int
+  invite_from_lable: String
+  group_name: String
+  group_id: String
+  connectycube_id: String
+  is_reinvite: Boolean
+  show_more: Boolean
+}
+
+type clubsInvited {
+  uuid: String
+  name: String
+  type: String
+}
+
+input InvitedLessonMemberInput {
+  name: String
+  uuid: String
+  offset: Int
+  limit: Int
+  skill_level: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  recommendation_level: String
+  age_range: String
+  gender: String
+  friends: String
+  sort_column: String
+  sort_order: String
+}
+
+type MemberLsnListPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+  is_reachout: Boolean
+  show_more: Boolean
+}
+
+input ClubSuggestionPaginationInput {
+  offset: Int!
+  limit: Int!
+  keyword: String
+  start_date: String
+  end_date: String
+  club_id: String
+  organizer_id: String
+  sort_column: String
+  sort_order: String
+}
+
+type ClubSuggestionInfo {
+  meta: Meta!
+  pagination: ClubSuggestionPagination
+  data: [ClubSuggestionData]
+}
+
+type ClubSuggestionData {
+  sr_no: Int!
+  file_path: String
+  uuid: String
+  user_image: String
+  name: String
+  club: String
+  no_fields: Int
+  is_approve: Int
+  date: String
+  status: String
+}
+
+type ClubSuggestionPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+type getRemaingUserInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [remaingRatingUserList]
+}
+
+type remaingRatingUserList {
+  uuid: String
+  full_name: String
+  recommendation: String
+  rating: String
+  avatar: String
+  file_path: String
+  recommanded_by: Int
+  connectycube_id: String
+  is_coach: Int
+  coach_recommendation: String
+  coach_recommanded_by: Int
+}
+
+input remaingRatingUsersInput {
+  offset: Int
+  limit: Int
+  name: String
+  is_coach: Int
+}
+
+input ViewClubSuggestionInput {
+  uuid: String!
+}
+
+type ViewClubSuggestionResponse {
+  meta: Meta!
+  data: clubSuggestionData!
+}
+
+type clubSuggestionData {
+  uuid: String!
+  response: String
+  user: SuggestedUserData
+}
+
+type SuggestedUserData {
+  name: String
+  user_image: String
+  file_path: String
+}
+
+input ConnectycubeidInput {
+  uuid: String!
+  ccgroup: String
+}
+
+type Connectycube {
+  meta: Meta!
+}
+
+input inActiveCoachInput {
+  uuid: String!
+}
+
+type inActiveCoachResponse {
+  meta: Meta!
+}
+
+input approveClubSuggestionInput {
+  uuid: String!
+  image_approve: Int
+  name_approve: Int
+  phone_number_approve: Int
+  url_approve: Int
+  type_approve: Int
+  no_courts_approve: Int
+  court_type_approve: Int
+  is_membership_requre_approve: Int
+  mon_approve: Int
+  tue_approve: Int
+  wed_approve: Int
+  thu_approve: Int
+  fri_approve: Int
+  sat_approve: Int
+  sun_approve: Int
+  note_approve: Int
+  cost_approve: Int
+}
+
+type approveClubSuggestionInputResponseFront {
+  meta: Meta!
+}
+
+type BannerTypeData {
+  meta: Meta!
+  data: [bannerTypeList]
+}
+
+type bannerTypeList {
+  id: ID
+  uuid: String
+  name: String
+  status: Int
+  description: String
+  key: String
+}
+
+type EventsInfo {
+  meta: Meta!
+  data: [getLatestEventsData]
+}
+
+input GetLatestEventInput {
+  latitude: Float
+  longitude: Float
+  radius: Int
+  rating: String
+  user_id: String
+}
+
+type getLatestEventsData {
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  skill_level: String
+  club_name_label: String
+  date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  created_date: String
+  is_event: Int
+  min_skill_level: String
+}
+
+input MyEventScheduleListFrontPaginationInput {
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  skill_level: String
+  rating: String
+  club_name: String
+  club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  organized_by: [String]
+  open_slot_filt: String
+}
+
+type MyEventScheduleListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [MyEventScheduleListFront]
+}
+
+type MyEventScheduleListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  skill_level: String
+  min_skill_level: String
+  skill_level_label: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  created_date: String
+  is_recurring: Boolean
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+}
+
+type MyEventPastListFrontInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [MyEventPastListFront]
+}
+
+type MyEventPastListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  skill_level: String
+  min_skill_level: String
+  skill_level_label: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  created_date: String
+  is_recurring: Boolean
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+}
+
+input EventsOpenInput {
+  user_name: String
+  match_title: String
+  location: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  invitation_status: String
+  schdeuled_type: String
+  match_type: String
+  skill_level: String
+  rating: String
+  club_name: String
+  club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  organized_by: [String]
+  is_event: String
+  is_my_events: Int
+  event_list_type: String
+  timezone: String
+  open_slot_filt: String
+}
+
+type EventsOpenList {
+  meta: Meta!
+  pagination: Pagination
+  data: [EventsOpenListFront]
+}
+
+type EventsOpenListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  skill_level: String
+  min_skill_level: String
+  skill_level_label: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  created_date: String
+  is_recurring: Boolean
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+  cost: String
+  is_event: Int
+}
+
+type CoachRecommendationDataFrontInfo {
+  meta: Meta!
+  data: [CoachRecommendationData]
+}
+
+type CoachRecommendationData {
+  uuid: String!
+  min: Int
+  max: Int
+  title: String
+  description: String
+  is_selected: Boolean
+}
+
+input removePlayerInput {
+  match_type: Int
+  match_uuid: String
+  user_uuid: String
+}
+
+type removePlayerResponse {
+  meta: Meta!
+}
+
+input joinMatchInput {
+  uuid: String
+  request_type: Int
+}
+
+type joinMatch {
+  meta: Meta!
+}
+
+input CommonOpenEventsInput {
+  user_name: String
+  match_title: String
+  location: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  invitation_status: String
+  schdeuled_type: String
+  match_type: String
+  skill_level: String
+  rating: String
+  club_name: String
+  club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  organized_by: [String]
+  timezone: String
+  is_event: Int
+  gender: Int
+}
+
+type CommonOpenEventsList {
+  meta: Meta!
+  pagination: Pagination
+  data: [CommonOpenEventsListFront]
+}
+
+type CommonOpenEventsListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  skill_level: String
+  min_skill_level: String
+  skill_level_label: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  created_date: String
+  is_recurring: Boolean
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+  cost: String
+  is_event: Int
+  openHostInfo: openHostInfo
+  event_approved: Int
+  is_event_completed: Int
+  status: Int
+  is_waiting_user: Int
+  tournament_bracket_type: String
+  gender: String
+}
+
+type openHostInfo {
+  uuid: String
+  name: String
+  image: String
+  rating: String
+  recommendation: String
+  file_path: String
+}
+
+input CommonPastEventsInput {
+  user_name: String
+  match_title: String
+  location: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  invitation_status: String
+  schdeuled_type: String
+  match_type: String
+  skill_level: String
+  rating: String
+  club_name: String
+  club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  organized_by: [String]
+  timezone: String
+  is_event: Int
+}
+
+type CommonPastEventsList {
+  meta: Meta!
+  pagination: Pagination
+  data: [CommonPastEventsListFront]
+}
+
+type CommonPastEventsListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  skill_level: String
+  min_skill_level: String
+  skill_level_label: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  created_date: String
+  is_recurring: Boolean
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+  cost: String
+  is_event: Int
+  pastHostInfo: pastHostInfo
+  is_event_completed: Int
+  status: Int
+  event_approved: Int
+  tournament_bracket_type: String
+  gender: String
+}
+
+type pastHostInfo {
+  uuid: String
+  name: String
+  image: String
+  rating: String
+  recommendation: String
+  file_path: String
+}
+
+input CommonScheduleEventsInput {
+  user_name: String
+  match_title: String
+  location: String
+  latitude: Float
+  longitude: Float
+  radius: Int
+  invitation_status: String
+  schdeuled_type: String
+  match_type: String
+  skill_level: String
+  rating: String
+  club_name: String
+  club_type: String
+  is_membership_require: String
+  time_line: String
+  from_date: String
+  to_date: String
+  offset: Int!
+  limit: Int
+  sort_column: String
+  sort_order: String
+  organized_by: [String]
+  open_slot_filt: String
+  timezone: String
+  is_event: Int
+  is_approved_tournament: Int
+}
+
+type CommonScheduleEventsList {
+  meta: Meta!
+  pagination: Pagination
+  data: [CommonScheduleEventsListFront]
+}
+
+type CommonScheduleEventsListFront {
+  sr_no: Int!
+  uuid: String!
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  skill_level: String
+  min_skill_level: String
+  skill_level_label: String
+  club_name_label: String
+  no_slot_label: String
+  date: String
+  time: String
+  club_name: String
+  club_uuid: String
+  club_type: String
+  no_slot: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  created_date: String
+  is_recurring: Boolean
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_booked_court: Int
+  cost: String
+  is_event: Int
+  scheduleHostInfo: scheduleHostInfo
+  is_event_completed: Int
+  status: Int
+  event_approved: Int
+  tournament_bracket_type: String
+  gender: String
+}
+
+type scheduleHostInfo {
+  uuid: String
+  name: String
+  image: String
+  rating: String
+  recommendation: String
+  file_path: String
+}
+
+input CoachListInput {
+  offset: Int
+  limit: Int
+  name: String
+  match_id: String
+  skill_level: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  recommendation_level: String
+  age_range: String
+  gender: String
+  sort_column: String
+  sort_order: String
+  match_organiser: Int
+  clubs: String
+}
+
+type CoachListResponse {
+  meta: Meta!
+  pagination: CoachListPagination
+  data: [coachUsersData]
+}
+
+type coachUsersData {
+  uuid: String
+  full_name: String
+  recommendation: String
+  location: String
+  rating: String
+  gender: String
+  clubs: [coachClubs]
+  isSelected: Boolean
+  image: String
+  file_path: String
+  age: Int
+  is_friend: Boolean
+  connectycube_id: String
+}
+
+type coachClubs {
+  uuid: String
+  name: String
+  type: String
+}
+
+type CoachListPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input InvitedCoachListInput {
+  name: String
+  uuid: String!
+  offset: Int
+  limit: Int
+  skill_level: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  recommendation_level: String
+  age_range: String
+  gender: String
+  sort_column: String
+  sort_order: String
+}
+
+type InvitedCoachListResponse {
+  meta: Meta!
+  pagination: InvitedCoachListPagination
+  data: [invitedCoachUsersData]
+}
+
+type invitedCoachUsersData {
+  uuid: String
+  full_name: String
+  recommendation: String
+  location: String
+  rating: String
+  gender: String
+  isSelected: Boolean
+  status: String
+  avatar: String
+  clubs: [clubsInvited]
+  image: String
+  file_path: String
+  age: Int
+  is_friend: Boolean
+}
+
+type InvitedCoachListPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input sendCoachInviteInput {
+  match_id: String
+  players: [String]
+  time_zone: String
+  is_alert_notification: Boolean
+  is_reinvite: Boolean
+}
+
+type sendCoachInviteResponse {
+  meta: Meta!
+}
+
+input CoachRemoveInput {
+  match_uuid: String!
+  user: [String]!
+}
+
+type CoachRemoveResponse {
+  meta: Meta!
+}
+
+input viewCommonEventInput {
+  uuid: String!
+}
+
+type viewCommonEventDetailResponse {
+  meta: Meta!
+  data: CommonEventDetail
+}
+
+type CommonEventDetail {
+  is_host: Boolean
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  match_user_type: String
+  match_status: String
+  club_info: club_info_event
+  date: String
+  time: String
+  recurring_match: String
+  is_like: Boolean
+  like_count: String
+  comment_count: String
+  no_courts: String
+  openCourtInfo: [openCourtInfoEvent]
+  no_of_players_label: String
+  note: String
+  no_of_players: String
+  skill_level_label: String
+  skill_level: String
+  min_skill_level: String
+  open_spots_label: String
+  open_slot: String
+  cost_of_player: String
+  cost_per_player_label: String
+  is_booked_court: Int
+  admin_pay_charge: Float
+  stripe_transaction_charge: Float
+  total_players: Int
+  is_reachout: String
+  is_private: String
+  duration: String
+  duration_label: String
+  request_status: String
+  open_host_info: open_host_info_event
+  open_player_info: [open_player_info_event]
+  partner_preferences: [event_partner_preferences]
+  matchlevel: String
+  matchlevel_label: String
+  is_reminder: Boolean
+  costPerPlayerLabel: String
+  is_recurring: Int
+  as_coach: Int
+  event_end_date: String
+  event_end_time: String
+  community_image: String
+  event_approved: Int
+  coaches: [EventCoachList]
+  is_event: Int
+  match_organiser: Int
+  gender: Int
+  organizer_payment_status: Int
+  time_end: Int
+  is_event_completed: Int
+  tier_details: [tierEventInfo]
+  is_waiting: Int
+  waiting_count: Int
+  is_waiting_user: Int
+  tournament_bracket_type: String
+  admin_charge_max_amount: Float
+  is_reachout_edit: Boolean
+  is_prefer_partner: Boolean
+}
+
+type EventCoachList {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  is_friend: Boolean
+  isSelected: Boolean
+  recommendation_level: String
+  clubs_coach: [clubs_event]
+  connectycube_id: String
+}
+
+type openCourtInfoEvent {
+  court_no: String
+  game_type: String
+}
+
+type open_host_info_event {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  is_friend: Boolean
+  is_group: Boolean
+  recommendation_level: String
+  clubs_event: [clubs_event]
+  connectycube_id: String
+}
+
+type clubs_event {
+  uuid: String
+  name: String
+  club_type: String
+}
+
+type club_info_event {
+  id: String
+  uuid: String
+  club_name: String
+  club_type: String
+  address: String
+  latitude: String
+  longitude: String
+  is_membership_requre: String
+}
+
+type open_player_info_event {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  is_friend: Boolean
+  is_group: Boolean
+  clubs: [clubs_event]
+  recommendation_level: String
+  connectycube_id: String
+  tier_details: tierEventInfo
+  is_prefer_partner: Boolean
+}
+
+type event_partner_preferences {
+  preferred_to: front_preferredTo
+  preferred_from: front_preferredFrom
+}
+
+type front_preferredTo {
+  uuid: String
+  full_name: String
+  rating: String
+}
+
+type front_preferredFrom {
+  uuid: String
+  full_name: String
+  rating: String
+}
+
+type tierEventInfo {
+  tier_price: Int
+  tier_description: String
+}
+
+input AddRequestPlayInputEvent {
+  match_id: String!
+  user_id: String!
+  is_event: Int!
+}
+
+type RequestToPlayEventResponse {
+  meta: Meta!
+}
+
+input EventRequestedUserInput {
+  match_id: String!
+  offset: Int
+  limit: Int
+  skill_level: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  recommendation_level: String
+  age_range: String
+  gender: String
+  friends: String
+  sort_column: String
+  sort_order: String
+}
+
+type EventUserRequestedResponse {
+  meta: Meta!
+  pagination: Pagination
+  data: userFinalEventData
+}
+
+type userFinalEventData {
+  plyares: [plyaresEvent]
+  is_slot_available: Boolean
+}
+
+type plyaresEvent {
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  clubs: [clubsEventReq]
+  status: String
+  is_friend: Boolean
+  is_group: Boolean
+  recommendation_level: String
+  connectycube_id: String
+}
+
+type clubsEventReq {
+  uuid: String
+  name: String
+  type: String
+}
+
+type InvitedEventMemberInfo {
+  meta: Meta!
+  pagination: MemberEventListPagination
+  data: [InvitedEventMemberInfoList]
+}
+
+type InvitedEventMemberInfoList {
+  uuid: String
+  full_name: String
+  recommendation: String
+  location: String
+  rating: String
+  clubs: [clubsInvited]
+  status: String
+  avatar: String
+  file_path: String
+  is_friend: Boolean
+  is_group: Boolean
+  invite_from: Int
+  invite_from_lable: String
+  group_name: String
+  group_id: String
+  connectycube_id: String
+  is_reinvite: Boolean
+  show_more: Boolean
+  is_waiting: Int
+}
+
+input InvitedEventMemberInput {
+  name: String
+  uuid: String
+  offset: Int
+  limit: Int
+  skill_level: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  recommendation_level: String
+  age_range: String
+  gender: String
+  friends: String
+  sort_column: String
+  sort_order: String
+}
+
+type MemberEventListPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+  is_reachout: Boolean
+  show_more: Boolean
+}
+
+input EventReqAcceptInput {
+  match_id: String!
+  user_id: String!
+  is_event: Int!
+  tier_price: Int
+  tier_description: String
+}
+
+type EventReqAcceptResponse {
+  meta: Meta!
+}
+
+input CommonEventReqRejectInput {
+  match_id: String!
+  user_id: String!
+  is_host_reject: Boolean
+  is_event: Int!
+}
+
+type ReqRejectResponseEvent {
+  meta: Meta!
+}
+
+input EventCancelInput {
+  match_id: String
+  cancel_all: Int
+  is_event: Int!
+}
+
+type EventCancelResponse {
+  meta: Meta!
+}
+
+input addPaymentInputEvent {
+  match_id: String
+  cost_per_player: String
+  transaction_fee: String
+  admin_fee: String
+  total: String
+  is_event: Int!
+  tier_description: String
+}
+
+type CreateEventPayResponse {
+  meta: Meta!
+}
+
+input CommunityEventsListInput {
+  latitude: Float
+  longitude: Float
+  radius: Int
+  skill_level: String
+  community_photo: String
+  gender: Int
+}
+
+type CommunityEventsListResponse {
+  meta: Meta!
+  data: [communityEventsData]
+}
+
+type communityEventsData {
+  uuid: String
+  image: String
+  event_title: String
+  matchlevel: String
+  matchlevel_label: String
+  is_event: Int
+  date: String
+  time: String
+  cost: String
+  is_like: Boolean
+  comment_count: String
+  like_count: String
+  club_uuid: String
+  club_name: String
+  club_type: String
+  skill_level: String
+  min_skill_level: String
+  no_slot: String
+  gender: Int
+}
+
+input setPartnerPreferenceInput {
+  match_id: String!
+  user_id: String!
+  preferred_to: [String]!
+}
+
+type setPartnerPreferenceResponse {
+  meta: Meta!
+}
+
+input EventWaitingListInput {
+  match_id: String!
+  offset: Int
+  limit: Int
+  skill_level: String
+  radius: Int
+  latitude: Float
+  longitude: Float
+  recommendation_level: String
+  age_range: String
+  gender: String
+  friends: String
+  sort_column: String
+  sort_order: String
+}
+
+type EventWaitingListResponse {
+  meta: Meta!
+  pagination: Pagination
+  data: finalEventWaitListData
+}
+
+type finalEventWaitListData {
+  plyares: [waitingPlayers]
+  is_slot_available: Boolean
+}
+
+type waitingPlayers {
+  sr_no: Int
+  uuid: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  clubs: [waitingListClubs]
+  status: String
+  is_friend: Boolean
+  is_group: Boolean
+  recommendation_level: String
+  connectycube_id: String
+  is_invited: Int
+  is_requested: Int
+  is_waiting: Int
+  gender: Int
+  invite_from: Int
+  mobile_number: String
+  phone_country_id: String
+  is_reinvite: Boolean
+  email: String
+}
+
+type waitingListClubs {
+  uuid: String
+  name: String
+  type: String
+}
+
+input CancelWaitingSpotInput {
+  match_id: String!
+  user_id: String!
+  is_event: Int!
+}
+
+type CancelWaitingSpotResponse {
+  meta: Meta!
+}
+
+input TournamentBracketsListInput {
+  offset: Int
+  limit: Int
+  event_id: String
+  user_id: String
+}
+
+type TournamentBracketsListResponse {
+  meta: Meta!
+  pagination: Pagination
+  data: [TournamentBracketData]
+}
+
+type TournamentBracketData {
+  uuid: String
+  image: String
+  event_title: String
+  matchlevel: String
+  matchlevel_label: String
+  is_event: Int
+  date: String
+  time: String
+  cost: String
+  is_like: Boolean
+  comment_count: String
+  like_count: String
+  club_uuid: String
+  club_name: String
+  club_type: String
+  skill_level: String
+  min_skill_level: String
+  no_slot: String
+  gender: Int
+}
+
+input MoveToOtherEventInput {
+  from_event_id: String
+  to_event_id: String
+  user_id: String
+}
+
+type MoveToOtherEventResponse {
+  meta: Meta!
+}
+
+input CommonEventsInput {
+  offset: Int!
+  limit: Int
+  title: String
+  club_name: String
+  skill_level: String
+  status: String
+  locations: String
+  radius: String
+  latitude: String
+  longitude: String
+  start_date: String
+  end_date: String
+  sort_column: String
+  sort_order: String
+  event_creator: [String]
+  is_event: String
+  event_approved: Int
+  gender: Int
+}
+
+type CommonEventsDataInfo {
+  meta: Meta!
+  pagination: CommonEventsPagination
+  data: [CommonEventsDetailsInfo]
+}
+
+type CommonEventsDetailsInfo {
+  sr_no: Int!
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  locations: String
+  latitude: String
+  longitude: String
+  status: String
+  clubs: [clubInfoCommonEvents]
+  ratings: [ratingInfoCommonEvents]
+  organizer: [userInfoCommonEvents]
+  date: String
+  time: String
+  total_court: Int
+  match_court_type: String
+  updated_at: String
+  created_at: String
+  matchlevel: String
+  matchlevel_label: String
+  is_event: Int
+  is_open: String
+  is_recurring: String
+  hours: String
+  minutes: String
+  event_end_date: String
+  event_end_time: String
+  event_approved: Int
+  community_image: String
+  gender: String
+  is_event_completed: Int
+  skill_level: String
+  min_skill_level: String
+  skill_level_label: String
+}
+
+type userInfoCommonEvents {
+  uuid: String
+  full_name: String
+  email: String
+  latitude: String
+  longitude: String
+  location: String
+}
+
+type clubInfoCommonEvents {
+  uuid: String
+  name: String
+  cost_per_player: String
+}
+
+type ratingInfoCommonEvents {
+  uuid: String
+  rating: String
+}
+
+type CommonEventsPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input viewCommonEventsAdminInput {
+  uuid: String!
+}
+
+type viewCommonEventResponse {
+  meta: Meta!
+  data: eventDataInfo!
+}
+
+type eventDataInfo {
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  locations: String
+  latitude: String
+  longitude: String
+  clubs: [eventClubViewsDtlInfo]
+  ratings: [eventRatinggInfo]
+  points_to_play: Int
+  date: String
+  time: String
+  hours: String
+  minutes: String
+  no_slot: String
+  no_of_players: String
+  note: String
+  organizer: [eventUserDataaInfo]
+  status: String
+  participants_count: Int
+  duration: String
+  cost_per_player: Int
+  cost_per_player_label: String
+  guest_fee: Int
+  match_type: String
+  min_skill_level: String
+  courts: [ClubcourtEventInfo]
+  court_type: String
+  matchlevel: String
+  matchlevel_label: String
+  court: String
+  is_open: String
+  is_recurring: String
+  event_end_date: String
+  event_end_time: String
+  community_image: String
+  event_approved: Int
+  gender: Int
+  coaches: [AdminEventCoachList]
+  is_event_completed: Int
+  recurring_match: String
+  is_event: Int
+  is_waiting: Int
+  waiting_list: [AdminEventWaitingList]
+  tier_details: [tierEventAdminInfo]
+  partner_preferences: [event_admin_partner_preferences]
+  amount_event_organizer: Float
+  total_amount_paid_for_event: Float
+  tournament_bracket_type: String
+}
+
+type AdminEventCoachList {
+  uuid: String
+  email: String
+  full_name: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  recommendation_level: String
+  clubs_coach: [clubs_event]
+}
+
+type ClubcourtEventInfo {
+  court_no: Int
+  court_type: String
+}
+
+type eventClubViewsDtlInfo {
+  uuid: String!
+  name: String!
+  type: String
+  address: String
+  cost: Int
+  image: String
+  file_path: String
+  rating: String
+  locations: String
+}
+
+type eventRatinggInfo {
+  uuid: String!
+  rating: Float
+}
+
+type eventUserDataaInfo {
+  uuid: String
+  full_name: String
+  email: String
+  latitude: String
+  longitude: String
+  avatar: String
+  file_path: String
+  rating: String
+  locations: String
+  recommendation_level: String
+  court: String
+}
+
+type event_admin_partner_preferences {
+  preferred_to: preferredTo
+  preferred_from: preferredFrom
+}
+
+type preferredTo {
+  uuid: String
+  full_name: String
+}
+
+type preferredFrom {
+  uuid: String
+  full_name: String
+}
+
+type tierEventAdminInfo {
+  tier_price: Int
+  tier_description: String
+}
+
+input CommunityApproveInput {
+  uuid: String!
+  status: Int
+}
+
+type CommunityApproveResponse {
+  meta: Meta!
+}
+
+input UpdateCommunityPhotoInput {
+  uuid: String!
+  community_image: String
+}
+
+type UpdateCommunityPhotoResponse {
+  meta: Meta!
+}
+
+input skipRatingInput {
+  match_uuid: String
+  user_uuid: String
+}
+
+type skipRating {
+  meta: Meta!
+}
+
+type homePageCount {
+  meta: Meta!
+  data: homePageAllCount
+}
+
+type homePageAllCount {
+  open_match: Int
+  my_match: Int
+  open_play: Int
+  tournament: Int
+  league: Int
+  lessons: Int
+  camps: Int
+  events: Int
+}
+
+input homePageCountInput {
+  latitude: Float
+  longitude: Float
+  radius: Int
+  rating: String
+}
+
+type homePageUserCountData {
+  meta: Meta!
+  data: homePageUserCountVal
+}
+
+type homePageUserCountVal {
+  recently_join: Int
+  friend: Int
+}
+
+input homePageUserCountInput {
+  latitude: Float
+  longitude: Float
+  radius: Int
+}
+
+input addPreferredPartnerInput {
+  match_uuid: String
+  preferred_user_uuid: String
+  is_tier: Int
+  prefer_by_uuid: String
+}
+
+type addPreferredPartnerResponse {
+  meta: Meta!
+  data: preferredPartnerData
+}
+
+type preferredPartnerData {
+  is_payment: Int
+}
+
+input addPaymentPreferPartnerInput {
+  match_uuid: String
+  cost_per_player: String
+  transaction_fee: String
+  admin_fee: String
+  total: String
+  is_event: Int!
+  tier_description: String
+  prefer_partner_id: String
+}
+
+type addPaymentPreferPartnerResponse {
+  meta: Meta!
+}
+
+input inviteFreeLessonAcceptInput {
+  match_uuid: String
+  user_uuid: String
+}
+
+type inviteFreeLessonAcceptResponse {
+  meta: Meta!
+}
+
+input joinCommonEventInput {
+  match_uuid: String
+  user_uuid: String
+  is_event: Int
+  tier_price: Int
+  tier_description: String
+}
+
+type joinCommonEventResponse {
+  meta: Meta!
+}
+
+input matchPaymentLedgerInput {
+  offset: Int
+  limit: Int
+  match_id: String
+  sort_column: String
+  sort_order: String
+}
+
+type matchPaymentLedgerInputInfo {
+  meta: Meta!
+  pagination: matchPaymentLedgerPagination
+  data: matchPaymentLedgerPaginationData
+}
+
+type matchPaymentLedgerPaginationData {
+  total: Float
+  payment_total: Float
+  refund_total: Float
+  org_trans_total: Float
+  ledgerVal: [matchPaymentLedgerPaginationInfo]
+}
+
+type matchPaymentLedgerPaginationInfo {
+  user_name: String
+  payment_amount: Float
+  payment_date: String
+  refund_amount: Float
+  refund_date: String
+  org_trans_amount: Float
+  org_trans_date: String
+  cost_per_player: Float
+  admin_charges: Float
+  stripe_fees: Float
+  total_amount: Float
+}
+
+type matchPaymentLedgerPagination {
+  total_count: Int
+  offset: Int
+  limit: Int
+}
+
+input inviteAcceptSlotCheckInput {
+  match_uuid: String
+  user_uuid: String
+}
+
+type inviteAcceptSlotCheckResponse {
+  meta: Meta!
+  data: inviteAcceptSlotCheckData
+}
+
+type inviteAcceptSlotCheckData {
+  data: Int
+}
+
+type viewMatchDetailResponse {
+  meta: Meta!
+  data: MatchDetail!
+}
+
+type MatchDetail {
+  uuid: String
+  image: String
+  file_path: String
+  match_title: String
+  match_title_uuid: String
+  match_user_type: String
+  match_type_id: Int
+  skill_level: String
+  locations: String
+  date: String
+  created_date: String
+  time: String
+  club_uuid: String
+  club_name: String
+  address: String
+  club_latitude: String
+  club_longitude: String
+  club_type: String
+  is_membership_requre: String
+  open_slot: String
+  note: String
+  points_to_play: String
+  no_of_players: String
+  cost_of_player: String
+  points_to_play_lable: String
+  open_spots_label: String
+  skill_level_label: String
+  duration_label: String
+  no_of_players_label: String
+  court_no_label: String
+  court_no: String
+  duration: String
+  is_like: Boolean
+  like_count: Int
+  comment_count: Int
+  host_info: host_info
+  player_info: [player_info]
+  is_host: Boolean
+  is_recurring: Int
+  recurring_match: String
+  schedule_player_info: [player_info]
+  cost_per_player_lable: String
+  match_status: String
+  match_location: String
+  match_latitude: String
+  match_longitude: String
+  court_info: [court_info]
+  is_multi_dink: Boolean
+  no_courts: String
+  is_booked_court: Int
+  is_private: Int
+  min_skill_level: String
+  is_reminder: Boolean
+  admin_pay_charge: Float
+  stripe_transaction_charge: Float
+  matchlevel: String
+  matchlevel_label: String
+  total_players: Int
+  is_reachout: Boolean
+  match_organiser: Int
+  tier_details: [tier_match_info]
+  is_waiting: Int
+  waiting_count: Int
+  is_reachout_edit: Boolean
+  admin_charge_max_amount: Float
+  request_status: String
+  is_waiting_user: Int
+}
+
+type court_info {
+  court_no: String
+  game_type: String
+}
+
+type tier_match_info {
+  tier_price: Int
+  tier_description: String
+}
+
+type EventConfirmPlayerInfo {
+  meta: Meta!
+  pagination: Pagination
+  data: [EventConfirmPlayerList]
+}
+
+type EventConfirmPlayerList {
+  uuid: String
+  full_name: String
+  recommendation: String
+  location: String
+  rating: String
+  gender: String
+  clubs: [exploreClubs]
+  isSelected: Boolean
+  image: String
+  file_path: String
+  age: Int
+  isFriend: Boolean
+  connectycube_id: String
+  is_coach: Int
+}
+
+input EventConfirmPlayerInput {
+  offset: Int
+  limit: Int
+  match_id: String
+  user_id: String
+  name: String
+}
+
+input LoginInput {
+  username: String!
+  password: String!
+}
+
+input RefreshTokenInput {
+  refresh_token: String
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+}
+
+type AuthPayload {
+  access_token: String
+  refresh_token: String
+  expires_in: Int
+  token_type: String
+  user: User
+}
+
+type RefreshTokenPayload {
+  access_token: String!
+  refresh_token: String!
+  expires_in: Int!
+  token_type: String!
+}
+
+type LogoutResponse {
+  status: String!
+  message: String
+}
+
+type ForgotPasswordResponse {
+  status: String!
+  message: String
+}
+
+type RegisterResponse {
+  tokens: AuthPayload
+  status: RegisterStatuses!
+}
+
+type UpdatePasswordResponse {
+  status: String!
+  message: String
+}
+
+enum RegisterStatuses {
+  MUST_VERIFY_EMAIL
+  SUCCESS
+}
+
+input NewPasswordWithCodeInput {
+  email: String!
+  token: String!
+  password: String!
+  password_confirmation: String!
+}
+
+input RegisterInput {
+  name: String!
+  email: String!
+  password: String!
+  password_confirmation: String!
+}
+
+input SocialLoginInput {
+  provider: String!
+  token: String!
+}
+
+input VerifyEmailInput {
+  token: String!
+}
+
+input UpdatePassword {
+  old_password: String!
+  password: String!
+  password_confirmation: String!
+}
+
+# Directions for ordering a list of records.
+enum SortOrder {
+  # Sort records in ascending order.
+  ASC
+
+  # Sort records in descending order.
+  DESC
+}
+
+# Aggregate functions when ordering by a relation without specifying a column.
+enum OrderByRelationAggregateFunction {
+  # Amount of items.
+  COUNT
+}
+
+# Aggregate functions when ordering by a relation that may specify a column.
+enum OrderByRelationWithColumnAggregateFunction {
+  # Average.
+  AVG
+
+  # Minimum.
+  MIN
+
+  # Maximum.
+  MAX
+
+  # Sum.
+  SUM
+
+  # Amount of items.
+  COUNT
+}
+
+# Allows ordering a list of records.
+input OrderByClause {
+  # The column that is used for ordering.
+  column: String!
+
+  # The direction that is used for ordering.
+  order: SortOrder!
+}
+
+# Specify if you want to include or exclude trashed results from a query.
+enum Trashed {
+  # Only return trashed results.
+  ONLY
+
+  # Return both trashed and non-trashed results.
+  WITH
+
+  # Only return non-trashed results.
+  WITHOUT
+}

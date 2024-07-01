@@ -1,0 +1,10 @@
+mutation SendOtp($input:SendOTPInput!) {
+    sendOTP(input: $input) {
+        meta {
+            status
+            message
+            message_code
+            status_code
+        }
+    }
+}

@@ -1,0 +1,62 @@
+
+
+#mutation UserLogin{
+#    userLogin(input: {
+#        version:"1.0"
+#        platform:"Android"
+#        phone_country_id:"1"
+#        mobile_number: "9016804343"
+#        otp: "1234"
+#        device_token: "xlmka"
+#        # device_info: {}
+#    }) {
+#        meta {
+#            status
+#            message
+#            message_code
+#            status_code
+#        }
+#        data {
+#            token_type
+#            expires_in
+#            access_token
+#            refresh_token
+#            user {
+#                uuid
+#                first_name
+#                last_name
+#                avatar
+#                file_path
+#                is_finish
+#                connectycube_id
+#                phone_country_id
+#                mobile_number
+#                is_card_added
+#                is_bank_account_added
+#            }
+#        }
+#    }
+#}
+#
+#mutation VerifyOTP{
+#    VerifyOTP(input: {
+#        phone_country_id:"1"
+#        mobile_number:"9016804343"
+#        otp:"1234"
+#    }) {
+#        meta {
+#            status
+#            message
+#            message_code
+#            status_code
+#        }
+#        data {
+#            uuid
+#            first_name
+#            last_name
+#            is_completed
+#            rating
+#            is_finish
+#        }
+#    }
+#}

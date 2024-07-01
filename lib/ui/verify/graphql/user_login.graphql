@@ -1,0 +1,30 @@
+mutation UserLogin($input:UserLoginInput!){
+    userLogin(input: $input
+    ) {
+        meta {
+            status
+            message
+            message_code
+            status_code
+        }
+        data {
+            token_type
+            expires_in
+            access_token
+            refresh_token
+            user {
+                uuid
+                first_name
+                last_name
+                avatar
+                file_path
+                is_finish
+                connectycube_id
+                phone_country_id
+                mobile_number
+                is_card_added
+                is_bank_account_added
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+mutation  verifyOtp($input: VeryfyOtpInput!){
+    VerifyOTP(input: $input){
+        meta {
+            status
+            message
+            message_code
+            status_code
+        }
+        data {
+            uuid
+            first_name
+            last_name
+            is_completed
+            rating
+            is_finish
+        }
+    }
+}
+
