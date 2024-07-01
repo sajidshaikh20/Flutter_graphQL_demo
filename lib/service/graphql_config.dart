@@ -3,7 +3,8 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 
 class GraphQLConfig {
   final connectivity = Connectivity();
-  static HttpLink httpLink = HttpLink('https://demoapi.maincourt.com/graphql');
+  //add your graphql api
+  static HttpLink httpLink = HttpLink('');
 
   GraphQLClient clientToQuery() => GraphQLClient(
       link: httpLink,
